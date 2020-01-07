@@ -1,0 +1,183 @@
+module DLTS {
+
+  imports {
+    Base
+  }
+
+  /** ------------------------------------------------------------------------- **/
+  /** Mending: Components **/
+  
+  item LTSSharpeningStone {
+    Type=Normal,
+    Weight=0.2,
+    DisplayName=Sharpening Stone,
+    Icon=SharpeningStone,
+  }
+
+  item LTSReplacementHandle {
+    Type=Normal,
+    Weight=0.8,
+    DisplayName=Replacement Tool Handle,
+    Icon=Pickaxe_Handle,
+  }
+  
+  recipe LTS Prepare Sharpening Stone {
+    keep Stone,
+    RippedSheets,
+    SharpedStone,
+    Water=2,
+    Result:LTSSharpeningStone,
+    Time:240.0,
+    Category:LTS-Base,
+  }
+
+  recipe LTS Make Replacement Tool Handle {
+    keep HuntingKnife/KitchenKnife,
+    Plank/TreeBranch,
+    Result:LTSReplacementHandle,
+    Time:240.0,
+    Category:LTS-Base,
+  }
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Mending: Recipes With Handle Replace (e.g. Axe) **/
+
+  recipe LTS Renew Axe {
+    Axe,
+    LTSReplacementHandle,
+    Twine=2,
+    Result:Axe,
+    Time:480,
+    OnGiveXP:CraftXP_Mending_Wood,
+    Category:LTS-Base,
+  }
+
+  recipe LTS Renew Wood Axe {
+    WoodAxe,
+    LTSReplacementHandle,
+    Twine=2,
+    Result:WoodAxe,
+    Time:480,
+    OnGiveXP:CraftXP_Mending_Wood,
+    Category:LTS-Base,
+  }
+
+  recipe LTS Renew PickAxe {
+    PickAxe,
+    LTSReplacementHandle,
+    Twine=2,
+    Result:PickAxe,
+    Time:480,
+    OnGiveXP:CraftXP_Mending_Wood,
+    Category:LTS-Base,
+  }
+  
+  recipe LTS Renew Hammer {
+    Hammer,
+    LTSReplacementHandle,
+    Twine=2,
+    Result:Hammer,
+    Time:480,
+    OnGiveXP:CraftXP_Mending_Wood,
+    Category:LTS-Base,
+  }
+
+  recipe LTS Renew Shovel {
+    Shovel,
+    LTSReplacementHandle,
+    Twine=2,
+    Result:Shovel,
+    Time:480,
+    OnGiveXP:CraftXP_Mending_Wood,
+    Category:LTS-Base,
+    Sound:Hammering,
+  }
+
+  recipe LTS Renew Shovel {
+    Shovel2,
+    LTSReplacementHandle,
+    Twine=2,
+    Result:Shovel2,
+    Time:480,
+    OnGiveXP:CraftXP_Mending_Wood,
+    Category:LTS-Base,
+    Sound:Hammering,
+  }
+
+  recipe LTS Renew Garden Hoe {
+    GardenHoe,
+    LTSReplacementHandle,
+    Twine=2,
+    Result:GardenHoe,
+    Time:480,
+    OnGiveXP:CraftXP_Mending_Wood,
+    Category:LTS-Base,
+    Sound:Hammering,
+  }
+
+  recipe LTS Renew Sledgehammer {
+    Sledgehammer,
+    LTSReplacementHandle,
+    Twine=2,
+    Result:Sledgehammer,
+    Time:480,
+    OnGiveXP:CraftXP_Mending_Wood,
+    Category:LTS-Base,
+    Sound:Hammering,
+  }
+
+  recipe LTS Renew Sledgehammer {
+    Sledgehammer2,
+    LTSReplacementHandle,
+    Twine=2,
+    Result:Sledgehammer2,
+    Time:480,
+    OnGiveXP:CraftXP_Mending_Wood,
+    Category:LTS-Base,
+    Sound:Hammering,
+  }
+
+  /** ------------------------------------------------------------------------- **/
+  /** Mending: Recipes With Blade Sharpening (e.g. Machete) **/
+
+  recipe LTS Renew Hunting Knife {
+    keep Stone,
+    HuntingKnife,
+    LTSSharpeningStone=2,
+    RippedSheets=2,
+    Water=2,
+    Result:HuntingKnife,
+    Time:480,
+    OnGiveXP:CraftXP_Mending_Blade,
+    Sound:SliceMeat,
+    Category:LTS-Base,
+  }
+  
+  recipe LTS Renew Machete {
+    keep Stone,
+    Machete,
+    LTSSharpeningStone=3,
+    RippedSheets=2,
+    Water=3,
+    Result:Machete,
+    Time:480,
+    OnGiveXP:CraftXP_Mending_Blade,
+    Sound:SliceMeat,
+    Category:LTS-Base,
+  }
+  
+  recipe LTS Renew Katana {
+    keep Stone,
+    Katana,
+    LTSSharpeningStone=4,
+    RippedSheets=2,
+    Water=4,
+    Result:Katana,
+    Time:480,
+    OnGiveXP:CraftXP_Mending_Blade,
+    Sound:SliceMeat,
+    Category:LTS-Base,
+  }
+
+}  
+  

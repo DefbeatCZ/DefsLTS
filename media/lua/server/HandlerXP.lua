@@ -37,3 +37,11 @@ end
 function CraftXP_Scrapping(recipe, ingredients, result, player)
     player:getXp():AddXP(Perks.MetalWelding, 2);
 end
+
+function CraftXP_Mending_Wood(recipe, ingredients, result, player)
+    player:getXp():AddXP(Perks.Woodwork, 10);
+end
+
+function CraftXP_Mending_Blade(recipe, ingredients, result, player)
+    player:getXp():AddXP(Perks.MetalWelding, 10);
+end
