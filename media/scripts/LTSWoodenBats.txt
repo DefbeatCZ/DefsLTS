@@ -1,0 +1,237 @@
+module DLTS {
+
+  imports {
+    Base
+  }
+
+  /** ------------------------------------------------------------------------- **/
+  /** Bats: Crafting base game Baseball Bat **/
+
+  recipe LTS Make Baseball Bat {
+    keep HuntingKnife/KitchenKnife,
+    Plank,
+    RippedSheets,
+    Twine=3,
+    Result:BaseballBat,
+    Category:LTS-Base,
+    Time:450.0,
+    Sound:Sawing,
+    OnGiveXP:CraftXP_Mending_Wood,
+  }
+
+  /** ------------------------------------------------------------------------- **/
+  /** Bats: Baseball Bat can be "Hardened" with Fabric/Adhesive **/
+  /** Improvement: MaxCondition and ConditionLoss **/
+
+  item LTSBatHardened {
+    Type=Weapon,
+    Categories=Blunt,
+    DisplayName=Baseball Bat [Hardened],
+    Weight=2,
+    ConditionMax=25,
+    ConditionLowerChanceOneIn=45,
+    MaxHitCount=2,
+    KnockBackOnNoDeath=TRUE,
+    KnockdownMod=2,
+    PushBackMod=0.5,
+    BaseSpeed=1,
+    CriticalChance=40,
+    critDmgMultiplier=2,
+    MinDamage=0.8,
+    MaxDamage=1.1,
+    DoorDamage=5,
+    TreeDamage=1,
+    SplatNumber=1,
+    SplatBloodOnNoDeath=FALSE,
+    MaxRange=1.4,
+    WeaponSprite=BaseballBat,
+    MinAngle=0.65,
+    MinimumSwingTime=3,
+    SwingAmountBeforeImpact=0.02,
+    SubCategory=Swinging,
+    IdleAnim=Idle_Weapon2,
+    SwingAnim=Bat,
+    MinRange=0.61,
+    SwingTime=3,
+    HitAngleMod=-30,
+    Icon=BaseballBat,
+    RunAnim=Run_Weapon2,
+    TwoHandWeapon=TRUE,
+    BreakSound=BreakWoodItem,
+    WeaponLength=0.5,
+    AttachmentType=Shovel,
+  }
+ 
+  fixing Fix Baseball Bat {
+    Require:LTSBatHardened,
+    Fixer:DuctTape=1; Woodwork=5,
+    Fixer:Woodglue=2; Woodwork=2,
+    Fixer:DuctTape=4,
+    Fixer:Scotchtape=4,
+  }
+ 
+  recipe LTS Reinforce Baseball Bat {
+    BaseballBat,
+    DuctTape=3,
+    Result:LTSBatHardened,
+    Time:260.0,
+    Category:LTS-Base,
+    OnGiveXP:CraftXP_Bat,
+  }
+ 
+  recipe LTS Reinforce Baseball Bat {
+    BaseballBat,
+    RippedSheets=4,
+    Woodglue=3,
+    Twine=6,
+    Result:LTSBatHardened,
+    Time:380.0,
+    Category:LTS-Base,
+    OnGiveXP:CraftXP_Bat,
+  }
+
+  /** ------------------------------------------------------------------------- **/
+  /** Bats: Reinforced Bat can be improved by adding Barbed Wire **/
+  /** Improvement: Min/Max Damage | Crit Chance/Mult **/
+  /** Changed: SplatBloodOnNoDeath | added dmg type as per nail bat  **/
+
+  item LTSBatBarbed {
+    Type=Weapon,
+    Categories=Blunt,
+    DisplayName=Baseball Bat [Barbed],
+    Weight=2,
+    ConditionMax=25,
+    ConditionLowerChanceOneIn=45,
+    MaxHitCount=2,
+    KnockBackOnNoDeath=TRUE,
+    KnockdownMod=2,
+    PushBackMod=0.5,
+    BaseSpeed=1,
+    CriticalChance=45,
+    critDmgMultiplier=3,
+    MinDamage=1.1,
+    MaxDamage=1.4,
+    DoorDamage=5,
+    TreeDamage=1,
+    SplatNumber=1,
+    SplatBloodOnNoDeath=TRUE,
+    MaxRange=1.4,
+    WeaponSprite=BaseballBat,
+    MinAngle=0.65,
+    MinimumSwingTime=3,
+    SwingAmountBeforeImpact=0.02,
+    SubCategory=Swinging,
+    IdleAnim=Idle_Weapon2,
+    SwingAnim=Bat,
+    MinRange=0.61,
+    SwingTime=3,
+    HitAngleMod=-30,
+    Icon=BaseballBat,
+    RunAnim=Run_Weapon2,
+    TwoHandWeapon=TRUE,
+    BreakSound=BreakWoodItem,
+    WeaponLength=0.5,
+    AttachmentType=Shovel,
+    DamageCategory=Slash,
+    DamageMakeHole=TRUE,
+  }
+ 
+  fixing Fix Baseball Bat [Barbed] {
+    Require:LTSBatBarbed,
+    Fixer:DuctTape=1; Woodwork=5,
+    Fixer:Woodglue=2; Woodwork=2,
+    Fixer:DuctTape=4,
+    Fixer:Scotchtape=4,
+  }
+ 
+  recipe LTS Put Barbed Wire on Reinforced Bat {
+    LTSBatHardened,
+    BarbedWire,
+    Twine=3,
+    Result:LTSBatBarbed,
+    Time:320.0,
+    Category:LTS-Base,
+    OnGiveXP:CraftXP_Bat,
+  }
+
+  recipe LTS Retrieve Barbed Wire {
+    LTSBatBarbed,
+    Result:BarbedWire,
+    Time:320.0,
+    Category:LTS-Base,
+  }
+
+  /** ------------------------------------------------------------------------- **/
+  /** Bats: Bat with Barbed Wire can be Spiked as vanilla Bat **/
+  /** Improvement: Min/Max Damage | Crit Chance/Mult **/
+  /** Changed: bigger SplatNumber | Icon and Sprite **/
+
+  item LTSBatSpiked {
+    Type=Weapon,
+    Categories=Blunt,
+    DisplayName=Baseball Bat [Spiked],
+    Weight=2,
+    ConditionMax=25,
+    ConditionLowerChanceOneIn=45,
+    MaxHitCount=2,
+    KnockBackOnNoDeath=TRUE,
+    KnockdownMod=2,
+    PushBackMod=0.5,
+    BaseSpeed=1,
+    CriticalChance=45,
+    critDmgMultiplier=5,
+    MinDamage=1.3,
+    MaxDamage=1.8,
+    DoorDamage=5,
+    TreeDamage=1,
+    SplatNumber=2,
+    SplatBloodOnNoDeath=TRUE,
+    MaxRange=1.4,
+    WeaponSprite=BaseballBatSpiked,
+    MinAngle=0.65,
+    MinimumSwingTime=3,
+    SwingAmountBeforeImpact=0.02,
+    SubCategory=Swinging,
+    IdleAnim=Idle_Weapon2,
+    SwingAnim=Bat,
+    MinRange=0.61,
+    SwingTime=3,
+    HitAngleMod=-30,
+    Icon=BaseballBatNails,
+    RunAnim=Run_Weapon2,
+    TwoHandWeapon=TRUE,
+    BreakSound=BreakWoodItem,
+    WeaponLength=0.5,
+    AttachmentType=Shovel,
+    DamageCategory=Slash,
+    DamageMakeHole=TRUE,
+  }
+ 
+  fixing Fix Baseball Bat [Spiked] {
+    Require:LTSBatSpiked,
+    Fixer:DuctTape=1; Woodwork=5,
+    Fixer:Woodglue=2; Woodwork=2,
+    Fixer:DuctTape=4,
+    Fixer:Scotchtape=4,
+  }
+ 
+  recipe LTS Put Spikes on Barbed Bat {
+    keep Hammer,
+    LTSBatBarbed,
+    Nails=5,
+    Result:LTSBatSpiked,
+    Time:320.0,
+    Category:LTS-Base,
+    Sound:Hammering,
+    OnGiveXP:CraftXP_Bat,
+  }
+
+  recipe LTS Retrieve Barbed Wire {
+    LTSBatSpiked,
+    Result:BarbedWire,
+    Time:320.0,
+    Category:LTS-Base,
+  }
+  
+}  
+  
