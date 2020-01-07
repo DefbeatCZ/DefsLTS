@@ -156,7 +156,7 @@ module DLTS {
     Tooltip=Tooltip_LTS_SaltDone,
   }
   
-  recipe DQ Mix Potassium Salt Solution {
+  recipe LTS Mix Potassium Salt Solution {
     BakingPan,
     Water=3,
     LTSWoodAsh,
@@ -165,7 +165,7 @@ module DLTS {
     Category:LTS-Chem,
   }
   
-  recipe DQ Extract Edible Salt {
+  recipe LTS Extract Edible Salt {
     LTSSaltDry,
     Result:Salt=2,
     Time:180.0,  

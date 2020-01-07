@@ -5,6 +5,47 @@ module DLTS {
   } 
   
   /** ------------------------------------------------------------------------- **/
+  /** Water Can from Gas Can **/  
+  
+  item LTSWaterCanEmpty {
+    Type=Normal,
+    DisplayName=Water Can [Empty],
+    Icon=CanWater,
+    Weight=1,
+    ReplaceOnUseOn=WaterSource-LTSWaterCanFilled,
+    CanStoreWater=true,
+  }
+  
+  item LTSWaterCanFilled {
+    IsWaterSource=TRUE,
+    Weight=8,
+    CanStoreWater=TRUE,
+    Type=Drainable,
+    UseWhileEquipped=FALSE,
+    UseDelta=0.02,
+    DisplayName=Water Can [With Water],
+    ReplaceOnDeplete=LTSWaterCanEmpty,
+    ReplaceOnUseOn=WaterSource-LTSWaterCanFilled,
+    Icon=CanWater,
+  }
+  
+  recipe LTS Clean Gas Can for Water {
+    EmptyPetrolCan,
+    Bleach,
+    Water=10,
+    Result:LTSWaterCanEmpty,
+    Time:420.0,
+    Category:LTS-Base,
+  }
+  
+  recipe LTS Reclaim Water Can for Gas {
+    LTSWaterCanEmpty,
+    Result:EmptyPetrolCan,
+    Time:30.0,
+    Category:LTS-Base,
+  }
+  
+  /** ------------------------------------------------------------------------- **/
   /** Chemistry: Base Materials **/
 
   item LTSWoodBits {
@@ -40,7 +81,7 @@ module DLTS {
     Result:LTSWoodAsh,
     Time:560.0, 
     Sound:PZ_Fire,
-    Category:DQ-Base,
+    Category:LTS-Base,
   }
   
   item LTSCharcoalDust {
@@ -50,7 +91,7 @@ module DLTS {
     Icon=CharcoalPowder,
   }
 
-  recipe DQ Prepare Charcoal Powder {
+  recipe LTS Prepare Charcoal Powder {
     keep MortarPestle,
     Charcoal,
     Result:LTSCharcoalDust,
