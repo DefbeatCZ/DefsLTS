@@ -1,0 +1,40 @@
+module DLTS {
+
+  imports {
+    Base
+  } 
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Processing Tools: Drying Rack **/
+  
+  item LTSDryingRackEmpty {
+    Type=Normal,
+    Weight=2.0,
+    DisplayName=Empty Drying Rack,
+    Icon=DryingRackEmpty,
+    Tooltip=Tooltip_LTS_DryingEmpty,
+  }
+  
+  recipe LTS Create Drying Rack {
+    keep Saw,
+    keep Hammer,
+    Plank=4,
+    Nails=8,
+    Sheet,
+    Twine=10,
+    Sound:Hammering,
+    Result:LTSDryingRackEmpty,
+    Time:150.0,
+    Category:LTS-Base,
+    OnGiveXP:CraftXP_WoodworkBase,
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}

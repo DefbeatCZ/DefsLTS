@@ -1,0 +1,546 @@
+module DLTS {
+
+  imports {
+    Base, farming
+  } 
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Food: Hot Cuppa Ingredients **/  
+  
+  item LTSTeaServingFruit {
+    Type=Food,
+    FoodType=Tea,
+    Weight=0.05,
+    HungerChange=-5,
+    DisplayName=Tea (Fruit),
+    Icon=TeaFruit,
+    EvolvedRecipe=HotDrink:6,
+    EvolvedRecipeName=Tea,
+  }
+  
+  recipe LTS Prepare Tea Serving {
+    keep HuntingKnife/KitchenKnife,
+    LTSDriedFruit,
+    Sound:PZ_FoodSlicing,
+    Result:LTSTeaServingFruit,
+    Time:90.0,
+    Category:LTS-Food,
+  }  
+  
+  item LTSTeaServingHerbs {
+    Type=Food,
+    FoodType=Tea,
+    Weight=0.05,
+    HungerChange=-5,
+    DisplayName=Tea (Herbs),
+    Icon=TeaHerbs,
+    EvolvedRecipe=HotDrink:6,
+    EvolvedRecipeName=Tea,
+  }
+  
+  recipe LTS Prepare Tea Serving {
+    keep HuntingKnife/KitchenKnife,
+    LTSDriedHerbs,
+    Sound:PZ_FoodSlicing,
+    Result:LTSTeaServingHerbs,
+    Time:90.0,
+    Category:LTS-Food,
+  }  
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Food: Seasonings **/  
+  
+  item LTSSeasoningHerbs {
+    Type=Food,
+    Weight=0.2,
+    DisplayName=Mixture Seasoning (Herbs),
+    Icon=DriedSeasoning,
+    Spice=true,
+    HungerChange=-8,
+    UnhappyChange=5,
+    EvolvedRecipe=Soup:1;Stew:1;Pie:1;Stir fry:1;Burger:1;Salad:1;Roasted Vegetables:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1,
+  }
+  
+  recipe LTS Create Seasoning {
+    keep HuntingKnife/KitchenKnife,
+    LTSDriedHerbs=2,
+    Sound:PZ_FoodSlicing,
+    Result:LTSSeasoningHerbs,
+    Time:90.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  } 
+  
+  item LTSSeasoningFruit {
+    Type=Food,
+    Weight=0.2,
+    DisplayName=Mixture Seasoning (Fruits),
+    Icon=DriedSeasoning,
+    Spice=true,
+    HungerChange=-8,
+    UnhappyChange=5,
+    EvolvedRecipe=Soup:1;Stew:1;Pie:1;Stir fry:1;Burger:1;Salad:1;Roasted Vegetables:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1,
+  }
+  
+  recipe LTS Create Seasoning {
+    keep HuntingKnife/KitchenKnife,
+    LTSDriedFruit=2,
+    Sound:PZ_FoodSlicing,
+    Result:LTSSeasoningFruit,
+    Time:90.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }   
+  
+  item LTSSeasoningMushroom {
+    Type=Food,
+    Weight=0.2,
+    DisplayName=Mixture Seasoning (Mushroom),
+    Icon=DriedSeasoning,
+    Spice=true,
+    HungerChange=-8,
+    UnhappyChange=5,
+    EvolvedRecipe=Soup:1;Stew:1;Pie:1;Stir fry:1;Burger:1;Salad:1;Roasted Vegetables:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1,
+  }
+  
+  recipe LTS Create Seasoning {
+    keep HuntingKnife/KitchenKnife,
+    LTSDriedMushroom=2,
+    Sound:PZ_FoodSlicing,
+    Result:LTSSeasoningMushroom,
+    Time:90.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  } 
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Food: Drying **/  
+  
+  item LTSDriedMeat {
+    Type=Food,
+    FoodType=Meat,
+    Weight=0.05,
+    DisplayName=Dried Meat,
+    Icon=DriedMeat,
+    HungerChange=-10,
+    EvolvedRecipe=Soup:10;Stew:10;Pie:10;Stir fry:10;Burger:10;Salad:10;Roasted Vegetables:10;RicePot:10;RicePan:10;PastaPot:10;PastaPan:10,
+    Carbohydrates=12.77,
+    Proteins=15.43,
+    Lipids=12.76,
+    Calories=127, 
+  }
+  
+  recipe LTS Arrange Meat to Dry {
+    LTSDryingRackEmpty,
+    LTSBitsMeat=12,
+    Salt;4,
+    Result:LTSDryingMeatWet,
+    Time:50,
+    Category:LTS-Food,
+  }
+  
+  item LTSDryingMeatWet {
+    Type=Normal,
+    Weight=5.0,
+    DisplayName=Drying Rack With Meat [Drying],
+    Icon=DryingRackFill1,
+    Tooltip=Tooltip_LTS_DryingFull,
+    Wet=true,
+    WetCooldown=1034000,
+    ItemWhenDry=DLTS.LTSDryingMeat,
+  }
+  
+  item LTSDryingMeat {
+    Type=Normal,
+    Weight=5.0,
+    DisplayName=Drying Rack With Meat [Ready],
+    Icon=DryingRackFill2,
+    Tooltip=Tooltip_LTS_DryingReady,  
+  }
+  
+  recipe LTS Extract Dried Items {
+    LTSDryingMeat,
+    Result:LTSDriedMeat=3,
+    Time:50,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+    OnCreate:giveDryingRack,
+  }
+  
+  item LTSDriedHerbs {
+    Type=Food,
+    FoodType=Vegetables,
+    Weight=0.05,
+    DisplayName=Dried Herbs,
+    Icon=DriedHerbs,
+    HungerChange=-10,
+    EvolvedRecipe=Soup:10;Stew:10;Pie:10;Stir fry:10;Burger:10;Salad:10;Roasted Vegetables:10;RicePot:10;RicePan:10;PastaPot:10;PastaPan:10,
+    Carbohydrates=14.45,
+    Proteins=1.13,
+    Lipids=1.75,
+    Calories=72, 
+  }
+  
+  recipe LTS Arrange Herbs to Dry {
+    LTSDryingRackEmpty,
+    LTSBitsHerbs=12,
+    Result:LTSDryingHerbsWet,
+    Time:50,
+    Category:LTS-Food,
+  }
+  
+  item LTSDryingHerbsWet {
+    Type=Normal,
+    Weight=5.0,
+    DisplayName=Drying Rack With Herbs [Drying],
+    Icon=DryingRackFill1,
+    Tooltip=Tooltip_LTS_DryingFull,
+    Wet=true,
+    WetCooldown=447000,
+    ItemWhenDry=DLTS.LTSDryingHerbs,
+  }
+  
+  item LTSDryingHerbs {
+    Type=Normal,
+    Weight=5.0,
+    DisplayName=Drying Rack With Herbs [Ready],
+    Icon=DryingRackFill2,
+    Tooltip=Tooltip_LTS_DryingReady,  
+  }
+  
+  recipe LTS Extract Dried Items {
+    LTSDryingHerbs,
+    Result:LTSDriedHerbs=3,
+    Time:50,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+    OnCreate:giveDryingRack,
+  }
+  
+  item LTSDriedVegetable {
+    Type=Food,
+    FoodType=Vegetables,
+    Weight=0.05,
+    DisplayName=Dried Vegetable,
+    Icon=DriedVegetable,
+    HungerChange=-10,
+    EvolvedRecipe=Soup:10;Stew:10;Pie:10;Stir fry:10;Burger:10;Salad:10;Roasted Vegetables:10;RicePot:10;RicePan:10;PastaPot:10;PastaPan:10,
+    Carbohydrates=21.97,
+    Proteins=0.99,
+    Lipids=0.26,
+    Calories=98, 
+  }
+  
+  recipe LTS Arrange Vegetable to Dry {
+    LTSDryingRackEmpty,
+    LTSBitsVegetable=12,
+    Salt;2,
+    Result:LTSDryingVegetableWet,
+    Time:50,
+    Category:LTS-Food,
+  }
+  
+  item LTSDryingVegetableWet {
+    Type=Normal,
+    Weight=5.0,
+    DisplayName=Drying Rack With Vegetable [Drying],
+    Icon=DryingRackFill1,
+    Tooltip=Tooltip_LTS_DryingFull,
+    Wet=true,
+    WetCooldown=647000,
+    ItemWhenDry=DLTS.LTSDryingVegetable,
+  }
+  
+  item LTSDryingVegetable {
+    Type=Normal,
+    Weight=5.0,
+    DisplayName=Drying Rack With Vegetable [Ready],
+    Icon=DryingRackFill2,
+    Tooltip=Tooltip_LTS_DryingReady,  
+  }
+  
+  recipe LTS Extract Dried Items {
+    LTSDryingVegetable,
+    Result:LTSDriedVegetable=3,
+    Time:50,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+    OnCreate:giveDryingRack,
+  }
+  
+  item LTSDriedFruit {
+    Type=Food,
+    FoodType=Fruits,
+    Weight=0.05,
+    DisplayName=Dried Fruit,
+    Icon=DriedFruit,
+    HungerChange=-10,
+    EvolvedRecipe=Soup:10;Stew:10;Pie:10;Stir fry:10;Burger:10;Salad:10;Roasted Vegetables:10;RicePot:10;RicePan:10;PastaPot:10;PastaPan:10,
+    Carbohydrates=47.36,
+    Proteins=0.79,
+    Lipids=0.08,
+    Calories=115, 
+  }
+  
+  recipe LTS Arrange Fruit to Dry {
+    LTSDryingRackEmpty,
+    LTSBitsFruit=12,
+    Result:LTSDryingFruitWet,
+    Time:50,
+    Category:LTS-Food,
+  }
+  
+  item LTSDryingFruitWet {
+    Type=Normal,
+    Weight=5.0,
+    DisplayName=Drying Rack With Fruit [Drying],
+    Icon=DryingRackFill1,
+    Tooltip=Tooltip_LTS_DryingFull,
+    Wet=true,
+    WetCooldown=516000,
+    ItemWhenDry=DLTS.LTSDryingFruit,
+  }
+  
+  item LTSDryingFruit {
+    Type=Normal,
+    Weight=5.0,
+    DisplayName=Drying Rack With Fruit [Ready],
+    Icon=DryingRackFill2,
+    Tooltip=Tooltip_LTS_DryingReady,  
+  }
+  
+  recipe LTS Extract Dried Items {
+    LTSDryingFruit,
+    Result:LTSDriedFruit=3,
+    Time:50,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+    OnCreate:giveDryingRack,
+  }
+  
+  item LTSDriedMushroom {
+    Type=Food,
+    FoodType=Vegetables,
+    Weight=0.05,
+    DisplayName=Dried Mushroom,
+    Icon=DriedMushroom,
+    HungerChange=-10,
+    EvolvedRecipe=Soup:10;Stew:10;Pie:10;Stir fry:10;Burger:10;Salad:10;Roasted Vegetables:10;RicePot:10;RicePan:10;PastaPot:10;PastaPan:10,
+    Carbohydrates=21.95,
+    Proteins=2.15,
+    Lipids=2.33,
+    Calories=79, 
+  }
+  
+  recipe LTS Arrange Mushroom to Dry {
+    LTSDryingRackEmpty,
+    LTSBitsMushroom=12,
+    Result:LTSDryingMushroomWet,
+    Time:50,
+    Category:LTS-Food,
+  }
+  
+  item LTSDryingMushroomWet {
+    Type=Normal,
+    Weight=5.0,
+    DisplayName=Drying Rack With Mushroom [Drying],
+    Icon=DryingRackFill1,
+    Tooltip=Tooltip_LTS_DryingFull,
+    Wet=true,
+    WetCooldown=483000,
+    ItemWhenDry=DLTS.LTSDryingMushroom,
+  }
+  
+  item LTSDryingMushroom {
+    Type=Normal,
+    Weight=5.0,
+    DisplayName=Drying Rack With Mushroom [Ready],
+    Icon=DryingRackFill2,
+    Tooltip=Tooltip_LTS_DryingReady,  
+  }
+  
+  recipe LTS Extract Dried Items {
+    LTSDryingMushroom,
+    Result:LTSDriedMushroom=3,
+    Time:50,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+    OnCreate:giveDryingRack,
+  }
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Food: Preparing Bits from Food Items **/
+  
+  item LTSBitsMeat {
+    Type=Food,
+    FoodType=Meat,
+    Weight=0.02,
+    DisplayName=Bits of Meat,
+    Icon=BitsMeat,
+    HungerChange=-4,
+    EvolvedRecipe=Soup:4;Stew:4;Pie:4;Stir fry:4;Burger:4;Salad:4;Roasted Vegetables:4;RicePot:4;RicePan:4;PastaPot:4;PastaPan:4,
+    Carbohydrates=1.22,
+    Proteins=2.58,
+    Lipids=1.76,
+    Calories=27, 
+    DaysFresh=1,
+    DaysTotallyRotten=2,
+    IsCookable=TRUE,
+    DangerousUncooked=TRUE,
+  }
+  
+  recipe LTS Cut Bits of Meat {
+    keep HuntingKnife/KitchenKnife,
+    MuttonChop/PorkChop/Steak/Rabbitmeat/Salmon/FishFillet,
+    Result:LTSBitsMeat=9,
+    Sound:PZ_FoodSlicing,
+    Time:40.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }
+  
+  recipe LTS Cut Bits of Meat {
+    keep HuntingKnife/KitchenKnife,
+    Smallanimalmeat/Smallbirdmeat,
+    Result:LTSBitsMeat=4,
+    Sound:PZ_FoodSlicing,
+    Time:40.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }
+  
+  item LTSBitsHerbs {
+    Type=Food,
+    FoodType=Vegetables,
+    Weight=0.02,
+    DisplayName=Bits of Herbs,
+    Icon=BitsHerbs,
+    HungerChange=-4,
+    EvolvedRecipe=Soup:4;Stew:4;Pie:4;Stir fry:4;Burger:4;Salad:4;Roasted Vegetables:4;RicePot:4;RicePan:4;PastaPot:4;PastaPan:4,
+    Carbohydrates=4.33,
+    Proteins=0.04,
+    Lipids=0.11,
+    Calories=12,    
+    DaysFresh=5,
+    DaysTotallyRotten=15,
+  }  
+
+  recipe LTS Cut Bits of Herbs {
+    keep HuntingKnife/KitchenKnife,
+    Violets/GrapeLeaves/BlackSage/CommonMallow/Ginseng/LemonGrass/WildGarlic,
+    Result:LTSBitsHerbs=2,
+    Sound:PZ_FoodSlicing,
+    Time:40.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }
+  
+  item LTSBitsVegetable {
+    Type=Food,
+    FoodType=Vegetables,
+    Weight=0.02,
+    DisplayName=Bits of Vegetable,
+    Icon=BitsVegetable,
+    HungerChange=-4,
+    EvolvedRecipe=Soup:4;Stew:4;Pie:4;Stir fry:4;Burger:4;Salad:4;Roasted Vegetables:4;RicePot:4;RicePan:4;PastaPot:4;PastaPan:4,
+    Carbohydrates=3.21,
+    Proteins=0.11,
+    Lipids=0.13,
+    Calories=17,    
+    DaysFresh=2,
+    DaysTotallyRotten=5,
+  }  
+  
+  recipe LTS Cut Bits of Vegetable {
+    keep HuntingKnife/KitchenKnife,
+    Cabbage/Eggplant,
+    Result:LTSBitsVegetable=9,
+    Sound:PZ_FoodSlicing,
+    Time:40.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }  
+
+  recipe LTS Cut Bits of Vegetable {
+    keep HuntingKnife/KitchenKnife,
+    Leek/Potato/Avocado/BellPepper/Broccoli/Zucchini,
+    Result:LTSBitsVegetable=6,
+    Sound:PZ_FoodSlicing,
+    Time:40.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }  
+
+  recipe LTS Cut Bits of Vegetable {
+    keep HuntingKnife/KitchenKnife,
+    Carrots/Onion/RedRadish/Tomato,
+    Result:LTSBitsVegetable=4,
+    Sound:PZ_FoodSlicing,
+    Time:40.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }  
+  
+  item LTSBitsFruit {
+    Type=Food,
+    FoodType=Fruits,
+    Weight=0.02,
+    DisplayName=Bits of Fruit,
+    Icon=BitsFruit,
+    HungerChange=-4,
+    EvolvedRecipe=Soup:4;Stew:4;Pie:4;Stir fry:4;Burger:4;Salad:4;Roasted Vegetables:4;RicePot:4;RicePan:4;PastaPot:4;PastaPan:4,
+    Carbohydrates=7.45,
+    Proteins=0.04,
+    Lipids=0.01,
+    Calories=21,    
+    DaysFresh=3,
+    DaysTotallyRotten=8,
+  }  
+
+  recipe LTS Cut Bits of Fruit {
+    keep HuntingKnife/KitchenKnife,
+    Cherry/Rosehips/Strewberrie/BerryBlack/BerryBlue/BerryGeneric1/BerryGeneric2/BerryGeneric3/BerryGeneric4/BerryGeneric5/BerryPoisonIvy,
+    Result:LTSBitsFruit=2,
+    Sound:PZ_FoodSlicing,
+    Time:40.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }  
+
+  recipe LTS Cut Bits of Fruit {
+    keep HuntingKnife/KitchenKnife,
+    Pineapple/Apple/Banana/Grapes/Lemon/Orange/Peach/WatermelonSliced,
+    Result:LTSBitsFruit=4,
+    Sound:PZ_FoodSlicing,
+    Time:40.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }  
+  
+  item LTSBitsMushroom {
+    Type=Food,
+    FoodType=Vegetables,
+    Weight=0.02,
+    DisplayName=Bits of Mushroom,
+    Icon=BitsMushroom,
+    HungerChange=-4,
+    EvolvedRecipe=Soup:4;Stew:4;Pie:4;Stir fry:4;Burger:4;Salad:4;Roasted Vegetables:4;RicePot:4;RicePan:4;PastaPot:4;PastaPan:4,
+    Carbohydrates=5.14,
+    Proteins=1.21,
+    Lipids=1.47,
+    Calories=23,    
+    DaysFresh=4,
+    DaysTotallyRotten=13,
+  }  
+  
+  recipe LTS Cut Bits of Mushroom {
+    keep HuntingKnife/KitchenKnife,
+    MushroomGeneric1/MushroomGeneric2/MushroomGeneric3/MushroomGeneric4/MushroomGeneric5/MushroomGeneric6/MushroomGeneric7,
+    Result:LTSBitsMushroom=3,
+    Sound:PZ_FoodSlicing,
+    Time:40.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  } 
+  
+}

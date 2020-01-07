@@ -32,6 +32,7 @@ module DLTS {
     CorpseMale/CorpseFemale,
     Result:LTSCorpseFlesh=3,
     Time:240.0,
+    Category:LTS-Base,
   }
   
 }

@@ -9,8 +9,10 @@ Tooltip_EN = {
   -- Corpse Disposal
   Tooltip_LTS_CorpseFlesh = "Is there something you would not do to survive? Can be used to make compost.",
 
-
-
+  -- Drying
+  Tooltip_LTS_DryingEmpty = "Place items inside to let them dry.",
+  Tooltip_LTS_DryingFull = "Let it dry. May take up to a week, depending on its contents. WARNING: Drying ticks are not counted when placed freely on ground !!!",
+  Tooltip_LTS_DryingReady = "Ready for the contents to be extracted.",
 
 
 
@@ -47,8 +49,6 @@ Tooltip_EN = {
   -- Lighter Fluid
   Tooltip_LF_Wet = "Will setle in less than a day.",  
   
-  -- Drying
-  Tooltip_DryingRackProcessing = "Let it dry; may take up to a week, depending on contents.",
-  Tooltip_DryingRackDone = "Ready for the contents to be extracted.",
+
   
 }
