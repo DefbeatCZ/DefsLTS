@@ -5,6 +5,60 @@ module DLTS {
   } 
   
   /** ------------------------------------------------------------------------- **/
+  /** Chemistry: Base Materials **/
+
+  item LTSWoodBits {
+    Type=Normal,
+    Weight=0.3,
+    DisplayName=Wood Bits,
+    Icon=WoodBits,
+  }
+
+  recipe LTS Prepare Wood Bits {
+    keep Saw,
+    Plank/TreeBranch/UnusableWood,
+    Result:LTSWoodBits,
+    Time:120.0, 
+    Sound:Sawing,
+    OnGiveXP:CraftXP_WoodworkBase,
+    Category:LTS-Base,
+  }
+  
+  item LTSWoodAsh {
+    Type=Normal,
+    Weight=0.2,
+    DisplayName=Wood Ash,
+    Icon=WoodAsh,
+  }
+
+  recipe LTS Prepare Clean Wood Ash {
+    keep Pot/Saucepan,
+    keep MortarPestle,
+    LTSWoodBits=2,
+    WoodenStick=4,
+    Matches/Lighter,
+    Result:LTSWoodAsh,
+    Time:560.0, 
+    Sound:PZ_Fire,
+    Category:DQ-Base,
+  }
+  
+  item LTSCharcoalDust {
+    Type=Normal,
+    Weight=0.2,
+    DisplayName=Charcoal Powder,
+    Icon=CharcoalPowder,
+  }
+
+  recipe DQ Prepare Charcoal Powder {
+    keep MortarPestle,
+    Charcoal,
+    Result:LTSCharcoalDust,
+    Time:120.0, 
+    Category:LTS-Base,
+  }
+  
+  /** ------------------------------------------------------------------------- **/
   /** Processing Tools: Drying Rack **/
   
   item LTSDryingRackEmpty {
@@ -15,7 +69,7 @@ module DLTS {
     Tooltip=Tooltip_LTS_DryingEmpty,
   }
   
-  recipe LTS Create Drying Rack {
+  recipe LTS Build Drying Rack {
     keep Saw,
     keep Hammer,
     Plank=4,
@@ -29,15 +83,59 @@ module DLTS {
     OnGiveXP:CraftXP_WoodworkBase,
   }
   
+  /** ------------------------------------------------------------------------- **/
+  /** Processing Tools: Wood Burner **/  
   
+  item LTSWoodBurner {
+    Type=Normal,
+    Weight=12.0,
+    DisplayName=Wood Burning Equipment [Empty],
+    Icon=WoodBurner,
+    Tooltip=Tooltip_LTS_BurnerEmpty,
+  }
   
+  recipe LTS Build Wood Burner {
+    keep Hammer,
+    keep Saw,
+    BlowTorch=5,
+    keep WeldingMask,
+    Pot=2,
+    SheetMetal=2,
+    Wire=4,
+    ScrapMetal=10,
+    LTSPropaneTankEmpty,
+    Result:LTSWoodBurner,
+    Time:560.0,
+    OnGiveXP:CraftXP_Burner,
+    Sound:PZ_Fire,
+    CanBeDoneFromFloor:true,
+    Category:LTS-Base,
+  }
   
+  /** ------------------------------------------------------------------------- **/
+  /** Empty Consumables **/
   
+  item LTSDepletedLighter {
+    Type=Normal,
+    Weight=0.1,
+    DisplayName=Lighter [Depleted],
+    Icon=Lighter,
+  }
   
+  item LTSPropaneTankEmpty {
+    Type=Normal,
+    Weight=4.0,
+    DisplayName=Propane Tank [Empty],
+    Icon=PropaneTank,
+  }
   
-  
-  
-  
+  recipe LTS Release Gas {
+    destroy PropaneTank,
+    Result:LTSPropaneTankEmpty,
+    CanBeDoneFromFloor:true,
+    Time:120.0,  
+    Category:LTS-Base,
+  }
   
   /** ------------------------------------------------------------------------- **/
   /** Corpse Disposal: Butcher Corpses to Meat (Poison) **/
@@ -47,10 +145,7 @@ module DLTS {
     FoodType=Meat,
     Weight=1.0,
     DisplayName=Corpse Flesh,
-    Icon=Steak,
-    ColorRed=164,
-    ColorGreen=233,
-    ColorBlue=22,
+    Icon=CorpseFlesh,
     HungerChange=-25,
     Poison=true,
     PoisonDetectionLevel=7,

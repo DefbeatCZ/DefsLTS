@@ -1,0 +1,176 @@
+module DLTS {
+
+  imports {
+    Base
+  } 
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Chemistry: Wood Burning Process (Wood Gas & Charcoal)**/
+
+  item LTSWoodBurnerWood {
+    Type=Normal,
+    Weight=20.0,
+    DisplayName=Wood Burning Equipment [Wood],
+    Icon=WoodBurner,
+    Tooltip=Tooltip_LTS_BurnerWood,
+  }
+
+  item LTSWoodBurnerFull {
+    Type=Normal,
+    Weight=20.0,
+    DisplayName=Wood Burning Equipment [Charcoal & Wood Gas],
+    Icon=WoodBurner,
+    Tooltip=Tooltip_LTS_BurnerFull,
+  }
+
+  item LTSWoodBurnerChar {
+    Type=Normal,
+    Weight=20.0,
+    DisplayName=Wood Burning Equipment [Charcoal],
+    Icon=WoodBurner,
+    Tooltip=Tooltip_LTS_BurnerChar,
+  }
+
+  recipe LTS Fill Burner With Wood {
+    LTSWoodBurner,
+    LTSWoodBits=16,
+    Result:LTSWoodBurnerWood,
+    Time:180.0, 
+    CanBeDoneFromFloor:true,    
+    Category:LTS-Chem,
+  }
+
+  recipe LTS Fire Wood Burner {
+    LTSWoodBurnerWood,
+    LTSLighterFluid=3,
+    Matches/Lighter,
+    Result:LTSWoodBurnerFull,
+    Time:640.0,  
+    Sound:PZ_Fire,
+    CanBeDoneFromFloor:true,
+    Category:LTS-Chem,
+  }
+
+  recipe LTS Extract Wood Gas {
+    destroy LTSWoodBurnerFull,
+    LTSPropaneTankEmpty,
+    Result:PropaneTank,
+    Time:120.0,
+    OnCreate:giveCharcoalBurner,
+    CanBeDoneFromFloor:true,
+    Category:LTS-Chem,
+  }
+
+  recipe LTS Extract Charcoal {
+    destroy LTSWoodBurnerFull/LTSWoodBurnerChar,
+    Result:Charcoal,
+    Time:120.0,
+    OnCreate:giveEmptyBurner,
+    CanBeDoneFromFloor:true,
+    Category:LTS-Chem,
+  }
+
+  /** ------------------------------------------------------------------------- **/
+  /** Chemistry: Lighter Fluid and Lighter Refill **/
+
+  item LTSLighterFluid {
+    Type=Drainable,
+    Weight=0.8,
+    DisplayName=Lighter Fluid,
+    Icon=LighterFluid,
+    UseDelta=0.1,
+    ReplaceOnDeplete=LTSLighterFluidEmpty,
+  }
+
+  item LTSLighterFluidEmpty {
+    Type=Normal,
+    Weight=0.1,
+    DisplayName=Lighter Fluid [Empty],
+    Icon=LighterFluid,
+  } 
+
+  item LTSLighterFluidProcess {
+    Type=Normal,
+    Weight=2.0,
+    DisplayName=Lighter Fluid [Settling],
+    Icon=ChemLighterFluid,
+    Wet=true,
+    WetCooldown=36000,
+    ItemWhenDry=DLTS.LTSLighterFluidDone,
+    Tooltip=Tooltip_LTS_LighterFluidWet,
+  } 
+
+  item LTSLighterFluidDone {
+    Type=Normal,
+    Weight=1.8,
+    DisplayName=Lighter Fluid [Ready],
+    Icon=ChemLighterFluid,
+    Tooltip=Tooltip_LTS_LighterFluidDone,
+  } 
+
+  recipe LTS Mix Lighter Fluid Solution {
+    BakingPan,
+    LTSCharcoalDust,
+    PetrolCan=1,
+    Result:LTSLighterFluidProcess,
+    Time:240.0,  
+    Category:LTS-Chem,
+  }
+
+  recipe LTS Refill Lighter with Fluid {
+    LTSDepletedLighter,
+    LTSLighterFluid=1,
+    Result:Lighter,
+    Time:48.0,
+    Category:LTS-Chem,
+  }
+
+  recipe LTS Extract Finished Fluid {
+    LTSLighterFluidDone,
+    LTSLighterFluidEmpty,
+    Result:LTSLighterFluid,
+    Time:48.0,
+    OnCreate:giveBakingPan,
+    Category:LTS-Chem,
+  }
+
+  /** ------------------------------------------------------------------------- **/
+  /** Chemistry: Potassium Salt Items and Process **/
+
+  item LTSSaltWet {
+    Type=Normal,
+    Weight=2.5,
+    DisplayName=Potassium Salt Solution [Drying],
+    Wet=true,
+    WetCooldown=174000,
+    ItemWhenDry=DLTS.LTSSaltDry,
+    Icon=ChemPotassiumSalt,
+    Tooltip=Tooltip_LTS_SaltWet,
+  }
+  
+  item LTSSaltDry {
+    Type=Normal,
+    Weight=2.0,
+    DisplayName=Potassium Salt Solution [Ready],
+    Icon=ChemPotassiumSalt,
+    Tooltip=Tooltip_LTS_SaltDone,
+  }
+  
+  recipe DQ Mix Potassium Salt Solution {
+    BakingPan,
+    Water=3,
+    LTSWoodAsh,
+    Result:LTSSaltWet,
+    Time:180.0,  
+    Category:LTS-Chem,
+  }
+  
+  recipe DQ Extract Edible Salt {
+    LTSSaltDry,
+    Result:Salt=2,
+    Time:180.0,  
+    OnCreate:giveBakingPan,
+    Category:LTS-Chem,
+  }
+  
+}
