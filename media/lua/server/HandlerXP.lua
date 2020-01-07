@@ -27,17 +27,13 @@ function CraftXP_Ropework(recipe, ingredients, result, player)
 end
 
 function CraftXP_Burner(recipe, ingredients, result, player)
-    player:getXp():AddXP(Perks.MetalWelding, 25);
+    player:getXp():AddXP(Perks.MetalWelding, 45);
 end
 
+function CraftXP_Smithing(recipe, ingredients, result, player)
+    player:getXp():AddXP(Perks.MetalWelding, 15);
+end
 
-
-
-
-
-
-
-
-
-
-
+function CraftXP_Scrapping(recipe, ingredients, result, player)
+    player:getXp():AddXP(Perks.MetalWelding, 2);
+end
