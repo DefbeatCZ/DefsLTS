@@ -1,0 +1,93 @@
+module DLTS {
+
+  imports {
+    Base
+  } 
+
+  /** ------------------------------------------------------------------------- **/
+  /** Books: Workbooks **/
+  
+  item LTSWorkbookWood {
+    Type=Normal,
+    Weight=0.4,
+    DisplayName=Awesome DIY - Carpentry,
+    Icon=Book8, 
+    Tooltip=Tooltip_LTS_WBWood,
+  }
+  
+  recipe LTS Woodworking Practice {
+    keep LTSWorkbookWood,
+    keep Saw,
+    keep Hammer,
+    Plank=2,
+    Result:UnusableWood,
+    Time:480.0,
+    Category:Carpentry,
+    OnGiveXP:WorkbookXP_Wood,
+    AnimNode:Disassemble,
+    Sound:Sawing,
+  }
+
+  item LTSWorkbookElectricity {
+    Type=Normal,
+    Weight=0.4,
+    DisplayName=Awesome DIY - Electricity,
+    Icon=Book6, 
+    Tooltip=Tooltip_LTS_WBElec,
+  }
+  
+  recipe LTS Electricity Practice {
+    keep LTSWorkbookElectricity,
+    keep Screwdriver,
+    ElectronicsScrap=2,
+    ElectricWire,
+    Result:ElectronicsScrap,
+    Time:480.0,
+    Category:Electrical,
+    OnGiveXP:WorkbookXP_Electricity,
+    AnimNode:Disassemble,
+  }
+
+  item LTSWorkbookWelding {
+    Type=Normal,
+    Weight=0.4,
+    DisplayName=Awesome DIY - Welding,
+    Icon=Book7, 
+    Tooltip=Tooltip_LTS_WBWeld,
+  }
+  
+  recipe LTS Welding Practice {
+    keep LTSWorkbookWelding,
+    keep WeldingMask,
+    BlowTorch=2,
+    ScrapMetal=2,
+    Result:ScrapMetal,
+    Time:480.0,
+    Category:Welding,
+    OnGiveXP:WorkbookXP_Welding,
+    AnimNode:Disassemble,
+    Sound:PZ_Fire,
+  }
+
+  item LTSWorkbookTailoring {
+    Type=Normal,
+    Weight=0.4,
+    DisplayName=Awesome DIY - Tailoring,
+    Icon=Book11, 
+    Tooltip=Tooltip_LTS_WBTail,
+  }
+  
+  recipe LTS Tailoring Practice {
+    keep LTSWorkbookTailoring,
+    keep Scissors,
+    keep Needle,
+    Thread=2,
+    RippedSheets=3,
+    Result:RippedSheets,
+    Time:480.0,
+    Category:Tailoring,
+    OnGiveXP:WorkbookXP_Tailoring,
+    AnimNode:Disassemble,
+  }
+  
+}

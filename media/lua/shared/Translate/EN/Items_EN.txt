@@ -1,6 +1,6 @@
 Items_EN = {
 
-  -- All Workbooks are named "Awesome DYI - [Subject] Workbook" (Defined in LTSBooks)
+  -- All Workbooks are named "Awesome DYI - [Subject]" (Defined in LTSBooks)
 
   -- All Magazines should follow "Magazine: [Subject]{, Vol. [No]}" where {*} is if applicable 
 

@@ -1,0 +1,53 @@
+Tooltip_EN = {
+
+  -- Workbooks
+  Tooltip_LTS_WBWood = "Get Hammer, Saw and 2 Planks to start learning.",
+  Tooltip_LTS_WBElec = "Get Screwdriver, 2 Electronic Scrap and a Wire to start learning.",
+  Tooltip_LTS_WBWeld = "Get Welding Mask, Blowtorch and 3 Metal Scrap to start learning.",
+  Tooltip_LTS_WBTail = "Get Scissors, Needle, Thread and 3 Ripped Sheets to start learning.",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  -- Old code - reuse later
+  
+  -- Storage Cellar
+  Tooltip_SC_00 = "Place on the ground to start digging. Will not be movable after!!!",
+  Tooltip_SC_01 = "Cellar: Stage 1/10, Dig more to expand; BEWARE: All stored items will be discarded during the process.",
+  Tooltip_SC_02 = "Cellar: Stage 2/10, Dig more to expand; BEWARE: All stored items will be discarded during the process.",
+  Tooltip_SC_03 = "Cellar: Stage 3/10, Dig more to expand; BEWARE: All stored items will be discarded during the process.",
+  Tooltip_SC_04 = "Cellar: Stage 4/10, Dig more to expand; BEWARE: All stored items will be discarded during the process.",
+  Tooltip_SC_05 = "Cellar: Stage 5/10, Dig more to expand; BEWARE: All stored items will be discarded during the process.",
+  Tooltip_SC_06 = "Cellar: Stage 6/10, Dig more to expand; BEWARE: All stored items will be discarded during the process.",
+  Tooltip_SC_07 = "Cellar: Stage 7/10, Dig more to expand; BEWARE: All stored items will be discarded during the process.",
+  Tooltip_SC_08 = "Cellar: Stage 8/10, Dig more to expand; BEWARE: All stored items will be discarded during the process.",
+  Tooltip_SC_09 = "Cellar: Stage 9/10, Dig more to expand; BEWARE: All stored items will be discarded during the process.",
+  Tooltip_SC_10 = "Cellar: Complete, Enjoy the space.",
+
+
+  
+  -- Wood Burner
+  Tooltip_WBS_Empty = "Fill with Wood Bits first.",
+  Tooltip_WBS_Wood = "Ready to process.",
+  Tooltip_WBS_Full = "Processing Done. Beware: Take Wood Gas first as it must be released when taking Charcoal.",
+  Tooltip_WBS_Char = "Processing Done; Charcoal remaining.",
+  
+  -- Lighter Fluid
+  Tooltip_LF_Wet = "Will setle in less than a day.",  
+  
+  -- Drying
+  Tooltip_DryingRackProcessing = "Let it dry; may take up to a week, depending on contents.",
+  Tooltip_DryingRackDone = "Ready for the contents to be extracted.",
+  
+}
