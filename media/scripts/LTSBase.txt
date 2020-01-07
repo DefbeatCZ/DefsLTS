@@ -37,4 +37,37 @@ module DLTS {
   
   
   
+  
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Corpse Disposal: Butcher Corpses to Meat (Poison) **/
+  
+  item LTSCorpseFlesh {
+    Type=Food,
+    FoodType=Meat,
+    Weight=1.0,
+    DisplayName=Corpse Flesh,
+    Icon=Steak,
+    ColorRed=164,
+    ColorGreen=233,
+    ColorBlue=22,
+    HungerChange=-25,
+    Poison=true,
+    PoisonDetectionLevel=7,
+    PoisonPower=50,
+    UseForPoison=15,
+    DaysFresh=1,
+    DaysTotallyRotten=1,
+    EvolvedRecipe=Soup:8;Stew:8;Pie:8;Stir fry:8;Burger:8;Salad:8;Roasted Vegetables:8;RicePot:8;RicePan:8;PastaPot:8;PastaPan:8,
+    Tooltip=Tooltip_LTS_CorpseFlesh,
+  }
+
+  recipe LTS Butcher Corpse {
+    keep Machete/MeatCleaver/HandAxe/Axe/WoodAxe,
+    CorpseMale/CorpseFemale,
+    Result:LTSCorpseFlesh=3,
+    Time:240.0,
+    Category:LTS-Base,
+  }
+  
 }
