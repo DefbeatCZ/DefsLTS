@@ -13,3 +13,12 @@ end
 function giveBakingPan(items, result, player)
     player:getInventory():AddItem("Base.BakingPan");
 end
+
+function giveRope1(items, result, player)
+    player:getInventory():AddItem("Base.Rope");
+end
+
+function giveRope2(items, result, player)
+    player:getInventory():AddItem("Base.Rope");
+    player:getInventory():AddItem("Base.Rope");
+end
