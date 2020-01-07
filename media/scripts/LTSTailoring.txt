@@ -4,6 +4,9 @@ module DLTS {
     Base
   } 
 
+  /** ------------------------------------------------------------------------- **/
+  /** Tailoring: Recycling Cloth/Denim Fragments and Making Thread/Twine/Rope  **/
+
   item LTSRecycledThread {
     Type=Normal,
     Weight=0.1,

@@ -6,7 +6,8 @@ Tooltip_EN = {
   Tooltip_LTS_WBWeld = "Get Welding Mask, Blowtorch and 3 Metal Scrap to start learning.",
   Tooltip_LTS_WBTail = "Get Scissors, Needle, Thread and 3 Ripped Sheets to start learning.",
 
-
+  -- Corpse Disposal
+  Tooltip_LTS_CorpseFlesh = "Is there something you would not do to survive? Can be used to make compost.",
 
 
 
