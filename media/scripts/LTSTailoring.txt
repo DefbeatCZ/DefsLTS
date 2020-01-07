@@ -1,0 +1,54 @@
+module DLTS {
+
+  imports {
+    Base
+  } 
+
+  item LTSRecycledThread {
+    Type=Normal,
+    Weight=0.1,
+    DisplayName=Recycled Thread,
+    Icon=RecycledThread,
+  }
+
+  recipe LTS Recycle Cloth {
+    keep Scissors,
+    RippedSheets/DenimStrips,
+    Result:LTSRecycledThread,
+    Time:240.0,
+    Category:Tailoring,
+    OnGiveXP:CraftXP_Ropework,
+    AnimNode:Disassemble,
+  }
+  
+  recipe LTS Weave Thread {
+    keep Scissors,
+    LTSRecycledThread=1,
+    Result:Thread,
+    Time:240.0,
+    Category:Tailoring,
+    OnGiveXP:CraftXP_Ropework,
+    AnimNode:Disassemble,
+  }
+  
+  recipe LTS Weave Twine {
+    keep Scissors,
+    LTSRecycledThread=5,
+    Result:Twine,
+    Time:360.0,
+    Category:Tailoring,
+    OnGiveXP:CraftXP_Ropework,
+    AnimNode:Disassemble,
+  }
+  
+  recipe LTS Weave Rope {
+    keep Scissors,
+    LTSRecycledThread=13,
+    Result:Rope,
+    Time:480.0,
+    Category:Tailoring,
+    OnGiveXP:CraftXP_Ropework,
+    AnimNode:Disassemble,
+  }
+
+}
