@@ -6,6 +6,13 @@ module DLTS {
   
   /** ------------------------------------------------------------------------- **/
   /** Water Can from Gas Can **/  
+
+  item LTSUsedLiterature {
+    Type=Normal,
+    DisplayName=Used Literature,
+    Icon=UsedLiterature,
+    Weight=0.2,
+  }
   
   item LTSWaterCanEmpty {
     Type=Normal,
