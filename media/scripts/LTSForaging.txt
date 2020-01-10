@@ -1,0 +1,62 @@
+module DLTS {
+
+  imports {
+    Base
+  } 
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Foraging: New Forage-ables **/  
+
+  item LTSWildNuts {
+    HungerChange=-10,
+    Weight=0.05,
+    Type=Food,
+    FoodType=NoExplicit,
+    DisplayName=Wild Nuts,
+    Icon=Nuts,
+    EvolvedRecipe=Pie:10;Salad:10;Roasted Vegetables:10;RicePot:10;RicePan:10,
+    Carbohydrates=12.48,
+    Proteins=11.46,
+    Lipids=14.49,
+    Calories=187,
+  } 
+  
+  item LTSWildOnion {
+    HungerChange=-10,
+    Weight=0.2,
+    Type=Food,
+    FoodType=Vegetables,
+    DaysFresh=9,
+    DaysTotallyRotten=12,
+    DisplayName=Wild Onion,
+    Icon=WildOnions,
+    EvolvedRecipe=Soup:10;Stew:10;Pie:10;Stir fry Griddle Pan:10;Stir fry:10;Sandwich:5;Burger:10;Salad:10;Roasted Vegetables:10;RicePot:10;RicePan:10;PastaPot:10;PastaPan:10,
+    Carbohydrates=7.76,
+    Proteins=0.93,
+    Lipids=0.12,
+    Calories=63,
+    StaticModel=RoundFood_Peach,
+  }
+
+  item LTSPineCone {
+    Type=Normal,
+    DisplayName=Pine Cone,
+    Icon=PineCone,
+    Weight=0.05,  
+  }
+
+  item LTSHoneyComb {
+    Type=Normal,
+    DisplayName=Honeycomb,
+    Icon=HoneyComb,
+    Weight=0.3,  
+  }
+
+  item LTSBirchBark {
+    Type=Normal,
+    DisplayName=Birch Bark,
+    Icon=BirchBark,
+    Weight=0.2,
+  }
+
+}
