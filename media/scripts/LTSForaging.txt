@@ -28,7 +28,7 @@ module DLTS {
   }  
 
   /** ------------------------------------------------------------------------- **/
-  /** Foraging: Pine Tar Extraction **/  
+  /** Foraging: Nuts Processing **/  
 
   recipe LTS Smash Nuts into Butter {
     keep MortarPestle,

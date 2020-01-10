@@ -185,6 +185,13 @@ module DLTS {
     Category:LTS-Base,
   }
   
+  item LTSGlueEmpty {
+    Type=Normal,
+    Weight=4.0,
+    DisplayName=Empty Glue Bottle,
+    Icon=EmptyGlue,
+  }
+  
   /** ------------------------------------------------------------------------- **/
   /** Corpse Disposal: Butcher Corpses to Meat (Poison) **/
   

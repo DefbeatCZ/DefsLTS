@@ -174,4 +174,35 @@ module DLTS {
     Category:LTS-Chem,
   }
   
+  /** ------------------------------------------------------------------------- **/
+  /** Chemistry: Wood Glue from Pine Tar **/
+  
+  item LTSGlueMixture {
+    Type=Drainable,
+    UseDelta=0.25,
+    UseWhileEquiped=FALSE,
+    DisplayName=Glue Mixture,
+    Icon=GlueMixture,
+    Weight=0.8,
+    ReplaceOnDeplete=EmptyJar,
+  }
+  
+  recipe LTS Prepare Glue Mixture {
+    LTSWoodAsh,
+    LTSPineTar=2,
+    Water=2,
+    Vinegar=1,
+    Result:LTSGlueMixture,
+    Time:180.0,  
+    Category:LTS-Chem,
+  }
+  
+  recipe LTS Fill Wood Glue {
+    LTSGlueEmpty,
+    LTSGlueMixture=1,
+    Result:Woodglue,
+    Time:180.0,  
+    Category:LTS-Chem,
+  }
+  
 }

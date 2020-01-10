@@ -5,17 +5,104 @@ module DLTS {
   }
   
   /** ------------------------------------------------------------------------- **/
+  /** Packaging: LTS Foraged Items **/
+  
+  item LTSStackOfHoneyComb {
+    Weight=0.2,
+    Type=Normal,
+    DisplayName=Honey Comb [20],
+    Icon=HoneyComb,
+  }
+  
+  recipe LTS Pack Honey Combs {
+    LTSHoneyComb=20,
+    Result:LTSStackOfHoneyComb,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unpack Honey Combs {
+    LTSStackOfHoneyComb,
+    Result:LTSHoneyComb=20,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }  
+  
+  item LTSStackOfWildNuts {
+    Weight=0.2,
+    Type=Normal,
+    DisplayName=Wild Nuts [20],
+    Icon=Nuts,
+  }
+  
+  recipe LTS Pack Wild Nuts {
+    LTSWildNuts=20,
+    Result:LTSStackOfWildNuts,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unpack Wild Nuts {
+    LTSStackOfWildNuts,
+    Result:LTSWildNuts=20,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }  
+  
+  item LTSStackOfBirchBark {
+    Weight=0.2,
+    Type=Normal,
+    DisplayName=Birch Bark [20],
+    Icon=BirchBark,
+  }
+  
+  recipe LTS Pack Birch Bark {
+    LTSBirchBark=20,
+    Result:LTSStackOfBirchBark,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unpack Birch Bark {
+    LTSStackOfBirchBark,
+    Result:LTSBirchBark=20,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }  
+  
+  item LTSStackOfPineCones {
+    Weight=0.2,
+    Type=Normal,
+    DisplayName=Pine Cone [20],
+    Icon=PineCone,
+  }
+  
+  recipe LTS Pack Pine Cones {
+    LTSPineCone=20,
+    Result:LTSStackOfPineCones,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unpack Pine Cones {
+    LTSStackOfPineCones,
+    Result:LTSPineCone=20,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }  
+  
+  /** ------------------------------------------------------------------------- **/
   /** Packaging: Foraged Plants **/
   
   item LTSStackOfGrapeLeaves {
     Weight=0.2,
     Type=Normal,
-    DisplayName=Grape Leaves [50],
+    DisplayName=Grape Leaves [20],
     Icon=GrapeLeaves,
   }
   
   recipe LTS Pack Grape Leaves {
-    GrapeLeaves=50,
+    GrapeLeaves=20,
     Result:LTSStackOfGrapeLeaves,
     Time:60.0,
     Category:LTS-Logistics,
@@ -23,7 +110,7 @@ module DLTS {
   
   recipe LTS Unpack Grape Leaves {
     LTSStackOfGrapeLeaves,
-    Result:GrapeLeaves=50,
+    Result:GrapeLeaves=20,
     Time:60.0,
     Category:LTS-Logistics,
   }  
@@ -31,12 +118,12 @@ module DLTS {
   item LTSStackOfViolets {
     Weight=0.2,
     Type=Normal,
-    DisplayName=Violets [50],
+    DisplayName=Violets [20],
     Icon=Violets,
   }
   
   recipe LTS Pack Violets {
-    Violets=50,
+    Violets=20,
     Result:LTSStackOfViolets,
     Time:60.0,
     Category:LTS-Logistics,
@@ -44,7 +131,7 @@ module DLTS {
   
   recipe LTS Unpack Violets {
     LTSStackOfViolets,
-    Result:Violets=50,
+    Result:Violets=20,
     Time:60.0,
     Category:LTS-Logistics,
   }  
@@ -52,12 +139,12 @@ module DLTS {
   item LTSStackOfRosehips {
     Weight=0.2,
     Type=Normal,
-    DisplayName=Rosehips [50],
+    DisplayName=Rosehips [20],
     Icon=Rosehips,
   }
   
   recipe LTS Pack Rosehips {
-    Rosehips=50,
+    Rosehips=20,
     Result:LTSStackOfRosehips,
     Time:60.0,
     Category:LTS-Logistics,
@@ -65,7 +152,7 @@ module DLTS {
   
   recipe LTS Unpack Rosehips {
     LTSStackOfRosehips,
-    Result:Rosehips=50,
+    Result:Rosehips=20,
     Time:60.0,
     Category:LTS-Logistics,
   } 
@@ -73,12 +160,12 @@ module DLTS {
   item LTSStackOfPlantain {
     Weight=0.2,
     Type=Normal,
-    DisplayName=Plantain [50],
+    DisplayName=Plantain [20],
     Icon=PlantainPlantago,
   }
   
   recipe LTS Pack Plantain {
-    Plantain=50,
+    Plantain=20,
     Result:LTSStackOfPlantain,
     Time:60.0,
     Category:LTS-Logistics,
@@ -86,7 +173,7 @@ module DLTS {
   
   recipe LTS Unpack Plantain {
     LTSStackOfPlantain,
-    Result:Plantain=50,
+    Result:Plantain=20,
     Time:60.0,
     Category:LTS-Logistics,
   }  
@@ -94,12 +181,12 @@ module DLTS {
   item LTSStackOfComfrey {
     Weight=0.2,
     Type=Normal,
-    DisplayName=Comfrey [50],
+    DisplayName=Comfrey [20],
     Icon=Comfrey,
   }
   
   recipe LTS Pack Comfrey {
-    Comfrey=50,
+    Comfrey=20,
     Result:LTSStackOfComfrey,
     Time:60.0,
     Category:LTS-Logistics,
@@ -107,7 +194,7 @@ module DLTS {
   
   recipe LTS Unpack Comfrey {
     LTSStackOfComfrey,
-    Result:Comfrey=50,
+    Result:Comfrey=20,
     Time:60.0,
     Category:LTS-Logistics,
   } 
@@ -115,12 +202,12 @@ module DLTS {
   item LTSStackOfWildGarlic {
     Weight=0.2,
     Type=Normal,
-    DisplayName=Wild Garlic [50],
+    DisplayName=Wild Garlic [20],
     Icon=WildGarlic,
   }
   
   recipe LTS Pack Wild Garlic {
-    WildGarlic=50,
+    WildGarlic=20,
     Result:LTSStackOfWildGarlic,
     Time:60.0,
     Category:LTS-Logistics,
@@ -128,7 +215,7 @@ module DLTS {
   
   recipe LTS Unpack Wild Garlic {
     LTSStackOfWildGarlic,
-    Result:WildGarlic=50,
+    Result:WildGarlic=20,
     Time:60.0,
     Category:LTS-Logistics,
   } 
@@ -136,12 +223,12 @@ module DLTS {
   item LTSStackOfCommonMallow {
     Weight=0.2,
     Type=Normal,
-    DisplayName=Common Mallow [50],
+    DisplayName=Common Mallow [20],
     Icon=CommonMallow,
   }
   
   recipe LTS Pack Common Mallow {
-    CommonMallow=50,
+    CommonMallow=20,
     Result:LTSStackOfCommonMallow,
     Time:60.0,
     Category:LTS-Logistics,
@@ -149,7 +236,7 @@ module DLTS {
   
   recipe LTS Unpack Common Mallow {
     LTSStackOfCommonMallow,
-    Result:CommonMallow=50,
+    Result:CommonMallow=20,
     Time:60.0,
     Category:LTS-Logistics,
   }  
@@ -157,12 +244,12 @@ module DLTS {
   item LTSStackOfLemonGrass {
     Weight=0.2,
     Type=Normal,
-    DisplayName=Lemon Grass [50],
+    DisplayName=Lemon Grass [20],
     Icon=LemonGrass,
   }
   
   recipe LTS Pack Lemon Grass {
-    LemonGrass=50,
+    LemonGrass=20,
     Result:LTSStackOfLemonGrass,
     Time:60.0,
     Category:LTS-Logistics,
@@ -170,7 +257,7 @@ module DLTS {
   
   recipe LTS Unpack Lemon Grass {
     LTSStackOfLemonGrass,
-    Result:LemonGrass=50,
+    Result:LemonGrass=20,
     Time:60.0,
     Category:LTS-Logistics,
   }  
@@ -178,12 +265,12 @@ module DLTS {
   item LTSStackOfBlackSage {
     Weight=0.2,
     Type=Normal,
-    DisplayName=Black Sage [50],
+    DisplayName=Black Sage [20],
     Icon=BlackSage,
   }
   
   recipe LTS Pack Black Sage {
-    BlackSage=50,
+    BlackSage=20,
     Result:LTSStackOfBlackSage,
     Time:60.0,
     Category:LTS-Logistics,
@@ -191,7 +278,7 @@ module DLTS {
   
   recipe LTS Unpack Black Sage {
     LTSStackOfBlackSage,
-    Result:BlackSage=50,
+    Result:BlackSage=20,
     Time:60.0,
     Category:LTS-Logistics,
   } 
@@ -199,12 +286,12 @@ module DLTS {
   item LTSStackOfGinseng {
     Weight=0.2,
     Type=Normal,
-    DisplayName=Ginseng [50],
+    DisplayName=Ginseng [20],
     Icon=Ginseng,
   }
   
   recipe LTS Pack Ginseng {
-    Ginseng=50,
+    Ginseng=20,
     Result:LTSStackOfGinseng,
     Time:60.0,
     Category:LTS-Logistics,
@@ -212,7 +299,7 @@ module DLTS {
   
   recipe LTS Unpack Ginseng {
     LTSStackOfGinseng,
-    Result:Ginseng=50,
+    Result:Ginseng=20,
     Time:60.0,
     Category:LTS-Logistics,
   }   

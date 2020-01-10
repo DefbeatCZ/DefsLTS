@@ -11,6 +11,7 @@ module DLTS {
     keep HuntingKnife/KitchenKnife,
     Plank,
     RippedSheets,
+    LTSPineTar=1,
     Twine=3,
     Result:BaseballBat,
     Category:LTS-Base,

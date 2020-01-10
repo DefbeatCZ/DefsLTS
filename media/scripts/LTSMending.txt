@@ -34,6 +34,8 @@ module DLTS {
   recipe LTS Make Replacement Tool Handle {
     keep HuntingKnife/KitchenKnife,
     Plank/TreeBranch,
+    RippedSheets,
+    LTSPineTar=1,
     Result:LTSReplacementHandle,
     Time:240.0,
     Category:LTS-Base,
