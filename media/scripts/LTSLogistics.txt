@@ -546,7 +546,7 @@ module DLTS {
     Category:LTS-Logistics,
   }
   
-  recipe Unstack Branches {
+  recipe LTS Unstack Branches {
     LTSStackOfBranches,
     CanBeDoneFromFloor:true,
     Result:TreeBranch=20,
