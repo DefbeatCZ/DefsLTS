@@ -111,6 +111,7 @@ module DLTS {
   recipe LTS Mix Lighter Fluid Solution {
     BakingPan,
     LTSCharcoalDust,
+    LTSPineTar=1,
     PetrolCan=1,
     Result:LTSLighterFluidProcess,
     Time:240.0,  

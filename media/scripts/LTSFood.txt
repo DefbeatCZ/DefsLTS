@@ -473,7 +473,7 @@ module DLTS {
 
   recipe LTS Cut Bits of Vegetable {
     keep HuntingKnife/KitchenKnife,
-    Carrots/Onion/RedRadish/Tomato,
+    Carrots/Onion/RedRadish/Tomato/LTSWildOnion,
     Result:LTSBitsVegetable=4,
     Sound:PZ_FoodSlicing,
     Time:40.0,

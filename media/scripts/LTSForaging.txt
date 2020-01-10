@@ -3,6 +3,140 @@ module DLTS {
   imports {
     Base
   } 
+
+  /** ------------------------------------------------------------------------- **/
+  /** Foraging: Birch Bark Tea **/  
+  
+  item LTSTeaServingBirch {
+    Type=Food,
+    FoodType=Tea,
+    Weight=0.05,
+    HungerChange=-5,
+    DisplayName=Tea (Birch Bark),
+    Icon=TeaBirch,
+    EvolvedRecipe=HotDrink:6,
+    EvolvedRecipeName=Tea,
+  }
+  
+  recipe LTS Prepare Tea Serving {
+    keep HuntingKnife/KitchenKnife,
+    LTSBirchBark,
+    Sound:PZ_FoodSlicing,
+    Result:LTSTeaServingBirch,
+    Time:90.0,
+    Category:LTS-Food,
+  }  
+
+  /** ------------------------------------------------------------------------- **/
+  /** Foraging: Pine Tar Extraction **/  
+
+  recipe LTS Smash Nuts into Butter {
+    keep MortarPestle,
+    keep HuntingKnife/KitchenKnife,
+    LTSWildNuts=20,
+    Result:Butter,
+    Time:480.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }
+  
+  recipe LTS Smash Nuts into Flour {
+    keep MortarPestle,
+    keep HuntingKnife/KitchenKnife,
+    LTSWildNuts=35,
+    Result:Flour,
+    Time:480.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Foraging: Pine Tar Extraction **/  
+  
+  item LTSPineTar {
+    Type=Drainable,
+    UseWhileEquiped=FALSE,
+    UseDelta=0.2,
+    DisplayName=Pine Tar,
+    Icon=PineTar,
+    canBeConsolidated=TRUE,
+    ReplaceOnDeplete=EmptyJar,
+  }
+  
+  item LTSWoodBurnerCones {
+    Type=Normal,
+    Weight=20.0,
+    DisplayName=Wood Burning Equipment [Pine Cones],
+    Icon=WoodBurner,
+    Tooltip=Tooltip_LTS_BurnerWood,
+  }
+  
+  item LTSWoodBurnerTar {
+    Type=Normal,
+    Weight=20.0,
+    DisplayName=Wood Burning Equipment [Tar],
+    Icon=WoodBurner,
+    Tooltip=Tooltip_LTS_BurnerTar,
+  }
+  
+  recipe LTS Fill Burner With Pine Cones {
+    LTSWoodBurner,
+    LTSPineCone=24,
+    LTSWoodBits=3,
+    Result:LTSWoodBurnerCones,
+    Time:180.0, 
+    CanBeDoneFromFloor:true,    
+    Category:LTS-Chem,
+  }
+  
+  recipe LTS Fire Wood Burner {
+    LTSWoodBurnerCones,
+    LTSLighterFluid=3,
+    Matches/Lighter,
+    Result:LTSWoodBurnerTar,
+    Time:640.0,  
+    Sound:PZ_Fire,
+    CanBeDoneFromFloor:true,
+    Category:LTS-Chem,
+  }
+  
+  recipe LTS Extract Pine Tar {
+    destroy LTSWoodBurnerTar,
+    EmptyJar,
+    Result:LTSPineTar,
+    Time:120.0,
+    OnCreate:giveEmptyBurner,
+    CanBeDoneFromFloor:true,
+    Category:LTS-Chem,
+  }
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Foraging: HoneyComb Extraction **/  
+  
+  item LTSWildHoney {
+    Type=Food,
+    DisplayName=Wild Honey,
+    Icon=WildHoney,
+    Weight=0.6,
+    HungerChange=-30,
+    EvolvedRecipe=Cake:5;Sandwich:5;Salad:5;Roasted Vegetables:5;Stir fry Griddle Pan:5;Stir fry:5;HotDrink:5,
+    Carbohydrates=211,
+    Proteins=0,
+    Lipids=0,
+    Calories=820,
+    FoodType=NoExplicit,
+    CantBeFrozen=TRUE,
+    ReplaceOnUse=EmptyJar,
+  }
+  
+  recipe LTS Extract Wild Honey {
+    EmptyJar,
+    LTSHoneyComb=10,
+    Water=1,
+    Result:LTSWildHoney,
+    Category:LTS-Food,
+    Time:240.0,
+  }
   
   /** ------------------------------------------------------------------------- **/
   /** Foraging: New Forage-ables **/  

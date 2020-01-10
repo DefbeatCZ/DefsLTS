@@ -15,10 +15,11 @@ Tooltip_EN = {
   Tooltip_LTS_DryingReady = "Ready for the contents to be extracted.",
 
   -- Wood Burner
-  Tooltip_LTS_BurnerEmpty = "Fill with Wood Bits first.",
+  Tooltip_LTS_BurnerEmpty = "Fill it first.",
   Tooltip_LTS_BurnerWood = "Ready to process.",
   Tooltip_LTS_BurnerFull = "Processing Done. WARNING: Take Wood Gas first as it must be released before taking Charcoal.",
   Tooltip_LTS_BurnerChar = "Processing Done. Charcoal remaining.",
+  Tooltip_LTS_BurnerTar = "Processing Done. Full of Pine Tar.",
 
   -- Lighter Fluid
   Tooltip_LTS_LighterFluidWet = "Will settle in less than a day. WARNING: Drying ticks are not counted when placed freely on ground !!!", 
