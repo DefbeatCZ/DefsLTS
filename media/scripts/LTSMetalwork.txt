@@ -123,7 +123,7 @@ module DLTS {
   /** Random Items (1 Scrap) **/
   recipe LTS Scrap Metal {
     keep LTSScrappingSaw,
-    Tweezers/Spoon/TentPeg/Scissors/PopEmpty/PaintbucketEmpty/Hinge/Fork/Doorknob/ButterKnife/KitchenKnife/Hairspray/Screwdriver/TinCanEmpty/TinOpener/Umbrella/HuntingKnife/MeatCleaver,
+    Tweezers/Spoon/TentPeg/Scissors/PopEmpty/PaintbucketEmpty/Hinge/Fork/Doorknob/ButterKnife/BreadKnife/KitchenKnife/Hairspray/Screwdriver/TinCanEmpty/TinOpener/Umbrella/HuntingKnife/MeatCleaver,
     Result:ScrapMetal,
     Time:120.0,
     OnGiveXP:CraftXP_Scrapping,
