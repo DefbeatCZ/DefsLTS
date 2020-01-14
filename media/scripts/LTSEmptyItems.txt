@@ -1,0 +1,50 @@
+module DLTS {
+
+  imports {
+    Base
+  } 
+
+  /** ------------------------------------------------------------------------- **/
+  /** Empty Consumables **/
+  
+  item LTSLighterEmpty {
+    Type=Normal,
+    Weight=0.1,
+    DisplayName=Lighter [Empty],
+    Icon=Lighter,
+  }
+  
+  item LTSPropaneTankEmpty {
+    Type=Normal,
+    Weight=4.0,
+    DisplayName=Propane Tank [Empty],
+    Icon=PropaneTank,
+  }
+  
+  recipe LTS Release Gas {
+    destroy PropaneTank,
+    Result:LTSPropaneTankEmpty,
+    CanBeDoneFromFloor:true,
+    Time:120.0,  
+    Category:LTS-Base,
+  }
+  
+  item LTSGlueEmpty {
+    Type=Normal,
+    Weight=0.1,
+    DisplayName=Glue Bottle [Empty],
+    Icon=EmptyGlue,
+  }
+  
+  item LTSDisinfectantEmpty {
+    Type=Normal,
+    Weight=0.1,
+    DisplayName=Bottle of Disinfectant [Empty],
+    Icon=Alcohol,
+  }
+  
+  
+  
+  
+  
+}

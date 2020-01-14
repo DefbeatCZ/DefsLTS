@@ -119,7 +119,7 @@ module DLTS {
   }
 
   recipe LTS Refill Lighter with Fluid {
-    LTSDepletedLighter,
+    LTSLighterEmpty,
     LTSLighterFluid=1,
     Result:Lighter,
     Time:48.0,
