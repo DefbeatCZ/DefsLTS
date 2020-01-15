@@ -183,14 +183,45 @@ module DLTS {
     Type=Normal,
     DisplayName=Honeycomb,
     Icon=HoneyComb,
-    Weight=0.3,  
+    Weight=0.2,  
   }
 
   item LTSBirchBark {
     Type=Normal,
     DisplayName=Birch Bark,
     Icon=BirchBark,
-    Weight=0.2,
+    Weight=0.1,
+  }
+  
+  item LTSTobacco {
+    Type=Normal,
+    DisplayName=Tobacco,
+    Icon=Tobacco,
+    Weight=0.1,
+  }
+  
+  item LTSCamomille {
+    HungerChange=-2,
+    Weight=0.1,
+    Type=Food,
+    DisplayName=Camomille,
+    Icon=Camomille,
+    Carbohydrates=7.12,
+    Proteins=0.36,
+    Lipids=0.07,
+    Calories=32,
+  }
+  
+  item LTSDandelion {
+    HungerChange=-2,
+    Weight=0.1,
+    Type=Food,
+    DisplayName=Dandelion,
+    Icon=Dandelion,
+    Carbohydrates=7.12,
+    Proteins=0.36,
+    Lipids=0.07,
+    Calories=32,
   }
 
 }
