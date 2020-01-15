@@ -1,0 +1,79 @@
+module DLTS {
+
+
+  /** ------------------------------------------------------------------------- **/
+  /** Mending Components **/
+
+  item LTSSharpeningStone {
+    Type=Normal,
+    Weight=0.2,
+    DisplayName=Sharpening Stone,
+    Icon=SharpeningStone,
+  }
+
+  item LTSReplacementHandle {
+    Type=Normal,
+    Weight=0.8,
+    DisplayName=Replacement Tool Handle,
+    Icon=Pickaxe_Handle,
+  }
+
+  /** ------------------------------------------------------------------------- **/
+  /** Processing Tools: Drying Rack **/
+  
+  item LTSDryingRackEmpty {
+    Type=Normal,
+    Weight=2.0,
+    DisplayName=Empty Drying Rack,
+    Icon=DryingRackEmpty,
+    Tooltip=Tooltip_LTS_DryingEmpty,
+  }
+
+  /** ------------------------------------------------------------------------- **/
+  /** Processing Tools: Scrapping Saw **/
+  
+  item LTSScrappingSaw {
+    Type=Normal,
+    Weight=0.8,
+    DisplayName=Scrapping Saw,
+    Icon=HackSaw2,
+    StaticModel=Hacksaw,
+  }
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Processing Tools: Wood Burner **/  
+  
+  item LTSWoodBurner {
+    Type=Normal,
+    Weight=12.0,
+    DisplayName=Distillation Equipment [Empty],
+    Icon=WoodBurner,
+    Tooltip=Tooltip_LTS_BurnerEmpty,
+  }
+
+  /** ------------------------------------------------------------------------- **/
+  /** Container: Water Can **/  
+
+  item LTSWaterCanEmpty {
+    Type=Normal,
+    DisplayName=Water Can [Empty],
+    Icon=CanWater,
+    Weight=1,
+    ReplaceOnUseOn=WaterSource-LTSWaterCanFilled,
+    CanStoreWater=true,
+  }
+  
+  item LTSWaterCanFilled {
+    IsWaterSource=TRUE,
+    Weight=8,
+    CanStoreWater=TRUE,
+    Type=Drainable,
+    UseWhileEquipped=FALSE,
+    UseDelta=0.02,
+    DisplayName=Water Can [With Water],
+    ReplaceOnDeplete=LTSWaterCanEmpty,
+    ReplaceOnUseOn=WaterSource-LTSWaterCanFilled,
+    Icon=CanWater,
+  }
+
+}

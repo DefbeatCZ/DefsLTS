@@ -1,0 +1,176 @@
+module DLTS {
+
+  /** ------------------------------------------------------------------------- **/
+  /** Items for Re-Use **/  
+
+  item LTSUsedLiterature {
+    Type=Normal,
+    DisplayName=Used Literature,
+    Icon=UsedLiterature,
+    Weight=0.2,
+  }
+
+  item LTSLighterEmpty {
+    Type=Normal,
+    Weight=0.1,
+    DisplayName=Lighter [Empty],
+    Icon=Lighter,
+  }
+  
+  item LTSPropaneTankEmpty {
+    Type=Normal,
+    Weight=4.0,
+    DisplayName=Propane Tank [Empty],
+    Icon=PropaneTank,
+  }
+
+  item LTSGlueEmpty {
+    Type=Normal,
+    Weight=0.1,
+    DisplayName=Glue Bottle [Empty],
+    Icon=EmptyGlue,
+  }
+  
+  item LTSDisinfectantEmpty {
+    Type=Normal,
+    Weight=0.1,
+    DisplayName=Bottle of Disinfectant [Empty],
+    Icon=Alcohol,
+  }
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Lighter Fluid **/  
+  
+  item LTSLighterFluid {
+    Type=Drainable,
+    Weight=0.8,
+    DisplayName=Lighter Fluid,
+    Icon=LighterFluidCan,
+    UseDelta=0.1,
+    ReplaceOnDeplete=LTSLighterFluidEmpty,
+  }
+
+  item LTSLighterFluidEmpty {
+    Type=Normal,
+    Weight=0.1,
+    DisplayName=Lighter Fluid [Empty],
+    Icon=LighterFluidCan,
+  } 
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Salt **/       
+
+  item LTSSaltWet {
+    Type=Normal,
+    Weight=1.4,
+    DisplayName=Potassium Salt Solution [Drying],
+    Wet=true,
+    WetCooldown=174000,
+    ItemWhenDry=DLTS.LTSSaltDry,
+    Icon=SaltJarWet,
+    Tooltip=Tooltip_LTS_SaltWet,
+  }
+  
+  item LTSSaltDry {
+    Type=Drainable,
+    UseDelta=0.2,
+    UseWhileEquipped=FALSE,
+    DisplayName=Potassium Salt,
+    Icon=SaltJarDry,
+    Weight=0.8,
+    cantBeConsolided=TRUE,
+    ReplaceOnDeplete=EmptyJar,
+  }
+
+  /** ------------------------------------------------------------------------- **/
+  /** Processing Materials **/  
+
+  item LTSWoodBits {
+    Type=Normal,
+    Weight=0.3,
+    DisplayName=Wood Bits,
+    Icon=WoodBits,
+  }
+
+  item LTSWoodAsh {
+    Type=Normal,
+    Weight=0.2,
+    DisplayName=Wood Ash,
+    Icon=WoodAsh,
+  }
+
+  item LTSCharcoalPowder {
+    Type=Normal,
+    Weight=0.2,
+    DisplayName=Charcoal Powder,
+    Icon=CharcoalPowder,
+  }
+  
+  item LTSGlueMixture {
+    Type=Drainable,
+    UseDelta=0.25,
+    UseWhileEquipped=FALSE,
+    DisplayName=Glue Mixture,
+    Icon=GlueMixture,
+    Weight=0.8,
+    cantBeConsolided=TRUE,
+    ReplaceOnDeplete=EmptyJar,
+  }
+  
+  item LTSPineTar {
+    Type=Drainable,
+    UseDelta=0.2,
+    UseWhileEquipped=FALSE,
+    DisplayName=Pine Tar,
+    Icon=PineTar,
+    Weight=0.8,
+    cantBeConsolided=TRUE,
+    ReplaceOnDeplete=EmptyJar,
+  }
+  
+  item LTSMoonshine {
+    Type=Drainable,
+    UseDelta=0.2,
+    UseWhileEquipped=FALSE,
+    DisplayName=Moonshine,
+    Icon=Moonshine,
+    Weight=0.8,
+    cantBeConsolided=TRUE,
+    ReplaceOnDeplete=EmptyJar,
+  }
+  
+  item LTSLimestone {
+    Type=Normal,
+    Weight=0.5,
+    DisplayName=Limestone Chunks,
+    Icon=Limestone,
+  }
+  
+  item LTSBriquette {
+    Type=Normal,
+    Weight=0.5,
+    DisplayName=Briquette,
+    Icon=Briquette,
+  }  
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Corpse Disposal: Butcher Corpses to Meat (Poison) **/
+  
+  item LTSCorpseFlesh {
+    Type=Food,
+    FoodType=Meat,
+    Weight=1.0,
+    DisplayName=Corpse Flesh,
+    Icon=CorpseFlesh,
+    HungerChange=-25,
+    Poison=true,
+    PoisonDetectionLevel=7,
+    PoisonPower=50,
+    UseForPoison=15,
+    DaysFresh=1,
+    DaysTotallyRotten=1,
+    EvolvedRecipe=Soup:8;Stew:8;Pie:8;Stir fry:8;Burger:8;Salad:8;Roasted Vegetables:8;RicePot:8;RicePan:8;PastaPot:8;PastaPan:8,
+    Tooltip=Tooltip_LTS_CorpseFlesh,
+  }
+
+}

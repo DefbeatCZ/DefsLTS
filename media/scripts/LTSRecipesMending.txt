@@ -2,51 +2,17 @@ module DLTS {
 
   imports {
     Base
-  }
+  } 
 
   /** ------------------------------------------------------------------------- **/
-  /** Mending: Components **/
-  
-  item LTSSharpeningStone {
-    Type=Normal,
-    Weight=0.2,
-    DisplayName=Sharpening Stone,
-    Icon=SharpeningStone,
-  }
-
-  item LTSReplacementHandle {
-    Type=Normal,
-    Weight=0.8,
-    DisplayName=Replacement Tool Handle,
-    Icon=Pickaxe_Handle,
-  }
-  
-  recipe LTS Prepare Sharpening Stone {
-    keep Stone,
-    RippedSheets,
-    SharpedStone,
-    Water=2,
-    Result:LTSSharpeningStone,
-    Time:240.0,
-    Category:LTS-Base,
-  }
-
-  recipe LTS Make Replacement Tool Handle {
-    keep HuntingKnife/KitchenKnife,
-    Plank/TreeBranch,
-    RippedSheets,
-    LTSPineTar=1,
-    Result:LTSReplacementHandle,
-    Time:240.0,
-    Category:LTS-Base,
-  }
-  
-  /** ------------------------------------------------------------------------- **/
-  /** Mending: Recipes With Handle Replace (e.g. Axe) **/
+  /** Mending Recipes consist of item + **/
+  /** Sharpening Stone if has blade 1* 1H | 3* 2H **/
+  /** Twine + Replacement Handle if has wooden handle **/
 
   recipe LTS Renew Axe {
-    Axe,
+    destroy Axe,
     LTSReplacementHandle,
+    LTSSharpeningStone,
     Twine=2,
     Result:Axe,
     Time:480,
@@ -55,8 +21,9 @@ module DLTS {
   }
 
   recipe LTS Renew Wood Axe {
-    WoodAxe,
+    destroy WoodAxe,
     LTSReplacementHandle,
+    LTSSharpeningStone,
     Twine=2,
     Result:WoodAxe,
     Time:480,
@@ -65,7 +32,7 @@ module DLTS {
   }
 
   recipe LTS Renew PickAxe {
-    PickAxe,
+    destroy PickAxe,
     LTSReplacementHandle,
     Twine=2,
     Result:PickAxe,
@@ -75,7 +42,7 @@ module DLTS {
   }
   
   recipe LTS Renew Hammer {
-    Hammer,
+    destroy Hammer,
     LTSReplacementHandle,
     Twine=2,
     Result:Hammer,
@@ -85,7 +52,7 @@ module DLTS {
   }
 
   recipe LTS Renew Shovel {
-    Shovel,
+    destroy Shovel,
     LTSReplacementHandle,
     Twine=2,
     Result:Shovel,
@@ -96,7 +63,7 @@ module DLTS {
   }
 
   recipe LTS Renew Shovel {
-    Shovel2,
+    destroy Shovel2,
     LTSReplacementHandle,
     Twine=2,
     Result:Shovel2,
@@ -107,7 +74,7 @@ module DLTS {
   }
 
   recipe LTS Renew Garden Hoe {
-    GardenHoe,
+    destroy GardenHoe,
     LTSReplacementHandle,
     Twine=2,
     Result:GardenHoe,
@@ -118,7 +85,7 @@ module DLTS {
   }
 
   recipe LTS Renew Sledgehammer {
-    Sledgehammer,
+    destroy Sledgehammer,
     LTSReplacementHandle,
     Twine=2,
     Result:Sledgehammer,
@@ -129,7 +96,7 @@ module DLTS {
   }
 
   recipe LTS Renew Sledgehammer {
-    Sledgehammer2,
+    destroy Sledgehammer2,
     LTSReplacementHandle,
     Twine=2,
     Result:Sledgehammer2,
@@ -139,14 +106,9 @@ module DLTS {
     Sound:Hammering,
   }
 
-  /** ------------------------------------------------------------------------- **/
-  /** Mending: Recipes With Blade Sharpening (e.g. Machete) **/
-
   recipe LTS Renew Hunting Knife {
-    keep Stone,
-    HuntingKnife,
-    LTSSharpeningStone=2,
-    RippedSheets=2,
+    destroy HuntingKnife,
+    LTSSharpeningStone,
     Water=2,
     Result:HuntingKnife,
     Time:480,
@@ -156,10 +118,8 @@ module DLTS {
   }
   
   recipe LTS Renew Machete {
-    keep Stone,
-    Machete,
-    LTSSharpeningStone=3,
-    RippedSheets=2,
+    destroy Machete,
+    LTSSharpeningStone,
     Water=3,
     Result:Machete,
     Time:480,
@@ -169,10 +129,8 @@ module DLTS {
   }
   
   recipe LTS Renew Katana {
-    keep Stone,
-    Katana,
-    LTSSharpeningStone=4,
-    RippedSheets=2,
+    destroy Katana,
+    LTSSharpeningStone=2,
     Water=4,
     Result:Katana,
     Time:480,

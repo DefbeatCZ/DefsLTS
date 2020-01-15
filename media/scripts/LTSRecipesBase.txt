@@ -1,0 +1,160 @@
+module DLTS {
+
+  imports {
+    Base
+  } 
+
+
+
+
+
+
+
+
+
+
+  /** ------------------------------------------------------------------------- **/
+  /** Emptying Containers for Re-Use **/
+  
+  recipe LTS Empty Propane Tank {
+    destroy PropaneTank,
+    Result:LTSPropaneTankEmpty,
+    CanBeDoneFromFloor:true,
+    Time:120.0,  
+    Category:LTS-Base,
+  }
+  
+  recipe LTS Empty Glue Bottle {
+    destroy Glue/Woodglue,
+    Result:LTSGlueEmpty,
+    CanBeDoneFromFloor:true,
+    Time:120.0,  
+    Category:LTS-Base,
+  }
+  
+  recipe LTS Empty Gas Can {
+    destroy PetrolCan,
+    Result:EmptyPetrolCan,
+    CanBeDoneFromFloor:true,
+    Time:120.0,  
+    Category:LTS-Base,
+  } 
+
+  recipe LTS Empty Glass Jar {
+    destroy Vinegar/Honey/Coffee2/PeanutButter,
+    Result:EmptyJar,
+    CanBeDoneFromFloor:true,
+    Time:120.0,  
+    Category:LTS-Base,
+  }  
+  
+  
+  
+  
+
+  
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Mending Components **/
+
+  recipe LTS Craft Sharpening Stone {
+    keep Stone,
+    RippedSheets,
+    SharpedStone,
+    Water=2,
+    Result:LTSSharpeningStone,
+    Time:240.0,
+    Category:LTS-Base,
+  }
+
+  recipe LTS Craft Replacement Tool Handle {
+    keep HuntingKnife/KitchenKnife,
+    Plank/TreeBranch,
+    RippedSheets,
+    Woodglue=1,
+    Result:LTSReplacementHandle,
+    Time:240.0,
+    Category:LTS-Base,
+  }
+
+  /** ------------------------------------------------------------------------- **/
+  /** Create Processing Tools **/
+
+  recipe LTS Build Drying Rack {
+    keep Saw,
+    keep Hammer,
+    Plank=4,
+    Nails=8,
+    Sheet,
+    Twine=10,
+    Sound:Hammering,
+    Result:LTSDryingRackEmpty,
+    Time:150.0,
+    Category:LTS-Base,
+    OnGiveXP:CraftXP_WoodworkBase,
+  }
+  
+  recipe LTS Build Wood Burner {
+    keep Hammer,
+    keep Saw,
+    BlowTorch=5,
+    keep WeldingMask,
+    Pot=2,
+    SheetMetal=2,
+    Wire=4,
+    ScrapMetal=10,
+    LTSPropaneTankEmpty,
+    Result:LTSWoodBurner,
+    Time:560.0,
+    OnGiveXP:CraftXP_Burner,
+    Sound:PZ_Fire,
+    CanBeDoneFromFloor:true,
+    Category:LTS-Base,
+  }
+  
+  recipe LTS Build Scrapping Saw {
+    BlowTorch=5,
+    keep WeldingMask,
+    Saw,
+    ScrapMetal=3,
+    LTSSharpeningStone=3,
+    Water=3,
+    Result:LTSScrappingSaw,
+    Time:480.0,
+    Category:LTS-Base,
+    Sound:PZ_Fire,
+    OnGiveXP:CraftXP_Smithing,
+  }
+
+  /** ------------------------------------------------------------------------- **/
+  /** Water Can from Gas Can **/
+
+  recipe LTS Claim Gas Can for Water {
+    EmptyPetrolCan,
+    Bleach,
+    Water=10,
+    Result:LTSWaterCanEmpty,
+    Time:420.0,
+    Category:LTS-Base,
+  }
+  
+  recipe LTS Claim Water Can for Gas {
+    LTSWaterCanEmpty,
+    Result:EmptyPetrolCan,
+    Time:30.0,
+    Category:LTS-Base,
+  }
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Corpse Disposal **/  
+  
+  recipe LTS Butcher Corpse {
+    keep Machete/MeatCleaver/HandAxe/Axe/WoodAxe,
+    CorpseMale/CorpseFemale,
+    Result:LTSCorpseFlesh=3,
+    Time:240.0,
+    Category:LTS-Base,
+  }
+  
+}
+  

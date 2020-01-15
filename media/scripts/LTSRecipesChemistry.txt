@@ -1,0 +1,151 @@
+module DLTS {
+
+  imports {
+    Base
+  } 
+
+
+
+
+  /** ------------------------------------------------------------------------- **/
+  /** Distillation **/
+
+  recipe LTS Process Wood to Wood Gas {
+    keep LTSWoodBurner,
+    Matches/Lighter,
+    LTSBriquette=2,
+    LTSPropaneTankEmpty,
+    Result:PropaneTank,
+    Time:560.0,
+    Sound:PZ_Fire,
+    CanBeDoneFromFloor:true,
+    Category:LTS-Chem,
+  }
+
+  recipe LTS Process Cones to Pine Tar {
+    keep LTSWoodBurner,
+    Matches/Lighter,
+    LTSBriquette=2,
+    LTSPineCone=25,
+    Result:LTSPineTar,
+    Time:560.0,
+    Sound:PZ_Fire,
+    CanBeDoneFromFloor:true,
+    Category:LTS-Chem,
+  }
+
+  recipe LTS Process Wood to Charcoal {
+    keep LTSWoodBurner,
+    Matches/Lighter,
+    LTSBriquette=2,
+    Log=3,
+    Result:Charcoal,
+    Time:560.0,
+    Sound:PZ_Fire,
+    CanBeDoneFromFloor:true,
+    Category:LTS-Chem,
+  }
+
+  /** ------------------------------------------------------------------------- **/
+  /** Briquettes **/
+
+  recipe LTS Craft Briquettes {
+    keep MortarPestle,
+    keep Hammer,
+    LTSCharcoalPowder,
+    Woodglue=1,
+    LTSWoodBits=2,
+    PetrolCan=1,
+    Result:LTSBriquette=2,
+    Time:240.0, 
+    Category:LTS-Chem,
+  }
+
+  recipe LTS Craft Briquettes {
+    keep MortarPestle,
+    keep Hammer,
+    LTSCharcoalPowder,
+    Woodglue=1,
+    LTSWoodBits=2,
+    LTSLighterFluid=2,
+    Result:LTSBriquette=2,
+    Time:240.0, 
+    Category:LTS-Chem,
+  }
+
+  /** ------------------------------------------------------------------------- **/
+  /** Lighter Fluid **/
+  
+  recipe LTS Mix Lighter Fluid {
+    keep Pot/Saucepan,
+    LTSLighterFluidEmpty,
+    LTSCharcoalPowder,
+    LTSPineTar=1,
+    PetrolCan=1,
+    Result:LTSLighterFluid,
+    Time:240.0,  
+    CanBeDoneFromFloor:true,
+    Category:LTS-Chem,    
+  }
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Potassium Salt **/
+
+  recipe LTS Mix Potassium Salt Solution {
+    EmptyJar,
+    LTSWoodAsh,
+    Result:LTSSaltWet,
+    Time:240.0,  
+    CanBeDoneFromFloor:true,
+    Category:LTS-Chem,    
+  }
+
+  /** ------------------------------------------------------------------------- **/
+  /** Glue Mixture **/
+
+  recipe LTS Mix Glue {
+    EmptyJar,
+    LTSLimestone,
+    Vinegar=1,
+    LTSPineTar=2,
+    Water=1,
+    Result:LTSGlueMixture,
+    Time:240.0,  
+    CanBeDoneFromFloor:true,
+    Category:LTS-Chem,   
+  }
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Base Materials **/
+
+  recipe LTS Prepare Wood Bits {
+    keep Saw,
+    Plank/TreeBranch/UnusableWood,
+    Result:LTSWoodBits,
+    Time:120.0, 
+    Sound:Sawing,
+    OnGiveXP:CraftXP_WoodworkBase,
+    Category:LTS-Chem,
+  }
+
+  recipe LTS Prepare Clean Wood Ash {
+    keep Pot/Saucepan,
+    keep MortarPestle,
+    LTSWoodBits=2,
+    WoodenStick=4,
+    Matches/Lighter,
+    Result:LTSWoodAsh,
+    Time:560.0, 
+    Sound:PZ_Fire,
+    Category:LTS-Chem,
+  }
+
+  recipe LTS Prepare Charcoal Powder {
+    keep MortarPestle,
+    Charcoal,
+    Result:LTSCharcoalPowder,
+    Time:120.0, 
+    Category:LTS-Chem,
+  }
+
+}

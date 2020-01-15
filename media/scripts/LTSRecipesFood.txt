@@ -1,0 +1,300 @@
+module DLTS {
+
+  imports {
+    Base, farming
+  } 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Dried Items **/  
+  
+  recipe LTS Arrange Meat to Dry {
+    LTSDryingRackEmpty,
+    LTSBitsMeat=12,
+    Salt;4,
+    Result:LTSDryingMeatWet,
+    Time:50,
+    Category:LTS-Food,
+  }
+  
+  recipe LTS Extract Dried Items {
+    LTSDryingMeat,
+    Result:LTSDriedMeat=3,
+    Time:50,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+    OnCreate:giveDryingRack,
+  }
+  
+  recipe LTS Arrange Herbs to Dry {
+    LTSDryingRackEmpty,
+    LTSBitsHerbs=12,
+    Result:LTSDryingHerbsWet,
+    Time:50,
+    Category:LTS-Food,
+  }
+  
+  recipe LTS Extract Dried Items {
+    LTSDryingHerbs,
+    Result:LTSDriedHerbs=3,
+    Time:50,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+    OnCreate:giveDryingRack,
+  }
+  
+  recipe LTS Arrange Vegetable to Dry {
+    LTSDryingRackEmpty,
+    LTSBitsVegetable=12,
+    Salt;2,
+    Result:LTSDryingVegetableWet,
+    Time:50,
+    Category:LTS-Food,
+  }
+  
+  recipe LTS Extract Dried Items {
+    LTSDryingVegetable,
+    Result:LTSDriedVegetable=3,
+    Time:50,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+    OnCreate:giveDryingRack,
+  }
+  
+  recipe LTS Arrange Fruit to Dry {
+    LTSDryingRackEmpty,
+    LTSBitsFruit=12,
+    Result:LTSDryingFruitWet,
+    Time:50,
+    Category:LTS-Food,
+  }
+  
+  recipe LTS Extract Dried Items {
+    LTSDryingFruit,
+    Result:LTSDriedFruit=3,
+    Time:50,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+    OnCreate:giveDryingRack,
+  }
+  
+  recipe LTS Arrange Mushroom to Dry {
+    LTSDryingRackEmpty,
+    LTSBitsMushroom=12,
+    Result:LTSDryingMushroomWet,
+    Time:50,
+    Category:LTS-Food,
+  }
+  
+  recipe LTS Extract Dried Items {
+    LTSDryingMushroom,
+    Result:LTSDriedMushroom=3,
+    Time:50,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+    OnCreate:giveDryingRack,
+  }
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Preparing Bits from Food Items **/
+  
+  recipe LTS Cut Bits of Meat {
+    keep HuntingKnife/KitchenKnife,
+    MuttonChop/PorkChop/Steak/Rabbitmeat/Salmon/FishFillet,
+    Result:LTSBitsMeat=7,
+    Sound:PZ_FoodSlicing,
+    Time:40.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }
+  
+  recipe LTS Cut Bits of Meat {
+    keep HuntingKnife/KitchenKnife,
+    Smallanimalmeat/Smallbirdmeat,
+    Result:LTSBitsMeat=3,
+    Sound:PZ_FoodSlicing,
+    Time:40.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }
+
+  recipe LTS Cut Bits of Herbs {
+    keep HuntingKnife/KitchenKnife,
+    Violets/GrapeLeaves/BlackSage/CommonMallow/Ginseng/LemonGrass/WildGarlic/LTSDandelion/LTSCamomille,
+    Result:LTSBitsHerbs=1,
+    Sound:PZ_FoodSlicing,
+    Time:40.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }
+  
+  recipe LTS Cut Bits of Vegetable {
+    keep HuntingKnife/KitchenKnife,
+    Cabbage/Eggplant,
+    Result:LTSBitsVegetable=9,
+    Sound:PZ_FoodSlicing,
+    Time:40.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }  
+
+  recipe LTS Cut Bits of Vegetable {
+    keep HuntingKnife/KitchenKnife,
+    Leek/Potato/Avocado/BellPepper/Broccoli/Zucchini,
+    Result:LTSBitsVegetable=5,
+    Sound:PZ_FoodSlicing,
+    Time:40.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }  
+
+  recipe LTS Cut Bits of Vegetable {
+    keep HuntingKnife/KitchenKnife,
+    Carrots/Onion/RedRadish/Tomato/LTSWildOnion,
+    Result:LTSBitsVegetable=3,
+    Sound:PZ_FoodSlicing,
+    Time:40.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }  
+
+  recipe LTS Cut Bits of Fruit {
+    keep HuntingKnife/KitchenKnife,
+    Cherry/Rosehips/Strewberrie/BerryBlack/BerryBlue/BerryGeneric1/BerryGeneric2/BerryGeneric3/BerryGeneric4/BerryGeneric5/BerryPoisonIvy,
+    Result:LTSBitsFruit=1,
+    Sound:PZ_FoodSlicing,
+    Time:40.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }  
+
+  recipe LTS Cut Bits of Fruit {
+    keep HuntingKnife/KitchenKnife,
+    Pineapple/Apple/Banana/Grapes/Lemon/Orange/Peach/WatermelonSliced,
+    Result:LTSBitsFruit=4,
+    Sound:PZ_FoodSlicing,
+    Time:40.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }  
+  
+  recipe LTS Cut Bits of Mushroom {
+    keep HuntingKnife/KitchenKnife,
+    MushroomGeneric1/MushroomGeneric2/MushroomGeneric3/MushroomGeneric4/MushroomGeneric5/MushroomGeneric6/MushroomGeneric7,
+    Result:LTSBitsMushroom=3,
+    Sound:PZ_FoodSlicing,
+    Time:40.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  } 
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Seasonings **/ 
+  
+  recipe LTS Create Seasoning {
+    keep HuntingKnife/KitchenKnife,
+    LTSDriedHerbs=2,
+    Sound:PZ_FoodSlicing,
+    Result:LTSSeasoningHerbs,
+    Time:90.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  } 
+  
+  recipe LTS Create Seasoning {
+    keep HuntingKnife/KitchenKnife,
+    LTSDriedFruit=2,
+    Sound:PZ_FoodSlicing,
+    Result:LTSSeasoningFruit,
+    Time:90.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }   
+  
+  recipe LTS Create Seasoning {
+    keep HuntingKnife/KitchenKnife,
+    LTSDriedMushroom=2,
+    Sound:PZ_FoodSlicing,
+    Result:LTSSeasoningMushroom,
+    Time:90.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  } 
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Foraged HoneyComb Extraction **/  
+  
+  recipe LTS Extract Wild Honey {
+    EmptyJar,
+    LTSHoneyComb=10,
+    Water=1,
+    Result:Honey,
+    Category:LTS-Food,
+    Time:240.0,
+  }
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Foraged Nuts Processing **/  
+
+  recipe LTS Smash Nuts into Butter {
+    keep MortarPestle,
+    keep HuntingKnife/KitchenKnife,
+    LTSWildNuts=20,
+    Result:Butter,
+    Time:480.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }
+  
+  recipe LTS Smash Nuts into Flour {
+    keep MortarPestle,
+    keep HuntingKnife/KitchenKnife,
+    LTSWildNuts=35,
+    Result:Flour,
+    Time:480.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Hot Cuppa Ingredients **/  
+  
+  recipe LTS Prepare Tea Serving {
+    keep HuntingKnife/KitchenKnife,
+    LTSDriedFruit,
+    Sound:PZ_FoodSlicing,
+    Result:LTSTeaServingFruit,
+    Time:90.0,
+    Category:LTS-Food,
+  }  
+  
+  recipe LTS Prepare Tea Serving {
+    keep HuntingKnife/KitchenKnife,
+    LTSDriedHerbs,
+    Sound:PZ_FoodSlicing,
+    Result:LTSTeaServingHerbs,
+    Time:90.0,
+    Category:LTS-Food,
+  }  
+  
+  recipe LTS Prepare Tea Serving {
+    keep HuntingKnife/KitchenKnife,
+    LTSBirchBark,
+    Sound:PZ_FoodSlicing,
+    Result:LTSTeaServingBirch,
+    Time:90.0,
+    Category:LTS-Food,
+  }  
+  
+}
+  

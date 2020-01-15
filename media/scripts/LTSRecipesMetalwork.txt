@@ -11,7 +11,7 @@ module DLTS {
     ScrapMetal=10,
     Result:SheetMetal,
     Time:480.0,
-    Category:LTS-Metal,
+    Category:Welding,
     Sound:PZ_Fire,
     OnGiveXP:CraftXP_Smithing,
   }
@@ -23,7 +23,7 @@ module DLTS {
     ScrapMetal=3,
     Result:SmallSheetMetal,
     Time:480.0,
-    Category:LTS-Metal,
+    Category:Welding,
     Sound:PZ_Fire,
     OnGiveXP:CraftXP_Smithing,
   }
@@ -35,7 +35,7 @@ module DLTS {
     ScrapMetal=3,
     Result:MetalBar,
     Time:480.0,
-    Category:LTS-Metal,
+    Category:Welding,
     Sound:PZ_Fire,
     OnGiveXP:CraftXP_Smithing,
   }
@@ -47,7 +47,7 @@ module DLTS {
     ScrapMetal=3,
     Result:MetalPipe,
     Time:480.0,
-    Category:LTS-Metal,
+    Category:Welding,
     Sound:PZ_Fire,
     OnGiveXP:CraftXP_Smithing,
   }
@@ -59,7 +59,7 @@ module DLTS {
     ScrapMetal=4,
     Result:NailsBox,
     Time:480.0,
-    Category:LTS-Metal,
+    Category:Welding,
     Sound:PZ_Fire,
     OnGiveXP:CraftXP_Smithing,
   }
@@ -71,7 +71,7 @@ module DLTS {
     ScrapMetal=3,
     Result:Wire,
     Time:480.0,
-    Category:LTS-Metal,
+    Category:Welding,
     Sound:PZ_Fire,
     OnGiveXP:CraftXP_Smithing,
   }
@@ -84,32 +84,7 @@ module DLTS {
     ScrapMetal=3,
     Result:BarbedWire,
     Time:480.0,
-    Category:LTS-Metal,
-    Sound:PZ_Fire,
-    OnGiveXP:CraftXP_Smithing,
-  }
-  
-  /** ------------------------------------------------------------------------- **/
-  /** Smithing: Scrapping Saw (used in all scrap recipes) **/
-
-  item LTSScrappingSaw {
-    Type=Normal,
-    Weight=0.8,
-    DisplayName=Metal Scrapping Saw,
-    Icon=HackSaw2,
-    StaticModel=Hacksaw,
-  }
-
-  recipe LTS Make Scrapping Saw {
-    BlowTorch=5,
-    keep WeldingMask,
-    Saw,
-    ScrapMetal=3,
-    LTSSharpeningStone=3,
-    Water=3,
-    Result:LTSScrappingSaw,
-    Time:480.0,
-    Category:LTS-Metal,
+    Category:Welding,
     Sound:PZ_Fire,
     OnGiveXP:CraftXP_Smithing,
   }
@@ -127,7 +102,7 @@ module DLTS {
     Result:ScrapMetal,
     Time:120.0,
     OnGiveXP:CraftXP_Scrapping,
-    Category:LTS-Metal,
+    Category:Welding,
     Sound:Sawing,
   }
 
@@ -138,7 +113,7 @@ module DLTS {
     Result:ScrapMetal=2,
     Time:180.0,
     OnGiveXP:CraftXP_Scrapping,
-    Category:LTS-Metal,
+    Category:Welding,
     Sound:Sawing,
   }
 
@@ -149,7 +124,7 @@ module DLTS {
     Result:ScrapMetal=3,
     Time:240.0,
     OnGiveXP:CraftXP_Scrapping,
-    Category:LTS-Metal,
+    Category:Welding,
     Sound:Sawing,
   }
 
@@ -160,7 +135,7 @@ module DLTS {
     Result:ScrapMetal=5,
     Time:360.0,
     OnGiveXP:CraftXP_Scrapping,
-    Category:LTS-Metal,
+    Category:Welding,
     Sound:Sawing,
   }
   
@@ -171,7 +146,7 @@ module DLTS {
     Result:ScrapMetal=4,
     Time:300.0,
     OnGiveXP:CraftXP_Scrapping,
-    Category:LTS-Metal,
+    Category:Welding,
     Sound:Sawing,
   }
   

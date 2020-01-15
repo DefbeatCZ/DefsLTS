@@ -1,0 +1,349 @@
+module DLTS {
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Dried Items **/  
+  
+  item LTSDriedMeat {
+    Type=Food,
+    FoodType=Meat,
+    Weight=0.05,
+    DisplayName=Dried Meat,
+    Icon=DriedMeat,
+    HungerChange=-12,
+    EvolvedRecipe=Soup:12;Stew:12;Pie:12;Stir fry:12;Burger:12;Salad:12;Roasted Vegetables:12;RicePot:12;RicePan:12;PastaPot:12;PastaPan:12,
+    Carbohydrates=12.77,
+    Proteins=15.43,
+    Lipids=12.76,
+    Calories=127, 
+  }
+  
+  item LTSDriedHerbs {
+    Type=Food,
+    FoodType=Vegetables,
+    Weight=0.05,
+    DisplayName=Dried Herbs,
+    Icon=DriedHerbs,
+    HungerChange=-12,
+    EvolvedRecipe=Soup:12;Stew:12;Pie:12;Stir fry:12;Burger:12;Salad:12;Roasted Vegetables:12;RicePot:12;RicePan:12;PastaPot:12;PastaPan:12,
+    Carbohydrates=14.45,
+    Proteins=1.13,
+    Lipids=1.75,
+    Calories=72, 
+  }
+  
+  item LTSDriedVegetable {
+    Type=Food,
+    FoodType=Vegetables,
+    Weight=0.05,
+    DisplayName=Dried Vegetable,
+    Icon=DriedVegetable,
+    HungerChange=-12,
+    EvolvedRecipe=Soup:12;Stew:12;Pie:12;Stir fry:12;Burger:12;Salad:12;Roasted Vegetables:12;RicePot:12;RicePan:12;PastaPot:12;PastaPan:12,
+    Carbohydrates=21.97,
+    Proteins=0.99,
+    Lipids=0.26,
+    Calories=98, 
+  }
+  
+  item LTSDriedFruit {
+    Type=Food,
+    FoodType=Fruits,
+    Weight=0.05,
+    DisplayName=Dried Fruit,
+    Icon=DriedFruit,
+    HungerChange=-12,
+    EvolvedRecipe=Soup:12;Stew:12;Pie:12;Stir fry:12;Burger:12;Salad:12;Roasted Vegetables:12;RicePot:12;RicePan:12;PastaPot:12;PastaPan:12,
+    Carbohydrates=47.36,
+    Proteins=0.79,
+    Lipids=0.08,
+    Calories=115, 
+  }
+  
+  item LTSDriedMushroom {
+    Type=Food,
+    FoodType=Vegetables,
+    Weight=0.05,
+    DisplayName=Dried Mushroom,
+    Icon=DriedMushroom,
+    HungerChange=-12,
+    EvolvedRecipe=Soup:12;Stew:12;Pie:12;Stir fry:12;Burger:12;Salad:12;Roasted Vegetables:12;RicePot:12;RicePan:12;PastaPot:12;PastaPan:12,
+    Carbohydrates=21.95,
+    Proteins=2.15,
+    Lipids=2.33,
+    Calories=79, 
+  }
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Dried Items (Processing Stages) **/ 
+  
+  item LTSDryingMeatWet {
+    Type=Normal,
+    Weight=5.0,
+    DisplayName=Drying Rack With Meat [Drying],
+    Icon=DryingRackFill1,
+    Tooltip=Tooltip_LTS_DryingFull,
+    Wet=true,
+    WetCooldown=1034000,
+    ItemWhenDry=DLTS.LTSDryingMeat,
+  }
+  
+  item LTSDryingMeat {
+    Type=Normal,
+    Weight=5.0,
+    DisplayName=Drying Rack With Meat [Ready],
+    Icon=DryingRackFill2,
+    Tooltip=Tooltip_LTS_DryingReady,  
+  }  
+  
+  item LTSDryingHerbsWet {
+    Type=Normal,
+    Weight=5.0,
+    DisplayName=Drying Rack With Herbs [Drying],
+    Icon=DryingRackFill1,
+    Tooltip=Tooltip_LTS_DryingFull,
+    Wet=true,
+    WetCooldown=447000,
+    ItemWhenDry=DLTS.LTSDryingHerbs,
+  }
+  
+  item LTSDryingHerbs {
+    Type=Normal,
+    Weight=5.0,
+    DisplayName=Drying Rack With Herbs [Ready],
+    Icon=DryingRackFill2,
+    Tooltip=Tooltip_LTS_DryingReady,  
+  }
+  
+  item LTSDryingVegetableWet {
+    Type=Normal,
+    Weight=5.0,
+    DisplayName=Drying Rack With Vegetable [Drying],
+    Icon=DryingRackFill1,
+    Tooltip=Tooltip_LTS_DryingFull,
+    Wet=true,
+    WetCooldown=647000,
+    ItemWhenDry=DLTS.LTSDryingVegetable,
+  }
+  
+  item LTSDryingVegetable {
+    Type=Normal,
+    Weight=5.0,
+    DisplayName=Drying Rack With Vegetable [Ready],
+    Icon=DryingRackFill2,
+    Tooltip=Tooltip_LTS_DryingReady,  
+  }
+  
+  item LTSDryingFruitWet {
+    Type=Normal,
+    Weight=5.0,
+    DisplayName=Drying Rack With Fruit [Drying],
+    Icon=DryingRackFill1,
+    Tooltip=Tooltip_LTS_DryingFull,
+    Wet=true,
+    WetCooldown=516000,
+    ItemWhenDry=DLTS.LTSDryingFruit,
+  }
+  
+  item LTSDryingFruit {
+    Type=Normal,
+    Weight=5.0,
+    DisplayName=Drying Rack With Fruit [Ready],
+    Icon=DryingRackFill2,
+    Tooltip=Tooltip_LTS_DryingReady,  
+  }
+  
+  item LTSDryingMushroomWet {
+    Type=Normal,
+    Weight=5.0,
+    DisplayName=Drying Rack With Mushroom [Drying],
+    Icon=DryingRackFill1,
+    Tooltip=Tooltip_LTS_DryingFull,
+    Wet=true,
+    WetCooldown=483000,
+    ItemWhenDry=DLTS.LTSDryingMushroom,
+  }
+  
+  item LTSDryingMushroom {
+    Type=Normal,
+    Weight=5.0,
+    DisplayName=Drying Rack With Mushroom [Ready],
+    Icon=DryingRackFill2,
+    Tooltip=Tooltip_LTS_DryingReady,  
+  }
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Bits from Food Items **/
+  
+  item LTSBitsMeat {
+    Type=Food,
+    FoodType=Meat,
+    Weight=0.02,
+    DisplayName=Bits of Meat,
+    Icon=BitsMeat,
+    HungerChange=-4,
+    EvolvedRecipe=Soup:4;Stew:4;Pie:4;Stir fry:4;Burger:4;Salad:4;Roasted Vegetables:4;RicePot:4;RicePan:4;PastaPot:4;PastaPan:4,
+    Carbohydrates=1.22,
+    Proteins=2.58,
+    Lipids=1.76,
+    Calories=27, 
+    DaysFresh=1,
+    DaysTotallyRotten=2,
+    IsCookable=TRUE,
+    DangerousUncooked=TRUE,
+  }
+  
+  item LTSBitsHerbs {
+    Type=Food,
+    FoodType=Vegetables,
+    Weight=0.02,
+    DisplayName=Bits of Herbs,
+    Icon=BitsHerbs,
+    HungerChange=-4,
+    EvolvedRecipe=Soup:4;Stew:4;Pie:4;Stir fry:4;Burger:4;Salad:4;Roasted Vegetables:4;RicePot:4;RicePan:4;PastaPot:4;PastaPan:4,
+    Carbohydrates=4.33,
+    Proteins=0.04,
+    Lipids=0.11,
+    Calories=12,    
+    DaysFresh=5,
+    DaysTotallyRotten=15,
+  }  
+  
+  item LTSBitsVegetable {
+    Type=Food,
+    FoodType=Vegetables,
+    Weight=0.02,
+    DisplayName=Bits of Vegetable,
+    Icon=BitsVegetable,
+    HungerChange=-4,
+    EvolvedRecipe=Soup:4;Stew:4;Pie:4;Stir fry:4;Burger:4;Salad:4;Roasted Vegetables:4;RicePot:4;RicePan:4;PastaPot:4;PastaPan:4,
+    Carbohydrates=3.21,
+    Proteins=0.11,
+    Lipids=0.13,
+    Calories=17,    
+    DaysFresh=2,
+    DaysTotallyRotten=5,
+  }  
+  
+  item LTSBitsFruit {
+    Type=Food,
+    FoodType=Fruits,
+    Weight=0.02,
+    DisplayName=Bits of Fruit,
+    Icon=BitsFruit,
+    HungerChange=-4,
+    EvolvedRecipe=Soup:4;Stew:4;Pie:4;Stir fry:4;Burger:4;Salad:4;Roasted Vegetables:4;RicePot:4;RicePan:4;PastaPot:4;PastaPan:4,
+    Carbohydrates=7.45,
+    Proteins=0.04,
+    Lipids=0.01,
+    Calories=21,    
+    DaysFresh=3,
+    DaysTotallyRotten=8,
+  } 
+  
+  item LTSBitsMushroom {
+    Type=Food,
+    FoodType=Vegetables,
+    Weight=0.02,
+    DisplayName=Bits of Mushroom,
+    Icon=BitsMushroom,
+    HungerChange=-4,
+    EvolvedRecipe=Soup:4;Stew:4;Pie:4;Stir fry:4;Burger:4;Salad:4;Roasted Vegetables:4;RicePot:4;RicePan:4;PastaPot:4;PastaPan:4,
+    Carbohydrates=5.14,
+    Proteins=1.21,
+    Lipids=1.47,
+    Calories=23,    
+    DaysFresh=4,
+    DaysTotallyRotten=13,
+  } 
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Seasonings **/ 
+
+  item LTSSeasoningHerbs {
+    Type=Food,
+    Weight=0.2,
+    DisplayName=Mixture Seasoning (Herbs),
+    Icon=DriedSeasoning,
+    Spice=true,
+    HungerChange=-8,
+    UnhappyChange=5,
+    EvolvedRecipe=Soup:1;Stew:1;Pie:1;Stir fry:1;Burger:1;Salad:1;Roasted Vegetables:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1,
+  }
+
+  item LTSSeasoningFruit {
+    Type=Food,
+    Weight=0.2,
+    DisplayName=Mixture Seasoning (Fruits),
+    Icon=DriedSeasoning,
+    Spice=true,
+    HungerChange=-8,
+    UnhappyChange=5,
+    EvolvedRecipe=Soup:1;Stew:1;Pie:1;Stir fry:1;Burger:1;Salad:1;Roasted Vegetables:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1,
+  }
+  
+  item LTSSeasoningMushroom {
+    Type=Food,
+    Weight=0.2,
+    DisplayName=Mixture Seasoning (Mushroom),
+    Icon=DriedSeasoning,
+    Spice=true,
+    HungerChange=-8,
+    UnhappyChange=5,
+    EvolvedRecipe=Soup:1;Stew:1;Pie:1;Stir fry:1;Burger:1;Salad:1;Roasted Vegetables:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1,
+  }
+
+  /** ------------------------------------------------------------------------- **/
+  /** Tea Servings **/  
+  
+  item LTSTeaServingBirch {
+    Type=Food,
+    FoodType=Tea,
+    Weight=0.05,
+    HungerChange=-5,
+    DisplayName=Tea (Birch Bark),
+    Icon=TeaBirch,
+    EvolvedRecipe=HotDrink:5,
+    EvolvedRecipeName=Tea,
+  }
+
+  item LTSTeaServingFruit {
+    Type=Food,
+    FoodType=Tea,
+    Weight=0.05,
+    HungerChange=-5,
+    DisplayName=Tea (Fruit),
+    Icon=TeaFruit,
+    EvolvedRecipe=HotDrink:5,
+    EvolvedRecipeName=Tea,
+  }
+
+  item LTSTeaServingHerbs {
+    Type=Food,
+    FoodType=Tea,
+    Weight=0.05,
+    HungerChange=-5,
+    DisplayName=Tea (Herbs),
+    Icon=TeaHerbs,
+    EvolvedRecipe=HotDrink:5,
+    EvolvedRecipeName=Tea,
+  }
+  
+}
