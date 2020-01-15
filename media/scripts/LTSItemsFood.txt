@@ -10,13 +10,30 @@ module DLTS {
   
   
   
+  /** ------------------------------------------------------------------------- **/
+  /** Crystalizing Honey **/  
   
+  item LTSSugarWet {
+    Type=Normal,
+    Weight=1.4,
+    DisplayName=Honey Bowl [Crystalizing],
+    Wet=true,
+    WetCooldown=180000,
+    ItemWhenDry=DLTS.LTSSugarDry,
+    Icon=CrystalizedHoney,
+    Tooltip=Tooltip_LTS_SaltWet,
+  }
   
-  
-  
-  
-  
-  
+  item LTSSugarDry {
+    Type=Drainable,
+    UseDelta=0.5,
+    UseWhileEquipped=FALSE,
+    DisplayName=Honey Sugar,
+    Icon=CrystalizedHoney,
+    Weight=1.2,
+    cantBeConsolided=TRUE,
+    ReplaceOnDeplete=Bowl,
+  }
   
   /** ------------------------------------------------------------------------- **/
   /** Dried Items **/  
@@ -101,7 +118,7 @@ module DLTS {
     Icon=DryingRackFill1,
     Tooltip=Tooltip_LTS_DryingFull,
     Wet=true,
-    WetCooldown=1034000,
+    WetCooldown=1080000,
     ItemWhenDry=DLTS.LTSDryingMeat,
   }
   
@@ -120,7 +137,7 @@ module DLTS {
     Icon=DryingRackFill1,
     Tooltip=Tooltip_LTS_DryingFull,
     Wet=true,
-    WetCooldown=447000,
+    WetCooldown=360000,
     ItemWhenDry=DLTS.LTSDryingHerbs,
   }
   
@@ -139,7 +156,7 @@ module DLTS {
     Icon=DryingRackFill1,
     Tooltip=Tooltip_LTS_DryingFull,
     Wet=true,
-    WetCooldown=647000,
+    WetCooldown=540000,
     ItemWhenDry=DLTS.LTSDryingVegetable,
   }
   
@@ -158,7 +175,7 @@ module DLTS {
     Icon=DryingRackFill1,
     Tooltip=Tooltip_LTS_DryingFull,
     Wet=true,
-    WetCooldown=516000,
+    WetCooldown=540000,
     ItemWhenDry=DLTS.LTSDryingFruit,
   }
   
@@ -177,7 +194,7 @@ module DLTS {
     Icon=DryingRackFill1,
     Tooltip=Tooltip_LTS_DryingFull,
     Wet=true,
-    WetCooldown=483000,
+    WetCooldown=360000,
     ItemWhenDry=DLTS.LTSDryingMushroom,
   }
   

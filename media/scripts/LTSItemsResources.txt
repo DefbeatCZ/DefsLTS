@@ -65,7 +65,7 @@ module DLTS {
     Weight=1.4,
     DisplayName=Potassium Salt Solution [Drying],
     Wet=true,
-    WetCooldown=174000,
+    WetCooldown=180000,
     ItemWhenDry=DLTS.LTSSaltDry,
     Icon=SaltJarWet,
     Tooltip=Tooltip_LTS_SaltWet,

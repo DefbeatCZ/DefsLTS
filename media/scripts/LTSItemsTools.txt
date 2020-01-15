@@ -46,7 +46,7 @@ module DLTS {
   item LTSWoodBurner {
     Type=Normal,
     Weight=12.0,
-    DisplayName=Distillation Equipment [Empty],
+    DisplayName=Distillation Equipment,
     Icon=WoodBurner,
     Tooltip=Tooltip_LTS_BurnerEmpty,
   }

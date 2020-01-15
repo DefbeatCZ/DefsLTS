@@ -4,6 +4,24 @@ module DLTS {
     Base, farming
   } 
   
+  /** ------------------------------------------------------------------------- **/
+  /** Grabbing items **/  
+  
+  recipe LTS Grab Salt {
+    LTSSaltDry=1,
+    Result:Salt,
+    Time:50,
+    Category:LTS-Food,
+  }
+  
+  recipe LTS Grab Sugar {
+    LTSSugarDry=1,
+    Result:Sugar,
+    Time:50,
+    Category:LTS-Food,
+  }
+  
+  
   
   
   
@@ -234,11 +252,20 @@ module DLTS {
   /** ------------------------------------------------------------------------- **/
   /** Foraged HoneyComb Extraction **/  
   
-  recipe LTS Extract Wild Honey {
+  recipe LTS Extract Comb (Honey) {
     EmptyJar,
     LTSHoneyComb=10,
     Water=1,
     Result:Honey,
+    Category:LTS-Food,
+    Time:240.0,
+  }
+  
+  recipe LTS Extract Comb (Crystalized) {
+    Bowl,
+    LTSHoneyComb=10,
+    Water=1,
+    Result:LTSSuggarWet,
     Category:LTS-Food,
     Time:240.0,
   }

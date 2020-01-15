@@ -7,11 +7,11 @@ module DLTS {
   /** ------------------------------------------------------------------------- **/
   /** Bats: Crafting base game Baseball Bat **/
 
-  recipe LTS Make Baseball Bat {
+  recipe LTS Craft Baseball Bat {
     keep HuntingKnife/KitchenKnife,
     Plank,
     RippedSheets,
-    LTSPineTar=1,
+    Woodglue=1,
     Twine=3,
     Result:BaseballBat,
     Category:LTS-Base,
@@ -65,9 +65,9 @@ module DLTS {
  
   fixing Fix Baseball Bat {
     Require:LTSBatHardened,
-    Fixer:DuctTape=1; Woodwork=5,
+    Fixer:Woodglue=1; Woodwork=5,
     Fixer:Woodglue=2; Woodwork=2,
-    Fixer:DuctTape=4,
+    Fixer:DuctTape=2,
     Fixer:Scotchtape=4,
   }
  
@@ -139,9 +139,9 @@ module DLTS {
  
   fixing Fix Baseball Bat [Barbed] {
     Require:LTSBatBarbed,
-    Fixer:DuctTape=1; Woodwork=5,
+    Fixer:Woodglue=1; Woodwork=5,
     Fixer:Woodglue=2; Woodwork=2,
-    Fixer:DuctTape=4,
+    Fixer:DuctTape=2,
     Fixer:Scotchtape=4,
   }
  
@@ -210,9 +210,9 @@ module DLTS {
  
   fixing Fix Baseball Bat [Spiked] {
     Require:LTSBatSpiked,
-    Fixer:DuctTape=1; Woodwork=5,
+    Fixer:Woodglue=1; Woodwork=5,
     Fixer:Woodglue=2; Woodwork=2,
-    Fixer:DuctTape=4,
+    Fixer:DuctTape=2,
     Fixer:Scotchtape=4,
   }
  
