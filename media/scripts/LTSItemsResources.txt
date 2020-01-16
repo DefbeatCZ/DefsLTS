@@ -146,6 +146,16 @@ module DLTS {
     Icon=Limestone,
   }
   
+  item LTSQuicklime {
+    Type=Drainable,
+    UseDelta=0.2,
+    UseWhileEquipped=FALSE,
+    DisplayName=Quicklime,
+    Icon=QuickLime,
+    Weight=2.0,
+    cantBeConsolided=TRUE,
+  }  
+  
   item LTSBriquette {
     Type=Normal,
     Weight=0.5,

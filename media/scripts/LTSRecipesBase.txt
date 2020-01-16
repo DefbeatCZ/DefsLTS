@@ -51,8 +51,35 @@ module DLTS {
   
   
   
-
+  /** ------------------------------------------------------------------------- **/
+  /** Re-Filling Recipes **/
   
+  recipe LTS Refill Empty Lighter {
+    LTSLighterEmpty,
+    LTSLighterFluid=1,
+    Result:Lighter,
+    CanBeDoneFromFloor:true,
+    Time:120.0,  
+    Category:LTS-Base,
+  }
+  
+  recipe LTS Refill Empty Glue {
+    LTSGlueEmpty,
+    LTSGlueMixture=1,
+    Result:Woodglue,
+    CanBeDoneFromFloor:true,
+    Time:120.0,  
+    Category:LTS-Base,
+  }
+  
+  recipe LTS Refill Empty Disinfectant {
+    LTSDisinfectantEmpty,
+    LTSMoonshine=1,
+    Result:Disinfectant,
+    CanBeDoneFromFloor:true,
+    Time:120.0,  
+    Category:LTS-Base,
+  }
   
   /** ------------------------------------------------------------------------- **/
   /** Mending Components **/

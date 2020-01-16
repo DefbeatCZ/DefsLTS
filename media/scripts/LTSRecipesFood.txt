@@ -21,6 +21,12 @@ module DLTS {
     Category:LTS-Food,
   }
   
+  recipe LTS Grab Yeast {
+    LTSYeastDry=1,
+    Result:Yeast,
+    Time:50,
+    Category:LTS-Food,
+  }
   
   
   
@@ -31,7 +37,19 @@ module DLTS {
   
   
   
+  /** ------------------------------------------------------------------------- **/
+  /** Yeast **/  
   
+  recipe LTS Start Yeast Cultivation {
+    Flour=1,
+    Water=2,
+    Sugar=2,
+    Bowl,
+    Result:LTSYeastWet,
+    OnGiveXP:CraftXP_FoodBase,
+    Time:50,
+    Category:LTS-Food,
+  }
   
   /** ------------------------------------------------------------------------- **/
   /** Dried Items **/  
@@ -265,7 +283,7 @@ module DLTS {
     Bowl,
     LTSHoneyComb=10,
     Water=1,
-    Result:LTSSuggarWet,
+    Result:LTSSugarWet,
     Category:LTS-Food,
     Time:240.0,
   }

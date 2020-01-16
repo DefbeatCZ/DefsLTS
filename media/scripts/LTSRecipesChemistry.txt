@@ -102,8 +102,7 @@ module DLTS {
 
   recipe LTS Mix Glue {
     EmptyJar,
-    LTSLimestone,
-    Vinegar=1,
+    LTSQuicklime=1,
     LTSPineTar=2,
     Water=1,
     Result:LTSGlueMixture,
@@ -142,6 +141,18 @@ module DLTS {
     Charcoal,
     Result:LTSCharcoalPowder,
     Time:120.0, 
+    Category:LTS-Chem,
+  }
+  
+  recipe LTS Prepare Reduced Quicklime {
+    keep Pot/Saucepan,
+    keep MortarPestle,
+    keep Hammer,
+    LTSLimestone=2,
+    Water=3,
+    Vinegar=1,
+    Result:LTSQuicklime,
+    Time:360.0, 
     Category:LTS-Chem,
   }
 

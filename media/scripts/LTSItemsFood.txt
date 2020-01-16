@@ -4,11 +4,38 @@ module DLTS {
   
   
   
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+  /** ------------------------------------------------------------------------- **/
+  /** Yeast **/  
+
+  item LTSYeastWet {
+    Type=Normal,
+    Weight=1.4,
+    DisplayName=Yeast [Growing],
+    Wet=true,
+    WetCooldown=18000,
+    ItemWhenDry=DLTS.LTSYeastDry,
+    Icon=YeastBowl,
+    Tooltip=Tooltip_LTS_SaltWet,
+  }
+
+  item LTSYeastDry {
+    Type=Drainable,
+    UseDelta=0.5,
+    UseWhileEquipped=FALSE,
+    DisplayName=Yeast [Mature],
+    Icon=YeastBowl,
+    Weight=1.2,
+    cantBeConsolided=TRUE,
+    ReplaceOnDeplete=Bowl,
+  }
   
   /** ------------------------------------------------------------------------- **/
   /** Crystalizing Honey **/  
