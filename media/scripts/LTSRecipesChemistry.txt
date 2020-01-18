@@ -42,6 +42,20 @@ module DLTS {
     CanBeDoneFromFloor:true,
     Category:LTS-Chem,
   }
+  
+  recipe LTS Process Mature Juice to Moonshine {
+    keep LTSWoodBurner,
+    EmptyJar,
+    Matches/Lighter,
+    LTSBriquette=2,
+    LTSFermentingJuiceOld,
+    Result:LTSMoonshine,
+    Time:560.0,
+    Sound:PZ_Fire,
+    CanBeDoneFromFloor:true,
+    Category:LTS-Chem,
+    onCreate:givePot,
+  }  
 
   /** ------------------------------------------------------------------------- **/
   /** Briquettes **/
@@ -65,7 +79,7 @@ module DLTS {
     Woodglue=1,
     LTSWoodBits=2,
     LTSLighterFluid=2,
-    Result:LTSBriquette=2,
+    Result:LTSBriquette=3,
     Time:240.0, 
     Category:LTS-Chem,
   }

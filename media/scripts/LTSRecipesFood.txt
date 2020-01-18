@@ -28,17 +28,48 @@ module DLTS {
     Category:LTS-Food,
   }
   
+  /** ------------------------------------------------------------------------- **/
+  /** Fermenting **/ 
+
+  recipe LTS Mix Fermentable Fruit Juice {
+    LTSBitsFruit=8,
+    Water=10,
+    Sugar=3,
+    Yeast=1,
+    Pot,
+    Result:LTSFermentingJuiceYoung,
+    OnGiveXP:CraftXP_FoodBase,
+    Time:150,
+    Category:LTS-Food,
+  }
+
+  recipe LTS Get Finished Wine {
+    LTSFermentingWine,
+    EmptyJar,
+    Result:LTSFruitWine,
+    Time:50,
+    Category:LTS-Food,
+    OnCreate:givePot,
+  }
+
+  recipe LTS Get Finished Vinegar {
+    LTSFermentingVinegar,
+    EmptyJar,
+    Result:Vinegar,
+    Time:50,
+    Category:LTS-Food,
+    OnCreate:givePot,
+  }
   
-  
-  
-  
-  
-
-
-
-
-
-
+  recipe LTS Prepare Moonshine Drink {
+    LTSBitsHerbs=2,
+    EmptyJar,
+    Water=1,
+    LTSMoonshine=2,
+    Result:LTSMoonshineDrink,
+    Time:150,
+    Category:LTS-Food,
+  }  
 
   /** ------------------------------------------------------------------------- **/
   /** Pickling Vegetable **/  

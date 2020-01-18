@@ -4,9 +4,16 @@ module DLTS {
     Base
   } 
 
+  /** ------------------------------------------------------------------------- **/
+  /** Limestone Extraction **/
 
-
-
+  recipe LTS Find Limestone Chunks {
+    keep Hammer,
+    Stone=5,
+    Result:LTSLimestone,
+    Time:120.0,  
+    Category:LTS-Base,
+  }
 
   /** ------------------------------------------------------------------------- **/
   /** Tobacco **/
@@ -55,12 +62,20 @@ module DLTS {
   } 
 
   recipe LTS Empty Glass Jar {
-    destroy Vinegar/Honey/Coffee2/PeanutButter/LTSPickledVegetableWet/LTSPickledVegetable/LTSGlueMixture/LTSPineTar/LTSMoonshine/LTSSaltWet/LTSSaltDry,
+    destroy Vinegar/Honey/Coffee2/PeanutButter/LTSPickledVegetableWet/LTSPickledVegetable/LTSGlueMixture/LTSPineTar/LTSMoonshine/LTSSaltWet/LTSSaltDry/FruitWine/MoonshineDrink,
     Result:EmptyJar,
     CanBeDoneFromFloor:true,
     Time:120.0,  
     Category:LTS-Base,
   }  
+  
+  recipe LTS Empty Pot {
+    destroy LTSFermentingJuiceYoung/LTSFermentingJuiceOld/LTSFermentingWine/LTSFermentingVinegar,
+    Result:Pot,
+    CanBeDoneFromFloor:true,
+    Time:120.0,  
+    Category:LTS-Base,
+  }
   
   /** ------------------------------------------------------------------------- **/
   /** Re-Filling Recipes **/

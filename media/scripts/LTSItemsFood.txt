@@ -1,17 +1,81 @@
 module DLTS {
 
+  /** ------------------------------------------------------------------------- **/
+  /** Fermenting **/  
+
+  item LTSFermentingJuiceYoung {
+    Type=Normal,
+    Weight=3,
+    DisplayName=Fermenting Pot [Young Juice],
+    Wet=true,
+    WetCooldown=480000,
+    ItemWhenDry=DLTS.LTSFermentingJuiceOld,
+    Icon=FermentingYoung,
+  } 
+
+  item LTSFermentingJuiceOld {
+    Type=Normal,
+    Weight=3,
+    DisplayName=Fermenting Pot [Mature Juice],
+    Wet=true,
+    WetCooldown=480000,
+    ItemWhenDry=DLTS.LTSFermentingWine,
+    Icon=FermentingOld,
+  }
   
+  item LTSFermentingWine {
+    Type=Normal,
+    Weight=3,
+    DisplayName=Fermenting Pot [Wine],
+    Wet=true,
+    WetCooldown=480000,
+    ItemWhenDry=DLTS.LTSFermentingVinegar,
+    Icon=FermentingWine,
+  }
   
+  item LTSFermentingVinegar {
+    Type=Normal,
+    Weight=3,
+    DisplayName=Fermenting Pot [Vinegar],
+    Icon=FermentingVinegar,
+  }
+
+  item LTSFruitWine {
+    HungerChange=-20,
+    Weight=0.8,
+    Type=Food,
+    ThirstChange=-20,
+    UnhappyChange=-20,
+    DisplayName=Fruit Wine,
+    Alcoholic=TRUE,
+    ReplaceOnUse=EmptyJar,
+    Icon=FruitWine,
+    CustomContextMenu=Drink,
+    CustomEatSound=DrinkingFromBottle,
+    Carbohydrates=123,
+    Proteins=0,
+    Lipids=0,
+    Calories=670,
+  }
   
-  
-
-
-
-
-
-
-
-
+  item LTSMoonshineDrink {
+    HungerChange=-20,
+    Weight=0.8,
+    Type=Food,
+    ThirstChange=-20,
+    DisplayName=Moonshine Drink,
+    Alcoholic=TRUE,
+    UnhappyChange=-10,
+    ReplaceOnUse=EmptyJar,
+    Icon=MoonshineDrink,
+    CustomContextMenu=Drink,
+    CustomEatSound=DrinkingFromBottle,
+    AlcoholPower=2,
+    Carbohydrates=270,
+    Proteins=0,
+    Lipids=0,
+    Calories=1500,
+  }
 
   /** ------------------------------------------------------------------------- **/
   /** Pickling Vegetable **/  
