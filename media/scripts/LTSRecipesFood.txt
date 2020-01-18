@@ -33,9 +33,26 @@ module DLTS {
   
   
   
-  
-  
-  
+
+
+
+
+
+
+
+  /** ------------------------------------------------------------------------- **/
+  /** Pickling Vegetable **/  
+
+  recipe LTS Prepare Vegetable to Pickle {
+    LTSBitsVegetable=8,
+    Water=2,
+    Salt;1,
+    EmptyJar,
+    Result:LTSPickledVegetableWet,
+    OnGiveXP:CraftXP_FoodBase,
+    Time:50,
+    Category:LTS-Food,
+  }
   
   /** ------------------------------------------------------------------------- **/
   /** Yeast **/  

@@ -8,10 +8,24 @@ module DLTS {
 
 
 
+  /** ------------------------------------------------------------------------- **/
+  /** Tobacco **/
 
+  recipe LTS Prepare Tobacco Leaves {
+    keep HuntingKnife/KitchenKnife,
+    LTSTobacco,
+    Result:LTSTobaccoLeavesWet=5,
+    Time:120.0,  
+    Category:LTS-Base,
+  }
 
-
-
+  recipe LTS Roll Homemade Cigarettes {
+    keep HuntingKnife/KitchenKnife,
+    LTSTobaccoLeaves,
+    Result:Cigarettes,
+    Time:120.0,  
+    Category:LTS-Base,
+  }
 
   /** ------------------------------------------------------------------------- **/
   /** Emptying Containers for Re-Use **/
@@ -41,15 +55,12 @@ module DLTS {
   } 
 
   recipe LTS Empty Glass Jar {
-    destroy Vinegar/Honey/Coffee2/PeanutButter,
+    destroy Vinegar/Honey/Coffee2/PeanutButter/LTSPickledVegetableWet/LTSPickledVegetable/LTSGlueMixture/LTSPineTar/LTSMoonshine/LTSSaltWet/LTSSaltDry,
     Result:EmptyJar,
     CanBeDoneFromFloor:true,
     Time:120.0,  
     Category:LTS-Base,
   }  
-  
-  
-  
   
   /** ------------------------------------------------------------------------- **/
   /** Re-Filling Recipes **/
@@ -80,6 +91,19 @@ module DLTS {
     Time:120.0,  
     Category:LTS-Base,
   }
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Plaster Bucket **/  
+  
+  recipe LTS Mix Plaster {
+    destroy BucketEmpty,
+    Water=5,
+    Sandbag=1,
+    LTSQuicklime=1,
+    Result:BucketPlasterFull,
+    Time:240.0,
+    Category:Carpentry,
+  }  
   
   /** ------------------------------------------------------------------------- **/
   /** Mending Components **/

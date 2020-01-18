@@ -12,6 +12,37 @@ module DLTS {
 
 
 
+
+  /** ------------------------------------------------------------------------- **/
+  /** Pickling Vegetable **/  
+  
+  item LTSPickledVegetableWet {
+    Type=Normal,
+    Weight=1,
+    DisplayName=Pickled Vegetable [Processing],
+    Wet=true,
+    WetCooldown=360000,
+    ItemWhenDry=DLTS.LTSPickledVegetable,
+    Icon=PickledVegetables,
+  }
+  
+  item LTSPickledVegetable {
+    Type=Food,
+    FoodType=Vegetables,
+    Weight=1,
+    DisplayName=Pickled Vegetable,
+    Icon=PickledVegetables,
+    HungerChange=-48,
+    EvolvedRecipe=Soup:12;Stew:12;Pie:12;Stir fry:12;Burger:12;Salad:12;Roasted Vegetables:12;RicePot:12;RicePan:12;PastaPot:12;PastaPan:12,
+    Carbohydrates=75.33,
+    Proteins=11.15,
+    Lipids=4.26,
+    Calories=421, 
+    DaysFresh=90,
+    DaysTotallyRotten=120,
+    ReplaceOnUse=EmptyJar,
+  }
+
   /** ------------------------------------------------------------------------- **/
   /** Yeast **/  
 

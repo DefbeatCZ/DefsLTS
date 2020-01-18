@@ -58,6 +58,27 @@ module DLTS {
   } 
   
   /** ------------------------------------------------------------------------- **/
+  /** Tobacco **/    
+  
+  item LTSTobaccoLeavesWet {
+    Type=Food,
+    Weight=0.05,
+    DisplayName=Tobacco Leaves,
+    Icon=TobaccoDry,
+    IsCookable=TRUE,
+    MinutesToCook=240,
+    MinutesToBurn=360,    
+    ReplaceOnCooked=DLTS.LTSTobaccoLeaves,
+  }
+  
+  item LTSTobaccoLeaves {
+    Type=Normal,
+    Weight=0.05,
+    DisplayName=Tobacco Leaves,
+    Icon=TobaccoDry,
+  }
+  
+  /** ------------------------------------------------------------------------- **/
   /** Salt **/       
 
   item LTSSaltWet {
