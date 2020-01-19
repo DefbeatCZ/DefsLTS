@@ -1,9 +1,9 @@
-# DefsLTS
-Long Term Survival Mod for Project Zomboid 
+#Long Term Survival Mod for Project Zomboid 
+---
 
-This repo contains source for the mod. Steam uploads are made from GIT labels. Download and use from here only if you are fine with unstable versions!
+Welcome! This repository contains all data from Def's Long Term Survival mod released on Steam Workshop under https://steamcommunity.com/sharedfiles/filedetails/?id=1962914415
 
-The GIT Wiki should be up to date with all the changes in the repo.
+The GIT Wiki should be up to date with all the changes in the repository, Steam releases may be lagging a bit behind.
 
-Also enjoy the mod and the game!
+Enjoy the mod and the game!
 DefbeatCZ
