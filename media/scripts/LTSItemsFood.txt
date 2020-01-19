@@ -1,6 +1,66 @@
 module DLTS {
 
   /** ------------------------------------------------------------------------- **/
+  /** Honey Candy & Bar **/  
+  
+  item LTSHoneyCandyFruit {
+    Type=Food,
+    DisplayName=Honey Candy [Fruits],
+    Icon=HerbalCandy2,
+    Weight=0.05,
+    HungerChange=-10,
+    UnhappyChange=-10,
+    StressChange=-5,
+    Carbohydrates=24.78,
+    Proteins=0.57,
+    Lipids=0.13,
+    Calories=67,
+  }
+  
+  item LTSHoneyCandyHealing {
+    Type=Food,
+    DisplayName=Honey Candy [Healing],
+    Icon=HerbalCandy3,
+    Weight=0.05,
+    HungerChange=-4,
+    PainReduction=12,
+    ReduceInfectionPower=4,
+    FluReduction=5,
+    Carbohydrates=24.78,
+    Proteins=0.57,
+    Lipids=0.13,
+    Calories=67,
+  }
+  
+  item LTSHoneyCandyEnergy {
+    Type=Food,
+    DisplayName=Honey Candy [Power Up],
+    Icon=HerbalCandy1,
+    Weight=0.05,
+    HungerChange=-4,
+    FatigueChange=-5,
+    EnduranceChange=5,
+    Carbohydrates=24.78,
+    Proteins=0.57,
+    Lipids=0.13,
+    Calories=67,
+  }
+  
+  item LTSHoneyBar {
+    Type=Food,
+    DisplayName=Honey Bar with Nuts & Fruits,
+    Icon=HoneyBar,
+    Weight=0.1,
+    HungerChange=-25,
+    UnhappyChange=-15,
+    StressChange=-10,
+    Carbohydrates=115.64,
+    Proteins=27.14,
+    Lipids=32.59,
+    Calories=624,
+  }
+
+  /** ------------------------------------------------------------------------- **/
   /** Fermenting **/  
 
   item LTSFermentingJuiceYoung {

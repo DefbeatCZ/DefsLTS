@@ -5,6 +5,56 @@ module DLTS {
   } 
   
   /** ------------------------------------------------------------------------- **/
+  /** Honey Candy & Bar **/ 
+
+  recipe Make Honey Candy [Fruit] {
+    Honey;5,
+    Sugar=1,
+    LTSBitsHerbs=2,
+    LTSBitsFruit=5,
+    Result:LTSHoneyCandyFruit=6,
+    OnGiveXP:CraftXP_FoodBase,
+    Time:350,
+    Category:LTS-Food,
+  }
+  
+  recipe Make Honey Candy [Healing] {
+    Honey;5,
+    Sugar=1,
+    LTSBitsHerbs=2,
+    BlackSage=2,
+    CommonMallow=2,
+    WildGarlic=2,
+    Result:LTSHoneyCandyHealing=6,
+    OnGiveXP:CraftXP_FoodBase,
+    Time:350,
+    Category:LTS-Food,
+  }
+  
+  recipe Make Honey Candy [Power Up] {
+    Honey;5,
+    Sugar=2,
+    LTSBitsHerbs=5,
+    Rosehips=4,
+    Ginseng=5,
+    Result:LTSHoneyCandyEnergy=6,
+    OnGiveXP:CraftXP_FoodBase,
+    Time:350,
+    Category:LTS-Food,
+  }  
+  
+  recipe Make Honey Bar {
+    Honey;5,
+    Sugar=1,
+    LTSBitsFruit=4,
+    LTSWildNuts=2,
+    Result:LTSHoneyBar,
+    OnGiveXP:CraftXP_FoodBase,
+    Time:350,
+    Category:LTS-Food,
+  }  
+  
+  /** ------------------------------------------------------------------------- **/
   /** Grabbing items **/  
   
   recipe LTS Grab Salt {
