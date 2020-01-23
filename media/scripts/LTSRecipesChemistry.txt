@@ -101,7 +101,7 @@ module DLTS {
   }
   
   /** ------------------------------------------------------------------------- **/
-  /** Lighter Fluid **/
+  /** Cleaning Liquid **/
   
   recipe LTS Mix Potash Soap {
     keep Pot/Saucepan,
@@ -109,7 +109,8 @@ module DLTS {
     LTSPineTar=2,
     LTSQuicklime=2,
     Water=4,
-    Result:Soap2,
+    LTSChemEmpty,
+    Result:CleaningLiquid2,
     Time:240.0,  
     CanBeDoneFromFloor:true,
     Category:LTS-Chem,    

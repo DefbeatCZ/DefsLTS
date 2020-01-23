@@ -9,6 +9,7 @@ Adjust("Base.PropaneTank", "ReplaceOnDeplete", "DLTS.LTSPropaneTankEmpty");
 Adjust("Base.Glue", "ReplaceOnDeplete", "DLTS.LTSGlueEmpty");
 Adjust("Base.Woodglue", "ReplaceOnDeplete", "DLTS.LTSGlueEmpty");
 Adjust("Base.Disinfectant", "ReplaceOnDeplete", "DLTS.LTSDisinfectantEmpty");
+Adjust("Base.CleaningLiquid2", "ReplaceOnDeplete", "DLTS.LTSChemEmpty");
 
 -- Jars
 Adjust("Base.Vinegar", "ReplaceOnDeplete", "Base.EmptyJar");
