@@ -77,6 +77,14 @@ module DLTS {
     Category:LTS-Base,
   }
   
+  recipe LTS Empty Chemical Container {
+    destroy LTSLighterFluid/CleaningLiquid,
+    Result:LTSChemEmpty,
+    CanBeDoneFromFloor:true,
+    Time:120.0,  
+    Category:LTS-Base,
+  }
+  
   /** ------------------------------------------------------------------------- **/
   /** Re-Filling Recipes **/
   

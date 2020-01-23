@@ -9,6 +9,13 @@ module DLTS {
     Icon=UsedLiterature,
     Weight=0.2,
   }
+  
+  item LTSChemEmpty {
+    Type=Normal,
+    DisplayName=Empty Chemical Container,
+    Icon=ChemEmpty,
+    Weight=0.1,
+  }
 
   item LTSLighterEmpty {
     Type=Normal,
@@ -47,15 +54,8 @@ module DLTS {
     DisplayName=Lighter Fluid,
     Icon=LighterFluidCan,
     UseDelta=0.1,
-    ReplaceOnDeplete=LTSLighterFluidEmpty,
+    ReplaceOnDeplete=DLTS.LTSChemEmpty,
   }
-
-  item LTSLighterFluidEmpty {
-    Type=Normal,
-    Weight=0.1,
-    DisplayName=Lighter Fluid [Empty],
-    Icon=LighterFluidCan,
-  } 
   
   /** ------------------------------------------------------------------------- **/
   /** Tobacco **/    

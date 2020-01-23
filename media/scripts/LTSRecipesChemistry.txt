@@ -12,6 +12,7 @@ module DLTS {
     Matches/Lighter,
     LTSBriquette=2,
     LTSPropaneTankEmpty,
+    Log=3,
     Result:PropaneTank,
     Time:560.0,
     Sound:PZ_Fire,
@@ -89,15 +90,30 @@ module DLTS {
   
   recipe LTS Mix Lighter Fluid {
     keep Pot/Saucepan,
-    LTSLighterFluidEmpty,
     LTSCharcoalPowder,
     LTSPineTar=1,
     PetrolCan=1,
+    LTSChemEmpty,
     Result:LTSLighterFluid,
     Time:240.0,  
     CanBeDoneFromFloor:true,
     Category:LTS-Chem,    
   }
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Lighter Fluid **/
+  
+  recipe LTS Mix Potash Soap {
+    keep Pot/Saucepan,
+    LTSWoodAsh=3,
+    LTSPineTar=2,
+    LTSQuicklime=2,
+    Water=4,
+    Result:Soap2,
+    Time:240.0,  
+    CanBeDoneFromFloor:true,
+    Category:LTS-Chem,    
+  }  
   
   /** ------------------------------------------------------------------------- **/
   /** Potassium Salt **/
