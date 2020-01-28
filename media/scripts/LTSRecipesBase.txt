@@ -117,17 +117,37 @@ module DLTS {
   }
   
   /** ------------------------------------------------------------------------- **/
-  /** Plaster Bucket **/  
+  /** Plaster Bucket & Concrete **/  
   
   recipe LTS Mix Plaster {
     destroy BucketEmpty,
     Water=5,
-    Sandbag=1,
-    LTSQuicklime=1,
+    Sandbag=2,
+    LTSQuicklime=2,
     Result:BucketPlasterFull,
     Time:240.0,
     Category:Carpentry,
   }  
+  
+  recipe LTS Mix Concrete {
+    destroy BucketEmpty,
+    Water=4,
+    Sandbag=3,
+    Gravelbag=2,
+    LTSQuicklime=3,
+    Result:BucketConcreteFull,
+    Time:240.0,
+    Category:Carpentry,
+  }  
+
+  recipe LTS Crush Sand {
+    keep Sledgehammer/Sledgehammer2,
+    Gravelbag=3,
+    EmptySandbag,
+    Result:Sandbag,
+    Time:480.0,
+    Category:Carpentry,
+  }
   
   /** ------------------------------------------------------------------------- **/
   /** Mending Components **/
