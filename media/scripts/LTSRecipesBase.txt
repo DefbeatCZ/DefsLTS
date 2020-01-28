@@ -45,14 +45,6 @@ module DLTS {
     Category:LTS-Base,
   }
   
-  recipe LTS Empty Glue Bottle {
-    destroy Glue/Woodglue,
-    Result:LTSGlueEmpty,
-    CanBeDoneFromFloor:true,
-    Time:120.0,  
-    Category:LTS-Base,
-  }
-  
   recipe LTS Empty Gas Can {
     destroy PetrolCan,
     Result:EmptyPetrolCan,
@@ -78,7 +70,7 @@ module DLTS {
   }
   
   recipe LTS Empty Chemical Container {
-    destroy LTSLighterFluid/CleaningLiquid,
+    destroy LTSLighterFluid/CleaningLiquid/Glue/Woodglue/Disinfectant,
     Result:LTSChemEmpty,
     CanBeDoneFromFloor:true,
     Time:120.0,  
@@ -98,16 +90,25 @@ module DLTS {
   }
   
   recipe LTS Refill Empty Glue {
-    LTSGlueEmpty,
+    LTSChemEmpty,
     LTSGlueMixture=1,
-    Result:Woodglue,
+    Result:Glue,
     CanBeDoneFromFloor:true,
     Time:120.0,  
     Category:LTS-Base,
   }
   
+  recipe LTS Refill Empty Woodglue {
+    LTSChemEmpty,
+    LTSGlueMixture=1,
+    Result:Woodglue,
+    CanBeDoneFromFloor:true,
+    Time:120.0,  
+    Category:LTS-Base,
+  }  
+  
   recipe LTS Refill Empty Disinfectant {
-    LTSDisinfectantEmpty,
+    LTSChemEmpty,
     LTSMoonshine=1,
     Result:Disinfectant,
     CanBeDoneFromFloor:true,

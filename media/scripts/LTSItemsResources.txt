@@ -30,20 +30,6 @@ module DLTS {
     DisplayName=Propane Tank [Empty],
     Icon=PropaneTank,
   }
-
-  item LTSGlueEmpty {
-    Type=Normal,
-    Weight=0.1,
-    DisplayName=Glue Bottle [Empty],
-    Icon=EmptyGlue,
-  }
-  
-  item LTSDisinfectantEmpty {
-    Type=Normal,
-    Weight=0.1,
-    DisplayName=Bottle of Disinfectant [Empty],
-    Icon=Alcohol,
-  }
   
   /** ------------------------------------------------------------------------- **/
   /** Lighter Fluid **/  

@@ -6,9 +6,11 @@ end
 -- Empty Versions
 Adjust("Base.Lighter", "ReplaceOnDeplete", "DLTS.LTSLighterEmpty");
 Adjust("Base.PropaneTank", "ReplaceOnDeplete", "DLTS.LTSPropaneTankEmpty");
-Adjust("Base.Glue", "ReplaceOnDeplete", "DLTS.LTSGlueEmpty");
-Adjust("Base.Woodglue", "ReplaceOnDeplete", "DLTS.LTSGlueEmpty");
-Adjust("Base.Disinfectant", "ReplaceOnDeplete", "DLTS.LTSDisinfectantEmpty");
+
+-- Chemical Containers
+Adjust("Base.Glue", "ReplaceOnDeplete", "DLTS.LTSChemEmpty");
+Adjust("Base.Woodglue", "ReplaceOnDeplete", "DLTS.LTSChemEmpty");
+Adjust("Base.Disinfectant", "ReplaceOnDeplete", "DLTS.LTSChemEmpty");
 Adjust("Base.CleaningLiquid2", "ReplaceOnDeplete", "DLTS.LTSChemEmpty");
 
 -- Jars
