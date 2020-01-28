@@ -1,0 +1,90 @@
+module DLTS {
+
+  imports {
+    Base
+  }
+ 
+  recipe LTS Mold Tarp {
+    BlowTorch=2,
+    keep SheetMetal,
+    LTSScrapPlastic=12,
+    Sheet,
+    Result:Tarp,
+    Time:480.0,
+    Category:Welding,
+    Sound:PZ_Fire,
+    OnGiveXP:CraftXP_SmithingPlastic,
+  }
+
+  recipe LTS Mold Fishing Tackle {
+    BlowTorch=2,
+    keep SheetMetal,
+    LTSScrapPlastic=4,
+    Nails=3,
+    Result:FishingTackle,
+    Time:480.0,
+    Category:Welding,
+    Sound:PZ_Fire,
+    OnGiveXP:CraftXP_SmithingPlastic,
+  }
+  
+  recipe LTS Mold Garbage Bag {
+    BlowTorch=2,
+    keep SheetMetal,
+    LTSScrapPlastic=3,
+    Result:Garbagebag,
+    Time:480.0,
+    Category:Welding,
+    Sound:PZ_Fire,
+    OnGiveXP:CraftXP_SmithingPlastic,
+  }  
+
+  recipe LTS Mold Chemical Container {
+    BlowTorch=2,
+    keep SheetMetal,
+    LTSScrapPlastic=5,
+    Result:LTSChemEmpty,
+    Time:480.0,
+    Category:Welding,
+    Sound:PZ_Fire,
+    OnGiveXP:CraftXP_SmithingPlastic,
+  }  
+ 
+  recipe LTS Mold Storage Box {
+    BlowTorch=2,
+    keep SheetMetal,
+    LTSScrapPlastic=15,
+    Result:LTSBoxBlank,
+    Time:480.0,
+    Category:Welding,
+    Sound:PZ_Fire,
+    OnGiveXP:CraftXP_SmithingPlastic,
+  }  
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Smithing: Scrapping items (that make sense) into Metal Scrap **/
+  /** Plastic processing is under metalworking as it is basically the same **/
+  
+  /** Random Items (1 Scrap) **/
+  recipe LTS Scrap Plastic {
+    keep LTSScrappingSaw,
+    Garbagebag/Plasticbag/BluePen/Pen/RedPen/Paintbrush/ChessBlack/Disc/CreditCard/Cube/Dart/Dice/Toothbrush/Toothpaste/ChessWhite/Yoyo,
+    Result:LTSScrapPlastic,
+    Time:120.0,
+    OnGiveXP:CraftXP_Scrapping,
+    Category:Welding,
+    Sound:Sawing,
+  }
+
+  /** Random Items (2 Scrap) **/
+  recipe LTS Scrap Plastic {
+    keep LTSScrappingSaw,
+    DogChew/Bricktoys/CatToy/Doll/ToyCar/WaterBottleEmpty/PopBottleEmpty/LTSChemEmpty,
+    Result:LTSScrapPlastic=2,
+    Time:120.0,
+    OnGiveXP:CraftXP_Scrapping,
+    Category:Welding,
+    Sound:Sawing,
+  }
+  
+}

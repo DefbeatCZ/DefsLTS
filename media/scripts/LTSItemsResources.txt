@@ -170,6 +170,13 @@ module DLTS {
     Icon=Briquette,
   }  
   
+  item LTSScrapPlastic {
+    Type=Normal,
+    Weight=0.1,
+    DisplayName=Scrap Plastic,
+    Icon=ScrapPlastic,
+  }    
+  
   /** ------------------------------------------------------------------------- **/
   /** Corpse Disposal: Butcher Corpses to Meat (Poison) **/
   

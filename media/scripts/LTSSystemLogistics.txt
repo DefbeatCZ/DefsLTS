@@ -4,41 +4,120 @@ module DLTS {
     Base, camping, Radio
   }
   
+  /** ------------------------------------------------------------------------- **/
+  /** Logistics: Sorting Box **/
   
+  item LTSBoxBlank {
+    Type=Container,
+    DisplayName=Plastic Box,
+    Weight=0.5,
+    Capacity=20,
+    Icon=BoxBlank,
+  }
   
+  item LTSBoxRed {
+    Type=Container,
+    DisplayName=Plastic Box Red,
+    Weight=0.5,
+    Capacity=20,
+    Icon=BoxRed,
+  }
   
+  item LTSBoxBlue {
+    Type=Container,
+    DisplayName=Plastic Box Blue,
+    Weight=0.5,
+    Capacity=20,
+    Icon=BoxBlue,
+  }  
   
+  item LTSBoxGray {
+    Type=Container,
+    DisplayName=Plastic Box Gray,
+    Weight=0.5,
+    Capacity=20,
+    Icon=BoxGray,
+  }  
   
+  item LTSBoxGreen {
+    Type=Container,
+    DisplayName=Plastic Box Green,
+    Weight=0.5,
+    Capacity=20,
+    Icon=BoxGreen,
+  }
   
+  item LTSBoxPurple {
+    Type=Container,
+    DisplayName=Plastic Box Purple,
+    Weight=0.5,
+    Capacity=20,
+    Icon=BoxPurple,
+  }
   
+  item LTSBoxYellow {
+    Type=Container,
+    DisplayName=Plastic Box Yellow,
+    Weight=0.5,
+    Capacity=20,
+    Icon=BoxYellow,
+  }
   
+  recipe LTS Box Color: Erase {
+    keep Eraser,
+    LTSBoxRed/LTSBoxBlue/LTSBoxGray/LTSBoxGreen/LTSBoxPurple/LTSBoxYellow,
+    Result:LTSBoxBlank,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
   
+  recipe LTS Box Color: Red {
+    keep Crayons,
+    LTSBoxBlank,
+    Result:LTSBoxRed,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+
+  recipe LTS Box Color: Blue {
+    keep Crayons,
+    LTSBoxBlank,
+    Result:LTSBoxBlue,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }  
   
+  recipe LTS Box Color: Gray {
+    keep Crayons,
+    LTSBoxBlank,
+    Result:LTSBoxGray,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }  
   
+  recipe LTS Box Color: Green {
+    keep Crayons,
+    LTSBoxBlank,
+    Result:LTSBoxGreen,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }  
   
+  recipe LTS Box Color: Purple {
+    keep Crayons,
+    LTSBoxBlank,
+    Result:LTSBoxPurple,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }  
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  recipe LTS Box Color: Yellow {
+    keep Crayons,
+    LTSBoxBlank,
+    Result:LTSBoxYellow,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }  
   
   /** ------------------------------------------------------------------------- **/
   /** Packaging: LTS Foraged Items **/

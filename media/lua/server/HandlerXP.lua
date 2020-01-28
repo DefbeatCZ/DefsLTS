@@ -34,6 +34,10 @@ function CraftXP_Smithing(recipe, ingredients, result, player)
     player:getXp():AddXP(Perks.MetalWelding, 15);
 end
 
+function CraftXP_SmithingPlastic(recipe, ingredients, result, player)
+    player:getXp():AddXP(Perks.MetalWelding, 4);
+end
+
 function CraftXP_Scrapping(recipe, ingredients, result, player)
     player:getXp():AddXP(Perks.MetalWelding, 2);
 end
