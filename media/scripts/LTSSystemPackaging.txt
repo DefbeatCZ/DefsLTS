@@ -1,0 +1,617 @@
+module DLTS {
+
+  imports {
+    Base, camping, Radio
+  }
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Packaging: LTS Foraged Items **/
+  
+  item LTSStackOfHoneyComb {
+    Weight=0.2,
+    Type=Normal,
+    DisplayName=Honey Comb [20],
+    Icon=HoneyComb,
+  }
+  
+  recipe LTS Pack Honey Combs {
+    LTSHoneyComb=20,
+    Result:LTSStackOfHoneyComb,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unpack Honey Combs {
+    LTSStackOfHoneyComb,
+    Result:LTSHoneyComb=20,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }  
+  
+  item LTSStackOfWildNuts {
+    Weight=0.2,
+    Type=Normal,
+    DisplayName=Wild Nuts [20],
+    Icon=Nuts,
+  }
+  
+  recipe LTS Pack Wild Nuts {
+    LTSWildNuts=20,
+    Result:LTSStackOfWildNuts,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unpack Wild Nuts {
+    LTSStackOfWildNuts,
+    Result:LTSWildNuts=20,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }  
+  
+  item LTSStackOfBirchBark {
+    Weight=0.2,
+    Type=Normal,
+    DisplayName=Birch Bark [20],
+    Icon=BirchBark,
+  }
+  
+  recipe LTS Pack Birch Bark {
+    LTSBirchBark=20,
+    Result:LTSStackOfBirchBark,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unpack Birch Bark {
+    LTSStackOfBirchBark,
+    Result:LTSBirchBark=20,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }  
+  
+  item LTSStackOfPineCones {
+    Weight=0.2,
+    Type=Normal,
+    DisplayName=Pine Cone [20],
+    Icon=PineCone,
+  }
+  
+  recipe LTS Pack Pine Cones {
+    LTSPineCone=20,
+    Result:LTSStackOfPineCones,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unpack Pine Cones {
+    LTSStackOfPineCones,
+    Result:LTSPineCone=20,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }  
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Packaging: Foraged Plants **/
+  
+  item LTSStackOfGrapeLeaves {
+    Weight=0.2,
+    Type=Normal,
+    DisplayName=Grape Leaves [20],
+    Icon=GrapeLeaves,
+  }
+  
+  recipe LTS Pack Grape Leaves {
+    GrapeLeaves=20,
+    Result:LTSStackOfGrapeLeaves,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unpack Grape Leaves {
+    LTSStackOfGrapeLeaves,
+    Result:GrapeLeaves=20,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }  
+  
+  item LTSStackOfViolets {
+    Weight=0.2,
+    Type=Normal,
+    DisplayName=Violets [20],
+    Icon=Violets,
+  }
+  
+  recipe LTS Pack Violets {
+    Violets=20,
+    Result:LTSStackOfViolets,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unpack Violets {
+    LTSStackOfViolets,
+    Result:Violets=20,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }  
+  
+  item LTSStackOfRosehips {
+    Weight=0.2,
+    Type=Normal,
+    DisplayName=Rosehips [20],
+    Icon=Rosehips,
+  }
+  
+  recipe LTS Pack Rosehips {
+    Rosehips=20,
+    Result:LTSStackOfRosehips,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unpack Rosehips {
+    LTSStackOfRosehips,
+    Result:Rosehips=20,
+    Time:60.0,
+    Category:LTS-Logistics,
+  } 
+  
+  item LTSStackOfPlantain {
+    Weight=0.2,
+    Type=Normal,
+    DisplayName=Plantain [20],
+    Icon=PlantainPlantago,
+  }
+  
+  recipe LTS Pack Plantain {
+    Plantain=20,
+    Result:LTSStackOfPlantain,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unpack Plantain {
+    LTSStackOfPlantain,
+    Result:Plantain=20,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }  
+  
+  item LTSStackOfComfrey {
+    Weight=0.2,
+    Type=Normal,
+    DisplayName=Comfrey [20],
+    Icon=Comfrey,
+  }
+  
+  recipe LTS Pack Comfrey {
+    Comfrey=20,
+    Result:LTSStackOfComfrey,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unpack Comfrey {
+    LTSStackOfComfrey,
+    Result:Comfrey=20,
+    Time:60.0,
+    Category:LTS-Logistics,
+  } 
+  
+  item LTSStackOfWildGarlic {
+    Weight=0.2,
+    Type=Normal,
+    DisplayName=Wild Garlic [20],
+    Icon=WildGarlic,
+  }
+  
+  recipe LTS Pack Wild Garlic {
+    WildGarlic=20,
+    Result:LTSStackOfWildGarlic,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unpack Wild Garlic {
+    LTSStackOfWildGarlic,
+    Result:WildGarlic=20,
+    Time:60.0,
+    Category:LTS-Logistics,
+  } 
+  
+  item LTSStackOfCommonMallow {
+    Weight=0.2,
+    Type=Normal,
+    DisplayName=Common Mallow [20],
+    Icon=CommonMallow,
+  }
+  
+  recipe LTS Pack Common Mallow {
+    CommonMallow=20,
+    Result:LTSStackOfCommonMallow,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unpack Common Mallow {
+    LTSStackOfCommonMallow,
+    Result:CommonMallow=20,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }  
+  
+  item LTSStackOfLemonGrass {
+    Weight=0.2,
+    Type=Normal,
+    DisplayName=Lemon Grass [20],
+    Icon=LemonGrass,
+  }
+  
+  recipe LTS Pack Lemon Grass {
+    LemonGrass=20,
+    Result:LTSStackOfLemonGrass,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unpack Lemon Grass {
+    LTSStackOfLemonGrass,
+    Result:LemonGrass=20,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }  
+  
+  item LTSStackOfBlackSage {
+    Weight=0.2,
+    Type=Normal,
+    DisplayName=Black Sage [20],
+    Icon=BlackSage,
+  }
+  
+  recipe LTS Pack Black Sage {
+    BlackSage=20,
+    Result:LTSStackOfBlackSage,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unpack Black Sage {
+    LTSStackOfBlackSage,
+    Result:BlackSage=20,
+    Time:60.0,
+    Category:LTS-Logistics,
+  } 
+  
+  item LTSStackOfGinseng {
+    Weight=0.2,
+    Type=Normal,
+    DisplayName=Ginseng [20],
+    Icon=Ginseng,
+  }
+  
+  recipe LTS Pack Ginseng {
+    Ginseng=20,
+    Result:LTSStackOfGinseng,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unpack Ginseng {
+    LTSStackOfGinseng,
+    Result:Ginseng=20,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }   
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Packaging: Insects **/
+  
+  item LTSStackOfCockroaches {
+    Weight=0.2,
+    Type=Normal,
+    DisplayName=Cockroach [50],
+    Icon=Cockroach,
+  }
+  
+  recipe LTS Pack Cockroaches {
+    Cockroach=50,
+    Result:LTSStackOfCockroaches,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unpack Cockroaches {
+    LTSStackOfCockroaches,
+    Result:Cockroach=50,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }  
+  
+  item LTSStackOfCrickets {
+    Weight=0.2,
+    Type=Normal,
+    DisplayName=Cricket [50],
+    Icon=Cricket,
+  }
+  
+  recipe LTS Pack Crickets {
+    Cricket=50,
+    Result:LTSStackOfCrickets,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unpack Crickets {
+    LTSStackOfCrickets,
+    Result:Cricket=50,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }  
+  
+  item LTSStackOfGrasshoppers {
+    Weight=0.2,
+    Type=Normal,
+    DisplayName=Grasshopper [50],
+    Icon=Grasshopper,
+  }
+  
+  recipe LTS Pack Grasshoppers {
+    Grasshopper=50,
+    Result:LTSStackOfGrasshoppers,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unpack Grasshoppers {
+    LTSStackOfGrasshoppers,
+    Result:Grasshopper=50,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  item LTSStackOfWorms {
+    Weight=0.2,
+    Type=Normal,
+    DisplayName=Worm [50],
+    Icon=Worm,
+  }
+  
+  recipe LTS Pack Worms {
+    Worm=50,
+    Result:LTSStackOfWorms,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unpack Worms {
+    LTSStackOfWorms,
+    Result:Worm=50,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }  
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Packaging: Thread, Twines and Ropes **/
+  
+  item LTSStackOfThread {
+    Weight=0.3,
+    Type=Normal,
+    DisplayName=Thread [10],
+    Icon=Thread,
+  }
+  
+  recipe LTS Make Stack of Thread {
+    Thread=100,
+    Result:LTSStackOfThread,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unstack Thread {
+    LTSStackOfThread,
+    Result:Thread=10,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  item LTSStackOfTwine {
+    Weight=0.3,
+    Type=Normal,
+    DisplayName=Twine [10],
+    Icon=Twine,
+  }
+  
+  recipe LTS Make Stack of Twine {
+    Twine=50,
+    Result:LTSStackOfTwine,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unstack Twine {
+    LTSStackOfTwine,
+    Result:Twine=10,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }  
+  
+  item LTSStackOfRope {
+    Weight=1.5,
+    Type=Normal,
+    DisplayName=Rope [10],
+    Icon=Rope,
+  }
+  
+  recipe LTS Make Stack of Rope {
+    Rope=10,
+    Result:LTSStackOfRope,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unstack Rope {
+    LTSStackOfRope,
+    Result:Rope=10,
+    Time:60.0,
+    Category:LTS-Logistics,
+  } 
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Packaging: Electronic and Metal Scrap **/
+
+  item LTSStackOfEScrap {
+    Weight=1,
+    Type=Normal,
+    DisplayName=Electronics Scrap [20],
+    Icon=ElectronicsScrap,
+  }
+  
+  recipe LTS Make Stack of Electronics Scrap {
+    ElectronicsScrap=20,
+    Result:LTSStackOfEScrap,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unstack Electronics Scrap {
+    LTSStackOfEScrap,
+    Result:ElectronicsScrap=20,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  item LTSStackOfMScrap {
+    Weight=1,
+    Type=Normal,
+    DisplayName=Scrap Metal [20],
+    Icon=ScrapMetal,
+  }
+  
+  recipe LTS Make Stack of Metal Scrap {
+    ScrapMetal=20,
+    Result:LTSStackOfMScrap,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unstack Metal Scrap {
+    LTSStackOfMScrap,
+    Result:ScrapMetal=20,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Packaging: Branches and Twigs **/
+
+  item LTSStackOfTwigs {
+    Weight=1,
+    Type=Normal,
+    DisplayName=Twigs [20],
+    Icon=Twigs,
+  }
+  
+  recipe LTS Make Stack of Twigs {
+    Twigs=20,
+    Rope,
+    CanBeDoneFromFloor:true,
+    Result:LTSStackOfTwigs,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unstack Twigs {
+    LTSStackOfTwigs,
+    CanBeDoneFromFloor:true,
+    Result:Twigs=20,
+    Time:60.0,
+    OnCreate:giveRope1,
+    Category:LTS-Logistics,
+  }
+  
+  item LTSStackOfBranches {
+    Weight=5,
+    Type=Normal,
+    DisplayName=Tree Branch [20],
+    Icon=Branch,
+  }
+  
+  recipe LTS Make Stack of Branches {
+    TreeBranch=20,
+    Rope,
+    CanBeDoneFromFloor:true,
+    Result:LTSStackOfBranches,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unstack Branches {
+    LTSStackOfBranches,
+    CanBeDoneFromFloor:true,
+    Result:TreeBranch=20,
+    Time:60.0,
+    OnCreate:giveRope1,
+    Category:LTS-Logistics,
+  }  
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Packaging: Planks **/
+
+  item LTSStackOfPlanks1 {
+    Weight=9,
+    Type=Normal,
+    DisplayName=Planks [6],
+    Icon=Plank,
+  }
+  
+  item LTSStackOfPlanks2 {
+    Weight=18,
+    Type=Normal,
+    DisplayName=Planks [4x6],
+    Icon=Plank,
+  }
+  
+  recipe LTS Make Stack of Planks {
+    Plank=6,
+    Rope,
+    CanBeDoneFromFloor:true,
+    Result:LTSStackOfPlanks1,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Put Stacks Together {
+    LTSStackOfPlanks1=4,
+    Rope=2,
+    CanBeDoneFromFloor:true,
+    Result:LTSStackOfPlanks2,
+    Time:60.0,
+    Category:LTS-Logistics,
+  }
+
+  recipe LTS Split Stacks {
+    LTSStackOfPlanks2,
+    Result:LTSStackOfPlanks1=4,
+    CanBeDoneFromFloor:true,
+    Time:60.0,
+    OnCreate:giveRope2,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Unstack Planks {
+    LTSStackOfPlanks1,
+    Result:Plank=6,
+    CanBeDoneFromFloor:true,
+    Time:60.0,
+    OnCreate:giveRope1,
+    Category:LTS-Logistics,
+  }
+
+
+
+
+  
+  
+  
+}
