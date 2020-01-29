@@ -142,7 +142,7 @@ module DLTS {
 
   recipe LTS Crush Sand {
     keep Sledgehammer/Sledgehammer2,
-    Gravelbag=3,
+    Gravelbag=4,
     EmptySandbag,
     Result:Sandbag,
     Time:480.0,
