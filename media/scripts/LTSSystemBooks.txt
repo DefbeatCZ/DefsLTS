@@ -40,7 +40,7 @@ module DLTS {
     keep LTSWorkbookElectricity,
     keep Screwdriver,
     ElectronicsScrap=2,
-    ElectricWire,
+    ElectricWire/Wire,
     Result:ElectronicsScrap,
     Time:480.0,
     Category:Electrical,
