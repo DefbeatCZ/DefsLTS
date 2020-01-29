@@ -61,6 +61,17 @@ module DLTS {
     OnGiveXP:CraftXP_SmithingPlastic,
   }  
   
+  recipe LTS Mold Cling Wrap {
+    BlowTorch=2,
+    keep SheetMetal,
+    LTSScrapPlastic=5,
+    Result:LTSClingWrap,
+    Time:480.0,
+    Category:Welding,
+    Sound:PZ_Fire,
+    OnGiveXP:CraftXP_SmithingPlastic,
+  }    
+  
   /** ------------------------------------------------------------------------- **/
   /** Smithing: Scrapping items (that make sense) into Metal Scrap **/
   /** Plastic processing is under metalworking as it is basically the same **/

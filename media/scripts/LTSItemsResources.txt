@@ -41,7 +41,20 @@ module DLTS {
     Icon=LighterFluidCan,
     UseDelta=0.1,
     ReplaceOnDeplete=DLTS.LTSChemEmpty,
+    cantBeConsolided=TRUE,
   }
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Cling Wrap **/  
+  
+  item LTSClingWrap {
+    Type=Drainable,
+    Weight=0.3,
+    DisplayName=Cling Wrap,
+    Icon=ClingWrap,
+    UseDelta=0.2,
+    cantBeConsolided=TRUE,
+  }  
   
   /** ------------------------------------------------------------------------- **/
   /** Tobacco **/    

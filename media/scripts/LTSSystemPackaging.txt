@@ -607,11 +607,5 @@ module DLTS {
     OnCreate:giveRope1,
     Category:LTS-Logistics,
   }
-
-
-
-
-  
-  
   
 }
