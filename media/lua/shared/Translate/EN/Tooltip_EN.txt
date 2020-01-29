@@ -3,8 +3,8 @@ Tooltip_EN = {
   -- Workbooks
   Tooltip_LTS_WBWood = "Get Hammer, Saw and 2 Planks to start learning.",
   Tooltip_LTS_WBElec = "Get Screwdriver, 2 Electronic Scrap and a Wire to start learning.",
-  Tooltip_LTS_WBWeld = "Get Welding Mask, Blowtorch and 3 Metal Scrap to start learning.",
-  Tooltip_LTS_WBTail = "Get Scissors, Needle, Thread and 3 Ripped Sheets to start learning.",
+  Tooltip_LTS_WBWeld = "Get Welding Mask, Blowtorch and 2 Metal Scrap to start learning.",
+  Tooltip_LTS_WBTail = "Get Scissors, Needle, some Thread and 3 Ripped Sheets to start learning.",
 
   -- Corpse Disposal
   Tooltip_LTS_CorpseFlesh = "Is there something you would not do to survive? Can be used to make compost.",
@@ -15,24 +15,10 @@ Tooltip_EN = {
   Tooltip_LTS_DryingReady = "Ready for the contents to be extracted.",
 
   -- Wood Burner
-  Tooltip_LTS_BurnerEmpty = "Fill it first.",
-  Tooltip_LTS_BurnerWood = "Ready to process.",
-  Tooltip_LTS_BurnerFull = "Processing Done. WARNING: Take Wood Gas first as it must be released before taking Charcoal.",
-  Tooltip_LTS_BurnerChar = "Processing Done. Charcoal remaining.",
-  Tooltip_LTS_BurnerTar = "Processing Done. Full of Pine Tar.",
+  Tooltip_LTS_Burner = "Ready. Can be used from floor.",
 
-  -- Lighter Fluid
-  Tooltip_LTS_LighterFluidWet = "Will settle in less than a day. WARNING: Drying ticks are not counted when placed freely on ground !!!", 
-  Tooltip_LTS_LighterFluidDone = "Ready - pour it to an empty Lighter Fluid Can.",
-
-  -- Potassium Salt
-  Tooltip_LTS_SaltWet = "Will crystalize in few days. WARNING: Drying ticks are not counted when placed freely on ground !!!", 
-  Tooltip_LTS_SaltDone = "Ready - just scrape the crystals.",
-
-
-
-
-  -- Old code - reuse later
+  -- Crystalization
+  Tooltip_LTS_WetC = "Should finish in few days. WARNING: Drying ticks are not counted when placed freely on ground !!!", 
   
   -- Storage Cellar
   Tooltip_SC_00 = "Place on the ground to start digging. Will not be movable after!!!",
@@ -47,14 +33,4 @@ Tooltip_EN = {
   Tooltip_SC_09 = "Cellar: Stage 9/10, Dig more to expand; BEWARE: All stored items will be discarded during the process.",
   Tooltip_SC_10 = "Cellar: Complete, Enjoy the space.",
 
-
-  
-
-
-
-  
- 
-  
-
-  
 }

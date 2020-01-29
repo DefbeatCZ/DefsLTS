@@ -88,7 +88,7 @@ module DLTS {
     WetCooldown=180000,
     ItemWhenDry=DLTS.LTSSaltDry,
     Icon=SaltJarWet,
-    Tooltip=Tooltip_LTS_SaltWet,
+    Tooltip=Tooltip_LTS_WetC,
   }
   
   item LTSSaltDry {

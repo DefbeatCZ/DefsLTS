@@ -178,7 +178,7 @@ module DLTS {
     WetCooldown=18000,
     ItemWhenDry=DLTS.LTSYeastDry,
     Icon=YeastBowl,
-    Tooltip=Tooltip_LTS_SaltWet,
+    Tooltip=Tooltip_LTS_WetC,
   }
 
   item LTSYeastDry {
@@ -203,7 +203,7 @@ module DLTS {
     WetCooldown=180000,
     ItemWhenDry=DLTS.LTSSugarDry,
     Icon=CrystalizedHoney,
-    Tooltip=Tooltip_LTS_SaltWet,
+    Tooltip=Tooltip_LTS_WetC,
   }
   
   item LTSSugarDry {

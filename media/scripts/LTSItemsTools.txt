@@ -48,7 +48,7 @@ module DLTS {
     Weight=12.0,
     DisplayName=Distillation Equipment,
     Icon=WoodBurner,
-    Tooltip=Tooltip_LTS_BurnerEmpty,
+    Tooltip=Tooltip_LTS_Burner,
   }
 
   /** ------------------------------------------------------------------------- **/
