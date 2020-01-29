@@ -5,9 +5,9 @@ module DLTS {
   }
  
   recipe LTS Mold Tarp {
-    BlowTorch=2,
+    BlowTorch=5,
     keep SheetMetal,
-    LTSScrapPlastic=12,
+    LTSScrapPlastic=7,
     Sheet,
     Result:Tarp,
     Time:480.0,
@@ -17,9 +17,9 @@ module DLTS {
   }
 
   recipe LTS Mold Fishing Tackle {
-    BlowTorch=2,
+    BlowTorch=1,
     keep SheetMetal,
-    LTSScrapPlastic=4,
+    LTSScrapPlastic=2,
     Nails=3,
     Result:FishingTackle,
     Time:480.0,
@@ -31,7 +31,7 @@ module DLTS {
   recipe LTS Mold Garbage Bag {
     BlowTorch=2,
     keep SheetMetal,
-    LTSScrapPlastic=3,
+    LTSScrapPlastic=2,
     Result:Garbagebag,
     Time:480.0,
     Category:Welding,
@@ -40,9 +40,9 @@ module DLTS {
   }  
 
   recipe LTS Mold Chemical Container {
-    BlowTorch=2,
+    BlowTorch=3,
     keep SheetMetal,
-    LTSScrapPlastic=5,
+    LTSScrapPlastic=4,
     Result:LTSChemEmpty,
     Time:480.0,
     Category:Welding,
@@ -51,9 +51,9 @@ module DLTS {
   }  
  
   recipe LTS Mold Storage Box {
-    BlowTorch=2,
+    BlowTorch=4,
     keep SheetMetal,
-    LTSScrapPlastic=15,
+    LTSScrapPlastic=8,
     Result:LTSBoxBlank,
     Time:480.0,
     Category:Welding,
@@ -62,7 +62,7 @@ module DLTS {
   }  
   
   recipe LTS Mold Cling Wrap {
-    BlowTorch=2,
+    BlowTorch=4,
     keep SheetMetal,
     LTSScrapPlastic=5,
     Result:LTSClingWrap,
@@ -87,11 +87,22 @@ module DLTS {
     Sound:Sawing,
   }
 
-  /** Random Items (2 Scrap) **/
+  /** Random Items (3 Scrap) **/
   recipe LTS Scrap Plastic {
     keep LTSScrappingSaw,
     DogChew/Bricktoys/CatToy/Doll/ToyCar/WaterBottleEmpty/PopBottleEmpty/LTSChemEmpty,
     Result:LTSScrapPlastic=2,
+    Time:120.0,
+    OnGiveXP:CraftXP_Scrapping,
+    Category:Welding,
+    Sound:Sawing,
+  }
+  
+  /** Random Items (5 Scrap) **/
+  recipe LTS Scrap Plastic {
+    keep LTSScrappingSaw,
+    Tarp/LTSBoxBlank,
+    Result:LTSScrapPlastic=5,
     Time:120.0,
     OnGiveXP:CraftXP_Scrapping,
     Category:Welding,

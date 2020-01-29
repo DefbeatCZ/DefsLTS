@@ -17,10 +17,10 @@ module DLTS {
   }
   
   recipe LTS Forge Small Metal Sheet {
-    BlowTorch=7,
+    BlowTorch=5,
     keep WeldingMask,
     keep Hammer,
-    ScrapMetal=3,
+    ScrapMetal=4,
     Result:SmallSheetMetal,
     Time:480.0,
     Category:Welding,
@@ -29,10 +29,10 @@ module DLTS {
   }
 
   recipe LTS Forge Metal Bar {
-    BlowTorch=7,
+    BlowTorch=5,
     keep WeldingMask,
     keep Hammer,
-    ScrapMetal=3,
+    ScrapMetal=4,
     Result:MetalBar,
     Time:480.0,
     Category:Welding,
@@ -44,7 +44,7 @@ module DLTS {
     BlowTorch=7,
     keep WeldingMask,
     keep Hammer,
-    ScrapMetal=3,
+    ScrapMetal=5,
     Result:MetalPipe,
     Time:480.0,
     Category:Welding,
@@ -53,10 +53,10 @@ module DLTS {
   }
 
   recipe LTS Forge Nails {
-    BlowTorch=7,
+    BlowTorch=9,
     keep WeldingMask,
     keep Hammer,
-    ScrapMetal=4,
+    ScrapMetal=12,
     Result:NailsBox,
     Time:480.0,
     Category:Welding,
@@ -65,10 +65,10 @@ module DLTS {
   }
 
   recipe LTS Forge Wire {
-    BlowTorch=7,
+    BlowTorch=9,
     keep WeldingMask,
     keep Hammer,
-    ScrapMetal=3,
+    ScrapMetal=5,
     Result:Wire,
     Time:480.0,
     Category:Welding,
@@ -77,7 +77,7 @@ module DLTS {
   }
 
   recipe LTS Forge Barbed Wire {
-    BlowTorch=7,
+    BlowTorch=5,
     keep WeldingMask,
     keep Hammer,
     Wire=5,
@@ -91,9 +91,6 @@ module DLTS {
   
   /** ------------------------------------------------------------------------- **/
   /** Smithing: Scrapping items (that make sense) into Metal Scrap **/
-  
-  /** Metalworking primary produce should not be scrapable **/
-  /** Large and Small Metal Sheet | Metal Bar | Metal Pipe | Nails | Wire **/
 
   /** Random Items (1 Scrap) **/
   recipe LTS Scrap Metal {
@@ -109,7 +106,7 @@ module DLTS {
   /** Random Items (2 Scrap) **/
   recipe LTS Scrap Metal {
     keep LTSScrappingSaw,
-    BakingPan/BarbedWire/HandShovel/HandScythe/HandFork/GardenHoe/GardenFork/Golfclub/FishingNet/GridlePan/Kettle/LeadPipe/LeafRake/Machete/Pan/Pot/RoastingPan/Saw/ScrewsBox/TrapCage/Wrench/TirePump/EngineParts/Saucepan,
+    BakingPan/BarbedWire/HandShovel/HandScythe/HandFork/GardenHoe/GardenFork/Golfclub/FishingNet/GridlePan/Kettle/LeadPipe/LeafRake/Machete/Pan/Pot/RoastingPan/Saw/ScrewsBox/TrapCage/Wrench/TirePump/EngineParts/Saucepan/Wire,
     Result:ScrapMetal=2,
     Time:180.0,
     OnGiveXP:CraftXP_Scrapping,
@@ -120,7 +117,7 @@ module DLTS {
   /** Random Items (3 Scrap) **/
   recipe LTS Scrap Metal {
     keep LTSScrappingSaw,
-    Crowbar/Axe/Hammer/HandAxe/Katana/LugWrench/PipeWrench/Shovel/Shovel2/WoodAxe/Sledgehammer/Sledgehammer2/PickAxe/LTSPropaneTankEmpty/EmptyPetrolCan/LTSWaterCanEmpty,
+    Crowbar/Axe/Hammer/HandAxe/Katana/LugWrench/PipeWrench/Shovel/Shovel2/WoodAxe/Sledgehammer/Sledgehammer2/PickAxe/LTSPropaneTankEmpty/EmptyPetrolCan/LTSWaterCanEmpty/SmallSheetMetal/MetalBar/MetalPipe/NailsBox,
     Result:ScrapMetal=3,
     Time:240.0,
     OnGiveXP:CraftXP_Scrapping,
@@ -131,7 +128,7 @@ module DLTS {
   /** Random Items (5 Scrap) **/
   recipe LTS Scrap Metal {
     keep LTSScrappingSaw,
-    Jack/LTSWoodBurner,
+    Jack/LTSWoodBurner/SheetMetal,
     Result:ScrapMetal=5,
     Time:360.0,
     OnGiveXP:CraftXP_Scrapping,
