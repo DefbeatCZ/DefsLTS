@@ -7,605 +7,933 @@ module DLTS {
   /** ------------------------------------------------------------------------- **/
   /** Packaging: LTS Foraged Items **/
   
-  item LTSStackOfHoneyComb {
-    Weight=0.2,
-    Type=Normal,
-    DisplayName=Honey Comb [20],
-    Icon=HoneyComb,
-  }
-  
-  recipe LTS Pack Honey Combs {
-    LTSHoneyComb=20,
-    Result:LTSStackOfHoneyComb,
-    Time:60.0,
-    Category:LTS-Logistics,
-  }
-  
-  recipe LTS Unpack Honey Combs {
-    LTSStackOfHoneyComb,
-    Result:LTSHoneyComb=20,
-    Time:60.0,
-    Category:LTS-Logistics,
-  }  
-  
-  item LTSStackOfWildNuts {
-    Weight=0.2,
-    Type=Normal,
-    DisplayName=Wild Nuts [20],
-    Icon=Nuts,
-  }
-  
-  recipe LTS Pack Wild Nuts {
-    LTSWildNuts=20,
-    Result:LTSStackOfWildNuts,
-    Time:60.0,
-    Category:LTS-Logistics,
-  }
-  
-  recipe LTS Unpack Wild Nuts {
-    LTSStackOfWildNuts,
-    Result:LTSWildNuts=20,
-    Time:60.0,
-    Category:LTS-Logistics,
-  }  
-  
-  item LTSStackOfBirchBark {
-    Weight=0.2,
-    Type=Normal,
-    DisplayName=Birch Bark [20],
+  item LTSStackBirchBark {
+    Type=Drainable,
+    Weight=0.6,
+    DisplayName=Birch Bark Stack,
     Icon=BirchBark,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
   }
   
-  recipe LTS Pack Birch Bark {
-    LTSBirchBark=20,
-    Result:LTSStackOfBirchBark,
-    Time:60.0,
+  recipe LTS Get Birch Bark {
+    LTSStackBirchBark=1,
+    Result:LTSBirchBark,
     Category:LTS-Logistics,
   }
   
-  recipe LTS Unpack Birch Bark {
-    LTSStackOfBirchBark,
-    Result:LTSBirchBark=20,
-    Time:60.0,
+  recipe LTS Wrap Birch Bark {
+    LTSBirchBark=10,
+    LTSClingWrap=1,
+    Result:LTSStackBirchBark,
     Category:LTS-Logistics,
-  }  
+  }
+
+  item LTSStackCamomille {
+    Type=Drainable,
+    Weight=0.4,
+    DisplayName=Camomille Stack,
+    Icon=Camomille,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
   
-  item LTSStackOfPineCones {
-    Weight=0.2,
-    Type=Normal,
-    DisplayName=Pine Cone [20],
+  recipe LTS Get Camomille {
+    LTSStackCamomille=1,
+    Result:LTSCamomille,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Camomille {
+    LTSCamomille=10,
+    LTSClingWrap=1,
+    Result:LTSStackCamomille,
+    Category:LTS-Logistics,
+  }
+
+  item LTSStackDandelion {
+    Type=Drainable,
+    Weight=0.4,
+    DisplayName=Dandelion Stack,
+    Icon=Dandelion,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Dandelion {
+    LTSStackDandelion=1,
+    Result:LTSDandelion,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Dandelion {
+    LTSDandelion=10,
+    LTSClingWrap=1,
+    Result:LTSStackDandelion,
+    Category:LTS-Logistics,
+  }
+  
+  item LTSStackHoneyComb {
+    Type=Drainable,
+    Weight=0.8,
+    DisplayName=Honey Comb Stack,
+    Icon=HoneyComb,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Honey Comb {
+    LTSStackHoneyComb=1,
+    Result:LTSHoneyComb,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Honey Comb {
+    LTSHoneyComb=10,
+    LTSClingWrap=1,
+    Result:LTSStackHoneyComb,
+    Category:LTS-Logistics,
+  }
+  
+  item LTSStackPineCone {
+    Type=Drainable,
+    Weight=0.7,
+    DisplayName=Pine Cone Stack,
     Icon=PineCone,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
   }
   
-  recipe LTS Pack Pine Cones {
-    LTSPineCone=20,
-    Result:LTSStackOfPineCones,
-    Time:60.0,
+  recipe LTS Get Pine Cone {
+    LTSStackPineCone=1,
+    Result:LTSPineCone,
     Category:LTS-Logistics,
   }
   
-  recipe LTS Unpack Pine Cones {
-    LTSStackOfPineCones,
-    Result:LTSPineCone=20,
-    Time:60.0,
+  recipe LTS Wrap Pine Cone {
+    LTSPineCone=10,
+    LTSClingWrap=1,
+    Result:LTSStackPineCone,
     Category:LTS-Logistics,
-  }  
+  }
+
+  item LTSStackTobacco {
+    Type=Drainable,
+    Weight=0.5,
+    DisplayName=Tobacco Stack,
+    Icon=Tobacco,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Tobacco {
+    LTSStackTobacco=1,
+    Result:LTSTobacco,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Tobacco {
+    LTSTobacco=10,
+    LTSClingWrap=1,
+    Result:LTSStackTobacco,
+    Category:LTS-Logistics,
+  }
+
+  item LTSStackWildNuts {
+    Type=Drainable,
+    Weight=0.5,
+    DisplayName=Wild Nuts Stack,
+    Icon=Nuts,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Wild Nuts {
+    LTSStackWildNuts=1,
+    Result:LTSWildNuts,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Wild Nuts {
+    LTSWildNuts=10,
+    LTSClingWrap=1,
+    Result:LTSStackWildNuts,
+    Category:LTS-Logistics,
+  }
   
   /** ------------------------------------------------------------------------- **/
-  /** Packaging: Foraged Plants **/
+  /** Packaging: Foraged Food/Meds **/
   
-  item LTSStackOfGrapeLeaves {
-    Weight=0.2,
-    Type=Normal,
-    DisplayName=Grape Leaves [20],
-    Icon=GrapeLeaves,
-  }
-  
-  recipe LTS Pack Grape Leaves {
-    GrapeLeaves=20,
-    Result:LTSStackOfGrapeLeaves,
-    Time:60.0,
-    Category:LTS-Logistics,
-  }
-  
-  recipe LTS Unpack Grape Leaves {
-    LTSStackOfGrapeLeaves,
-    Result:GrapeLeaves=20,
-    Time:60.0,
-    Category:LTS-Logistics,
-  }  
-  
-  item LTSStackOfViolets {
-    Weight=0.2,
-    Type=Normal,
-    DisplayName=Violets [20],
+  item LTSStackViolets {
+    Type=Drainable,
+    Weight=0.4,
+    DisplayName=Violets Stack,
     Icon=Violets,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
   }
   
-  recipe LTS Pack Violets {
-    Violets=20,
-    Result:LTSStackOfViolets,
-    Time:60.0,
+  recipe LTS Get Violets {
+    LTSStackViolets=1,
+    Result:Violets,
     Category:LTS-Logistics,
   }
   
-  recipe LTS Unpack Violets {
-    LTSStackOfViolets,
-    Result:Violets=20,
-    Time:60.0,
+  recipe LTS Wrap Violets {
+    Violets=10,
+    LTSClingWrap=1,
+    Result:LTSStackViolets,
     Category:LTS-Logistics,
-  }  
+  }
   
-  item LTSStackOfRosehips {
-    Weight=0.2,
-    Type=Normal,
-    DisplayName=Rosehips [20],
+  item LTSStackGrapeLeaves {
+    Type=Drainable,
+    Weight=0.4,
+    DisplayName=Grape Leaves Stack,
+    Icon=GrapeLeaves,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Grape Leaves {
+    LTSStackGrapeLeaves=1,
+    Result:GrapeLeaves,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Grape Leaves {
+    GrapeLeaves=10,
+    LTSClingWrap=1,
+    Result:LTSStackGrapeLeaves,
+    Category:LTS-Logistics,
+  }
+  
+  item LTSStackRosehips {
+    Type=Drainable,
+    Weight=0.4,
+    DisplayName=Rosehips Stack,
     Icon=Rosehips,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
   }
   
-  recipe LTS Pack Rosehips {
-    Rosehips=20,
-    Result:LTSStackOfRosehips,
-    Time:60.0,
+  recipe LTS Get Rosehips {
+    LTSStackRosehips=1,
+    Result:Rosehips,
     Category:LTS-Logistics,
   }
   
-  recipe LTS Unpack Rosehips {
-    LTSStackOfRosehips,
-    Result:Rosehips=20,
-    Time:60.0,
-    Category:LTS-Logistics,
-  } 
-  
-  item LTSStackOfPlantain {
-    Weight=0.2,
-    Type=Normal,
-    DisplayName=Plantain [20],
-    Icon=PlantainPlantago,
-  }
-  
-  recipe LTS Pack Plantain {
-    Plantain=20,
-    Result:LTSStackOfPlantain,
-    Time:60.0,
+  recipe LTS Wrap Rosehips {
+    Rosehips=10,
+    LTSClingWrap=1,
+    Result:LTSStackRosehips,
     Category:LTS-Logistics,
   }
-  
-  recipe LTS Unpack Plantain {
-    LTSStackOfPlantain,
-    Result:Plantain=20,
-    Time:60.0,
-    Category:LTS-Logistics,
-  }  
-  
-  item LTSStackOfComfrey {
-    Weight=0.2,
-    Type=Normal,
-    DisplayName=Comfrey [20],
-    Icon=Comfrey,
-  }
-  
-  recipe LTS Pack Comfrey {
-    Comfrey=20,
-    Result:LTSStackOfComfrey,
-    Time:60.0,
-    Category:LTS-Logistics,
-  }
-  
-  recipe LTS Unpack Comfrey {
-    LTSStackOfComfrey,
-    Result:Comfrey=20,
-    Time:60.0,
-    Category:LTS-Logistics,
-  } 
-  
-  item LTSStackOfWildGarlic {
-    Weight=0.2,
-    Type=Normal,
-    DisplayName=Wild Garlic [20],
-    Icon=WildGarlic,
-  }
-  
-  recipe LTS Pack Wild Garlic {
-    WildGarlic=20,
-    Result:LTSStackOfWildGarlic,
-    Time:60.0,
-    Category:LTS-Logistics,
-  }
-  
-  recipe LTS Unpack Wild Garlic {
-    LTSStackOfWildGarlic,
-    Result:WildGarlic=20,
-    Time:60.0,
-    Category:LTS-Logistics,
-  } 
-  
-  item LTSStackOfCommonMallow {
-    Weight=0.2,
-    Type=Normal,
-    DisplayName=Common Mallow [20],
-    Icon=CommonMallow,
-  }
-  
-  recipe LTS Pack Common Mallow {
-    CommonMallow=20,
-    Result:LTSStackOfCommonMallow,
-    Time:60.0,
-    Category:LTS-Logistics,
-  }
-  
-  recipe LTS Unpack Common Mallow {
-    LTSStackOfCommonMallow,
-    Result:CommonMallow=20,
-    Time:60.0,
-    Category:LTS-Logistics,
-  }  
-  
-  item LTSStackOfLemonGrass {
-    Weight=0.2,
-    Type=Normal,
-    DisplayName=Lemon Grass [20],
-    Icon=LemonGrass,
-  }
-  
-  recipe LTS Pack Lemon Grass {
-    LemonGrass=20,
-    Result:LTSStackOfLemonGrass,
-    Time:60.0,
-    Category:LTS-Logistics,
-  }
-  
-  recipe LTS Unpack Lemon Grass {
-    LTSStackOfLemonGrass,
-    Result:LemonGrass=20,
-    Time:60.0,
-    Category:LTS-Logistics,
-  }  
-  
-  item LTSStackOfBlackSage {
-    Weight=0.2,
-    Type=Normal,
-    DisplayName=Black Sage [20],
+
+  item LTSStackBlackSage {
+    Type=Drainable,
+    Weight=0.4,
+    DisplayName=Black Sage Stack,
     Icon=BlackSage,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
   }
   
-  recipe LTS Pack Black Sage {
-    BlackSage=20,
-    Result:LTSStackOfBlackSage,
-    Time:60.0,
+  recipe LTS Get Black Sage {
+    LTSStackBlackSage=1,
+    Result:BlackSage,
     Category:LTS-Logistics,
   }
   
-  recipe LTS Unpack Black Sage {
-    LTSStackOfBlackSage,
-    Result:BlackSage=20,
-    Time:60.0,
+  recipe LTS Wrap Black Sage {
+    BlackSage=10,
+    LTSClingWrap=1,
+    Result:LTSStackBlackSage,
     Category:LTS-Logistics,
-  } 
+  }
+
+  item LTSStackComfrey {
+    Type=Drainable,
+    Weight=0.4,
+    DisplayName=Comfrey Stack,
+    Icon=Comfrey,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
   
-  item LTSStackOfGinseng {
-    Weight=0.2,
-    Type=Normal,
-    DisplayName=Ginseng [20],
+  recipe LTS Get Comfrey {
+    LTSStackComfrey=1,
+    Result:Comfrey,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Comfrey {
+    Comfrey=10,
+    LTSClingWrap=1,
+    Result:LTSStackComfrey,
+    Category:LTS-Logistics,
+  }
+
+  item LTSStackCommonMallow {
+    Type=Drainable,
+    Weight=0.4,
+    DisplayName=Common Mallow Stack,
+    Icon=CommonMallow,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Common Mallow {
+    LTSStackCommonMallow=1,
+    Result:CommonMallow,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Common Mallow {
+    CommonMallow=10,
+    LTSClingWrap=1,
+    Result:LTSStackCommonMallow,
+    Category:LTS-Logistics,
+  }
+
+  item LTSStackGinseng {
+    Type=Drainable,
+    Weight=0.4,
+    DisplayName=Ginseng Stack,
     Icon=Ginseng,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
   }
   
-  recipe LTS Pack Ginseng {
-    Ginseng=20,
-    Result:LTSStackOfGinseng,
-    Time:60.0,
+  recipe LTS Get Ginseng {
+    LTSStackGinseng=1,
+    Result:Ginseng,
     Category:LTS-Logistics,
   }
   
-  recipe LTS Unpack Ginseng {
-    LTSStackOfGinseng,
-    Result:Ginseng=20,
-    Time:60.0,
+  recipe LTS Wrap Ginseng {
+    Ginseng=10,
+    LTSClingWrap=1,
+    Result:LTSStackGinseng,
     Category:LTS-Logistics,
-  }   
+  }
+
+  item LTSStackLemonGrass {
+    Type=Drainable,
+    Weight=0.4,
+    DisplayName=Lemon Grass Stack,
+    Icon=LemonGrass,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Lemon Grass {
+    LTSStackLemonGrass=1,
+    Result:LemonGrass,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Lemon Grass {
+    LemonGrass=10,
+    LTSClingWrap=1,
+    Result:LTSStackLemonGrass,
+    Category:LTS-Logistics,
+  }
+  
+  item LTSStackPlantain {
+    Type=Drainable,
+    Weight=0.4,
+    DisplayName=Plantain Stack,
+    Icon=PlantainPlantago,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Plantain {
+    LTSStackPlantain=1,
+    Result:Plantain,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Plantain {
+    Plantain=10,
+    LTSClingWrap=1,
+    Result:LTSStackPlantain,
+    Category:LTS-Logistics,
+  }
+
+  item LTSStackWildGarlic {
+    Type=Drainable,
+    Weight=0.4,
+    DisplayName=Wild Garlic Stack,
+    Icon=WildGarlic,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Wild Garlic {
+    LTSStackWildGarlic=1,
+    Result:WildGarlic,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Wild Garlic {
+    WildGarlic=10,
+    LTSClingWrap=1,
+    Result:LTSStackWildGarlic,
+    Category:LTS-Logistics,
+  }
+
+  /** ------------------------------------------------------------------------- **/
+  /** Packaging: Foraged Materials **/
+
+  item LTSStackSharpedStone {
+    Type=Drainable,
+    Weight=0.8,
+    DisplayName=Chipped Stone Stack,
+    Icon=RockSharpened,
+    UseDelta=0.2,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Chipped Stone {
+    LTSStackSharpedStone=1,
+    Result:SharpedStone,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Chipped Stone {
+    SharpedStone=5,
+    LTSClingWrap=1,
+    Result:LTSStackSharpedStone,
+    Category:LTS-Logistics,
+  }
+
+  item LTSStackStone {
+    Type=Drainable,
+    Weight=0.8,
+    DisplayName=Stone Stack,
+    Icon=Rock,
+    UseDelta=0.2,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Stone {
+    LTSStackStone=1,
+    Result:Stone,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Stone {
+    Stone=5,
+    LTSClingWrap=1,
+    Result:LTSStackStone,
+    Category:LTS-Logistics,
+  }
+
+  item LTSStackTreeBranch {
+    Type=Drainable,
+    Weight=0.7,
+    DisplayName=Tree Branch Stack,
+    Icon=Branch,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Tree Branch {
+    LTSStackTreeBranch=1,
+    Result:TreeBranch,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Tree Branch {
+    TreeBranch=10,
+    LTSClingWrap=1,
+    Result:LTSStackTreeBranch,
+    Category:LTS-Logistics,
+  }
+
+  item LTSStackTwigs {
+    Type=Drainable,
+    Weight=0.6,
+    DisplayName=Twigs Stack,
+    Icon=Twigs,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Twigs {
+    LTSStackTwigs=1,
+    Result:Twigs,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Twigs {
+    Twigs=10,
+    LTSClingWrap=1,
+    Result:LTSStackTwigs,
+    Category:LTS-Logistics,
+  }
   
   /** ------------------------------------------------------------------------- **/
   /** Packaging: Insects **/
-  
-  item LTSStackOfCockroaches {
-    Weight=0.2,
-    Type=Normal,
-    DisplayName=Cockroach [50],
+
+  item LTSStackCockroach {
+    Type=Drainable,
+    Weight=0.1,
+    DisplayName=Cockroach Stack,
     Icon=Cockroach,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
   }
   
-  recipe LTS Pack Cockroaches {
-    Cockroach=50,
-    Result:LTSStackOfCockroaches,
-    Time:60.0,
+  recipe LTS Get Cockroach {
+    LTSStackCockroach=1,
+    Result:Cockroach,
     Category:LTS-Logistics,
   }
   
-  recipe LTS Unpack Cockroaches {
-    LTSStackOfCockroaches,
-    Result:Cockroach=50,
-    Time:60.0,
+  recipe LTS Wrap Cockroach {
+    Cockroach=10,
+    LTSClingWrap=1,
+    Result:LTSStackCockroach,
     Category:LTS-Logistics,
-  }  
+  }
   
-  item LTSStackOfCrickets {
-    Weight=0.2,
-    Type=Normal,
-    DisplayName=Cricket [50],
+  item LTSStackCricket {
+    Type=Drainable,
+    Weight=0.1,
+    DisplayName=Cricket Stack,
     Icon=Cricket,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
   }
   
-  recipe LTS Pack Crickets {
-    Cricket=50,
-    Result:LTSStackOfCrickets,
-    Time:60.0,
+  recipe LTS Get Cricket {
+    LTSStackCricket=1,
+    Result:Cricket,
     Category:LTS-Logistics,
   }
   
-  recipe LTS Unpack Crickets {
-    LTSStackOfCrickets,
-    Result:Cricket=50,
-    Time:60.0,
+  recipe LTS Wrap Cricket {
+    Cricket=10,
+    LTSClingWrap=1,
+    Result:LTSStackCricket,
     Category:LTS-Logistics,
-  }  
+  }
   
-  item LTSStackOfGrasshoppers {
-    Weight=0.2,
-    Type=Normal,
-    DisplayName=Grasshopper [50],
+  item LTSStackGrasshopper {
+    Type=Drainable,
+    Weight=0.1,
+    DisplayName=Grasshopper Stack,
     Icon=Grasshopper,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
   }
   
-  recipe LTS Pack Grasshoppers {
-    Grasshopper=50,
-    Result:LTSStackOfGrasshoppers,
-    Time:60.0,
+  recipe LTS Get Grasshopper {
+    LTSStackGrasshopper=1,
+    Result:Grasshopper,
     Category:LTS-Logistics,
   }
   
-  recipe LTS Unpack Grasshoppers {
-    LTSStackOfGrasshoppers,
-    Result:Grasshopper=50,
-    Time:60.0,
+  recipe LTS Wrap Grasshopper {
+    Grasshopper=10,
+    LTSClingWrap=1,
+    Result:LTSStackGrasshopper,
     Category:LTS-Logistics,
   }
   
-  item LTSStackOfWorms {
-    Weight=0.2,
-    Type=Normal,
-    DisplayName=Worm [50],
+  item LTSStackWorm {
+    Type=Drainable,
+    Weight=0.1,
+    DisplayName=Worm Stack,
     Icon=Worm,
+    UseDelta=0.05,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
   }
   
-  recipe LTS Pack Worms {
-    Worm=50,
-    Result:LTSStackOfWorms,
-    Time:60.0,
+  recipe LTS Get Worm {
+    LTSStackWorm=1,
+    Result:Worm,
     Category:LTS-Logistics,
   }
   
-  recipe LTS Unpack Worms {
-    LTSStackOfWorms,
-    Result:Worm=50,
-    Time:60.0,
+  recipe LTS Wrap Worm {
+    Worm=20,
+    LTSClingWrap=1,
+    Result:LTSStackWorm,
     Category:LTS-Logistics,
-  }  
+  }
   
   /** ------------------------------------------------------------------------- **/
-  /** Packaging: Thread, Twines and Ropes **/
-  
-  item LTSStackOfThread {
-    Weight=0.3,
-    Type=Normal,
-    DisplayName=Thread [10],
-    Icon=Thread,
-  }
-  
-  recipe LTS Make Stack of Thread {
-    Thread=100,
-    Result:LTSStackOfThread,
-    Time:60.0,
-    Category:LTS-Logistics,
-  }
-  
-  recipe LTS Unstack Thread {
-    LTSStackOfThread,
-    Result:Thread=10,
-    Time:60.0,
-    Category:LTS-Logistics,
-  }
-  
-  item LTSStackOfTwine {
-    Weight=0.3,
-    Type=Normal,
-    DisplayName=Twine [10],
-    Icon=Twine,
-  }
-  
-  recipe LTS Make Stack of Twine {
-    Twine=50,
-    Result:LTSStackOfTwine,
-    Time:60.0,
-    Category:LTS-Logistics,
-  }
-  
-  recipe LTS Unstack Twine {
-    LTSStackOfTwine,
-    Result:Twine=10,
-    Time:60.0,
-    Category:LTS-Logistics,
-  }  
-  
-  item LTSStackOfRope {
-    Weight=1.5,
-    Type=Normal,
-    DisplayName=Rope [10],
-    Icon=Rope,
-  }
-  
-  recipe LTS Make Stack of Rope {
-    Rope=10,
-    Result:LTSStackOfRope,
-    Time:60.0,
-    Category:LTS-Logistics,
-  }
-  
-  recipe LTS Unstack Rope {
-    LTSStackOfRope,
-    Result:Rope=10,
-    Time:60.0,
-    Category:LTS-Logistics,
-  } 
-  
-  /** ------------------------------------------------------------------------- **/
-  /** Packaging: Electronic and Metal Scrap **/
+  /** Packaging: LTS Resources **/
 
-  item LTSStackOfEScrap {
-    Weight=1,
-    Type=Normal,
-    DisplayName=Electronics Scrap [20],
+  item LTSStackWoodBits {
+    Type=Drainable,
+    Weight=0.7,
+    DisplayName=Wood Bits Stack,
+    Icon=WoodBits,
+    UseDelta=0.2,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Wood Bits {
+    LTSStackWoodBits=1,
+    Result:LTSWoodBits,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Wood Bits {
+    LTSWoodBits=5,
+    LTSClingWrap=1,
+    Result:LTSStackWoodBits,
+    Category:LTS-Logistics,
+  }
+
+  item LTSStackWoodAsh {
+    Type=Drainable,
+    Weight=0.3,
+    DisplayName=Wood Ash Stack,
+    Icon=WoodAsh,
+    UseDelta=0.2,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Wood Ash {
+    LTSStackWoodAsh=1,
+    Result:LTSWoodAsh,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Wood Ash {
+    LTSWoodAsh=5,
+    LTSClingWrap=1,
+    Result:LTSStackWoodAsh,
+    Category:LTS-Logistics,
+  }
+
+  item LTSStackCharcoalPowder {
+    Type=Drainable,
+    Weight=0.3,
+    DisplayName=Charcoal Powder Stack,
+    Icon=CharcoalPowder,
+    UseDelta=0.2,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Charcoal Powder {
+    LTSStackCharcoalPowder=1,
+    Result:LTSCharcoalPowder,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Charcoal Powder {
+    LTSCharcoalPowder=5,
+    LTSClingWrap=1,
+    Result:LTSStackCharcoalPowder,
+    Category:LTS-Logistics,
+  }
+
+  item LTSStackLimestone {
+    Type=Drainable,
+    Weight=1.0,
+    DisplayName=Limestone Chunks Stack,
+    Icon=Limestone,
+    UseDelta=0.2,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Limestone {
+    LTSStackLimestone=1,
+    Result:LTSLimestone,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Limestone {
+    LTSLimestone=5,
+    LTSClingWrap=1,
+    Result:LTSStackLimestone,
+    Category:LTS-Logistics,
+  }
+
+  item LTSStackBriquette {
+    Type=Drainable,
+    Weight=3.0,
+    DisplayName=Briquette Stack,
+    Icon=Briquette,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Briquette {
+    LTSStackBriquette=1,
+    Result:LTSBriquette,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Briquette {
+    LTSBriquette=10,
+    LTSClingWrap=1,
+    Result:LTSStackBriquette,
+    Category:LTS-Logistics,
+  }
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Packaging: Scraps **/
+
+  item LTSStackElectronicsScrap {
+    Type=Drainable,
+    Weight=0.3,
+    DisplayName=Electronics Scrap Stack,
     Icon=ElectronicsScrap,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
   }
   
-  recipe LTS Make Stack of Electronics Scrap {
-    ElectronicsScrap=20,
-    Result:LTSStackOfEScrap,
-    Time:60.0,
+  recipe LTS Get Electronics Scrap {
+    LTSStackElectronicsScrap=1,
+    Result:ElectronicsScrap,
     Category:LTS-Logistics,
   }
   
-  recipe LTS Unstack Electronics Scrap {
-    LTSStackOfEScrap,
-    Result:ElectronicsScrap=20,
-    Time:60.0,
+  recipe LTS Wrap Electronics Scrap {
+    ElectronicsScrap=10,
+    LTSClingWrap=1,
+    Result:LTSStackElectronicsScrap,
     Category:LTS-Logistics,
   }
-  
-  item LTSStackOfMScrap {
-    Weight=1,
-    Type=Normal,
-    DisplayName=Scrap Metal [20],
+
+  item LTSStackScrapMetal {
+    Type=Drainable,
+    Weight=0.3,
+    DisplayName=Scrap Metal Stack,
     Icon=ScrapMetal,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
   }
   
-  recipe LTS Make Stack of Metal Scrap {
-    ScrapMetal=20,
-    Result:LTSStackOfMScrap,
-    Time:60.0,
+  recipe LTS Get Scrap Metal {
+    LTSStackScrapMetal=1,
+    Result:ScrapMetal,
     Category:LTS-Logistics,
   }
   
-  recipe LTS Unstack Metal Scrap {
-    LTSStackOfMScrap,
-    Result:ScrapMetal=20,
-    Time:60.0,
+  recipe LTS Wrap Scrap Metal {
+    ScrapMetal=10,
+    LTSClingWrap=1,
+    Result:LTSStackScrapMetal,
+    Category:LTS-Logistics,
+  }
+
+  item LTSStackScrapPlastic {
+    Type=Drainable,
+    Weight=0.3,
+    DisplayName=Scrap Plastic Stack,
+    Icon=ScrapPlastic,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Scrap Plastic {
+    LTSStackScrapPlastic=1,
+    Result:LTSScrapPlastic,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Scrap Plastic {
+    LTSScrapPlastic=10,
+    LTSClingWrap=1,
+    Result:LTSStackScrapPlastic,
     Category:LTS-Logistics,
   }
   
   /** ------------------------------------------------------------------------- **/
-  /** Packaging: Branches and Twigs **/
+  /** Packaging: Building Materials **/
 
-  item LTSStackOfTwigs {
-    Weight=1,
-    Type=Normal,
-    DisplayName=Twigs [20],
-    Icon=Twigs,
+  item LTSStackLog {
+    Type=Drainable,
+    Weight=12,
+    DisplayName=Log Stack,
+    Icon=Logs,
+    UseDelta=0.25,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
   }
   
-  recipe LTS Make Stack of Twigs {
-    Twigs=20,
-    Rope,
-    CanBeDoneFromFloor:true,
-    Result:LTSStackOfTwigs,
-    Time:60.0,
+  recipe LTS Get Log {
+    LTSStackLog=1,
+    Result:Log,
     Category:LTS-Logistics,
   }
   
-  recipe LTS Unstack Twigs {
-    LTSStackOfTwigs,
-    CanBeDoneFromFloor:true,
-    Result:Twigs=20,
-    Time:60.0,
-    OnCreate:giveRope1,
+  recipe LTS Wrap Log {
+    Log=4,
+    LTSClingWrap=1,
+    Result:LTSStackLog,
     Category:LTS-Logistics,
   }
   
-  item LTSStackOfBranches {
+  item LTSStackPlank {
+    Type=Drainable,
     Weight=5,
-    Type=Normal,
-    DisplayName=Tree Branch [20],
-    Icon=Branch,
+    DisplayName=Plank Stack,
+    Icon=Plank,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
   }
   
-  recipe LTS Make Stack of Branches {
-    TreeBranch=20,
-    Rope,
-    CanBeDoneFromFloor:true,
-    Result:LTSStackOfBranches,
-    Time:60.0,
+  recipe LTS Get Plank {
+    LTSStackPlank=1,
+    Result:Plank,
     Category:LTS-Logistics,
   }
   
-  recipe LTS Unstack Branches {
-    LTSStackOfBranches,
-    CanBeDoneFromFloor:true,
-    Result:TreeBranch=20,
-    Time:60.0,
-    OnCreate:giveRope1,
+  recipe LTS Wrap Plank {
+    Plank=10,
+    LTSClingWrap=1,
+    Result:LTSStackPlank,
+    Category:LTS-Logistics,
+  }
+  
+  item LTSStackSheetMetal {
+    Type=Drainable,
+    Weight=3.5,
+    DisplayName=Metal Sheet Stack,
+    Icon=SheetMetal,
+    UseDelta=0.2,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Metal Sheet {
+    LTSStackSheetMetal=1,
+    Result:SheetMetal,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Metal Sheet {
+    SheetMetal=5,
+    LTSClingWrap=1,
+    Result:LTSStackSheetMetal,
+    Category:LTS-Logistics,
+  }
+  
+  item LTSStackSmallSheetMetal {
+    Type=Drainable,
+    Weight=1.5,
+    DisplayName=Small Metal Sheet Stack,
+    Icon=MetalSheetSmall,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Small Metal Sheet {
+    LTSStackSmallSheetMetal=1,
+    Result:SmallSheetMetal,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Small Metal Sheet {
+    SmallSheetMetal=10,
+    LTSClingWrap=1,
+    Result:LTSStackSmallSheetMetal,
+    Category:LTS-Logistics,
+  }
+  
+  item LTSStackMetalPipe {
+    Type=Drainable,
+    Weight=1.5,
+    DisplayName=Metal Pipe Stack,
+    Icon=MetalTube,
+    UseDelta=0.2,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Metal Pipe {
+    LTSStackMetalPipe=1,
+    Result:MetalPipe,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Metal Pipe {
+    MetalPipe=5,
+    LTSClingWrap=1,
+    Result:LTSStackMetalPipe,
+    Category:LTS-Logistics,
+  }
+
+  item LTSStackMetalBar {
+    Type=Drainable,
+    Weight=3.5,
+    DisplayName=Metal Bar Stack,
+    Icon=MetalBar,
+    UseDelta=0.2,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Metal Bar {
+    LTSStackMetalBar=1,
+    Result:MetalBar,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Metal Bar {
+    MetalBar=5,
+    LTSClingWrap=1,
+    Result:LTSStackMetalBar,
     Category:LTS-Logistics,
   }  
   
-  /** ------------------------------------------------------------------------- **/
-  /** Packaging: Planks **/
-
-  item LTSStackOfPlanks1 {
-    Weight=9,
-    Type=Normal,
-    DisplayName=Planks [6],
-    Icon=Plank,
+  item LTSStackHinge {
+    Type=Drainable,
+    Weight=0.9,
+    DisplayName=Hinge Stack,
+    Icon=Doorhinge,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
   }
   
-  item LTSStackOfPlanks2 {
-    Weight=18,
-    Type=Normal,
-    DisplayName=Planks [4x6],
-    Icon=Plank,
-  }
-  
-  recipe LTS Make Stack of Planks {
-    Plank=6,
-    Rope,
-    CanBeDoneFromFloor:true,
-    Result:LTSStackOfPlanks1,
-    Time:60.0,
+  recipe LTS Get Hinge {
+    LTSStackHinge=1,
+    Result:Hinge,
     Category:LTS-Logistics,
   }
   
-  recipe LTS Put Stacks Together {
-    LTSStackOfPlanks1=4,
-    Rope=2,
-    CanBeDoneFromFloor:true,
-    Result:LTSStackOfPlanks2,
-    Time:60.0,
-    Category:LTS-Logistics,
-  }
-
-  recipe LTS Split Stacks {
-    LTSStackOfPlanks2,
-    Result:LTSStackOfPlanks1=4,
-    CanBeDoneFromFloor:true,
-    Time:60.0,
-    OnCreate:giveRope2,
+  recipe LTS Wrap Hinge {
+    Hinge=10,
+    LTSClingWrap=1,
+    Result:LTSStackHinge,
     Category:LTS-Logistics,
   }
   
-  recipe LTS Unstack Planks {
-    LTSStackOfPlanks1,
-    Result:Plank=6,
-    CanBeDoneFromFloor:true,
-    Time:60.0,
-    OnCreate:giveRope1,
+  item LTSStackDoorknob {
+    Type=Drainable,
+    Weight=1.5,
+    DisplayName=Doorknob Stack,
+    Icon=DoorKnob,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Doorknob {
+    LTSStackDoorknob=1,
+    Result:Doorknob,
     Category:LTS-Logistics,
   }
+  
+  recipe LTS Wrap Doorknob {
+    Doorknob=10,
+    LTSClingWrap=1,
+    Result:LTSStackDoorknob,
+    Category:LTS-Logistics,
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
 }
