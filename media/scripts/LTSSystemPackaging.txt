@@ -927,13 +927,271 @@ module DLTS {
     Category:LTS-Logistics,
   }
   
+  /** ------------------------------------------------------------------------- **/
+  /** Packaging: LTS Food **/
   
+  item LTSStackHoneyCandyFruit {
+    Type=Drainable,
+    Weight=0.1,
+    DisplayName=Honey Candy [Fruit] Stack,
+    Icon=HerbalCandy2,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
   
+  recipe LTS Get Honey Candy [Fruit] {
+    LTSStackHoneyCandyFruit=1,
+    Result:LTSHoneyCandyFruit,
+    Category:LTS-Logistics,
+  }
   
+  recipe LTS Wrap Honey Candy [Fruit] {
+    LTSHoneyCandyFruit=10,
+    LTSClingWrap=1,
+    Result:LTSStackHoneyCandyFruit,
+    Category:LTS-Logistics,
+  }
   
+  item LTSStackHoneyCandyHealing {
+    Type=Drainable,
+    Weight=0.1,
+    DisplayName=Honey Candy [Healing] Stack,
+    Icon=HerbalCandy3,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
   
+  recipe LTS Get Honey Candy [Healing] {
+    LTSStackHoneyCandyHealing=1,
+    Result:LTSHoneyCandyHealing,
+    Category:LTS-Logistics,
+  }
   
+  recipe LTS Wrap Honey Candy [Healing] {
+    LTSHoneyCandyHealing=10,
+    LTSClingWrap=1,
+    Result:LTSStackHoneyCandyHealing,
+    Category:LTS-Logistics,
+  }
   
+  item LTSStackHoneyCandyEnergy {
+    Type=Drainable,
+    Weight=0.1,
+    DisplayName=Honey Candy [Energy] Stack,
+    Icon=HerbalCandy1,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
   
+  recipe LTS Get Honey Candy [Energy] {
+    LTSStackHoneyCandyEnergy=1,
+    Result:LTSHoneyCandyEnergy,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Honey Candy [Energy] {
+    LTSHoneyCandyEnergy=10,
+    LTSClingWrap=1,
+    Result:LTSStackHoneyCandyEnergy,
+    Category:LTS-Logistics,
+  }
+  
+  item LTSStackHoneyBar {
+    Type=Drainable,
+    Weight=0.3,
+    DisplayName=Honey Bar Stack,
+    Icon=HoneyBar,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Honey Bar {
+    LTSStackHoneyBar=1,
+    Result:LTSHoneyBar,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Honey Bar {
+    LTSHoneyBar=10,
+    LTSClingWrap=1,
+    Result:LTSStackHoneyBar,
+    Category:LTS-Logistics,
+  }
+  
+  item LTSStackDriedMeat {
+    Type=Drainable,
+    Weight=0.2,
+    DisplayName=Dried Meat Stack,
+    Icon=DriedMeat,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Dried Meat {
+    LTSStackDriedMeat=1,
+    Result:LTSDriedMeat,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Dried Meat {
+    LTSDriedMeat=10,
+    LTSClingWrap=1,
+    Result:LTSStackDriedMeat,
+    Category:LTS-Logistics,
+  }
+  
+  item LTSStackDriedHerbs {
+    Type=Drainable,
+    Weight=0.2,
+    DisplayName=Dried Herbs Stack,
+    Icon=DriedHerbs,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Dried Herbs {
+    LTSStackDriedHerbs=1,
+    Result:LTSDriedHerbs,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Dried Herbs {
+    LTSDriedHerbs=10,
+    LTSClingWrap=1,
+    Result:LTSStackDriedHerbs,
+    Category:LTS-Logistics,
+  }
+  
+  item LTSStackDriedVegetable {
+    Type=Drainable,
+    Weight=0.2,
+    DisplayName=Dried Vegetable Stack,
+    Icon=DriedVegetable,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Dried Vegetable {
+    LTSStackDriedVegetable=1,
+    Result:LTSDriedVegetable,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Dried Vegetable {
+    LTSDriedVegetable=10,
+    LTSClingWrap=1,
+    Result:LTSStackDriedVegetable,
+    Category:LTS-Logistics,
+  }
+  
+  item LTSStackDriedFruit {
+    Type=Drainable,
+    Weight=0.2,
+    DisplayName=Dried Fruit Stack,
+    Icon=DriedFruit,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Dried Fruit {
+    LTSStackDriedFruit=1,
+    Result:LTSDriedFruit,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Dried Fruit {
+    LTSDriedFruit=10,
+    LTSClingWrap=1,
+    Result:LTSStackDriedFruit,
+    Category:LTS-Logistics,
+  }
+  
+  item LTSStackDriedMushroom {
+    Type=Drainable,
+    Weight=0.2,
+    DisplayName=Dried Mushroom Stack,
+    Icon=DriedMushroom,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Dried Mushroom {
+    LTSStackDriedMushroom=1,
+    Result:LTSDriedMushroom,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Dried Mushroom {
+    LTSDriedMushroom=10,
+    LTSClingWrap=1,
+    Result:LTSStackDriedMushroom,
+    Category:LTS-Logistics,
+  }
+  
+  item LTSStackTeaServingBirch {
+    Type=Drainable,
+    Weight=0.1,
+    DisplayName=Tea (Birch Bark) Stack,
+    Icon=TeaBirch,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Tea (Birch Bark) {
+    LTSStackTeaServingBirch=1,
+    Result:LTSTeaServingBirch,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Tea (Birch Bark) {
+    LTSTeaServingBirch=10,
+    LTSClingWrap=1,
+    Result:LTSStackTeaServingBirch,
+    Category:LTS-Logistics,
+  }
+  
+  item LTSStackTeaServingFruit {
+    Type=Drainable,
+    Weight=0.1,
+    DisplayName=Tea (Fruit) Stack,
+    Icon=TeaFruit,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Tea (Fruit) {
+    LTSStackTeaServingFruit=1,
+    Result:LTSTeaServingFruit,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Tea (Fruit) {
+    LTSTeaServingFruit=10,
+    LTSClingWrap=1,
+    Result:LTSStackTeaServingFruit,
+    Category:LTS-Logistics,
+  }
+  
+  item LTSStackTeaServingHerbs {
+    Type=Drainable,
+    Weight=0.1,
+    DisplayName=Tea (Herbs) Stack,
+    Icon=TeaHerbs,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSScrapPlastic,
+  }
+  
+  recipe LTS Get Tea (Herbs) {
+    LTSStackTeaServingHerbs=1,
+    Result:LTSTeaServingHerbs,
+    Category:LTS-Logistics,
+  }
+  
+  recipe LTS Wrap Tea (Herbs) {
+    LTSTeaServingHerbs=10,
+    LTSClingWrap=1,
+    Result:LTSStackTeaServingHerbs,
+    Category:LTS-Logistics,
+  }
   
 }

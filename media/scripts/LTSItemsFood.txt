@@ -48,7 +48,7 @@ module DLTS {
   
   item LTSHoneyBar {
     Type=Food,
-    DisplayName=Honey Bar with Nuts & Fruits,
+    DisplayName=Honey Bar,
     Icon=HoneyBar,
     Weight=0.1,
     HungerChange=-25,
