@@ -5,7 +5,7 @@ module DLTS {
 
   item LTSWildNuts {
     HungerChange=-10,
-    Weight=0.05,
+    Weight=0.1,
     Type=Food,
     FoodType=NoExplicit,
     DisplayName=Wild Nuts,
@@ -38,7 +38,7 @@ module DLTS {
     Type=Normal,
     DisplayName=Pine Cone,
     Icon=PineCone,
-    Weight=0.05,  
+    Weight=0.1,  
   }
 
   item LTSHoneyComb {
