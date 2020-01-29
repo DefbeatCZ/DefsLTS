@@ -26,7 +26,7 @@ module DLTS {
   
   recipe LTS Weave Thread {
     keep Scissors,
-    LTSRecycledThread=1,
+    LTSRecycledThread=2,
     Result:Thread,
     Time:240.0,
     Category:Tailoring,
@@ -36,7 +36,7 @@ module DLTS {
   
   recipe LTS Weave Twine {
     keep Scissors,
-    LTSRecycledThread=5,
+    LTSRecycledThread=7,
     Result:Twine,
     Time:360.0,
     Category:Tailoring,
