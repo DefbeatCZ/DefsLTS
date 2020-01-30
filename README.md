@@ -1,4 +1,4 @@
-#Long Term Survival Mod for Project Zomboid 
+Long Term Survival Mod for Project Zomboid 
 ---
 
 Welcome! This repository contains all data from Def's Long Term Survival mod released on Steam Workshop under https://steamcommunity.com/sharedfiles/filedetails/?id=1962914415
