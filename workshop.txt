@@ -1,6 +1,6 @@
-version=1
+version=1.1
 id=1962914415
 title=Def's Long Term Survival
-description=Description.
+description=Mod wiki @ https://github.com/DefbeatCZ/DefsLTS/wiki.
 tags=
 visibility=public
