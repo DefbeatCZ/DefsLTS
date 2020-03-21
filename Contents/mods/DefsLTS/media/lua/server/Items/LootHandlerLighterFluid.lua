@@ -6,7 +6,6 @@ function registerAsLoot(item, chance, sub1, sub2)
 end
 
 registerAsLoot("DLTS.LTSLighterFluid", 0.5, "shed", "other");
-registerAsLoot("DLTS.LTSLighterFluid", 0.5, "shed", "counter");
 registerAsLoot("DLTS.LTSLighterFluid", 0.5, "all", "metal_shelves");
 registerAsLoot("DLTS.LTSLighterFluid", 0.5, "all", "shelves");
 registerAsLoot("DLTS.LTSLighterFluid", 0.5, "toolstore", "counter");

@@ -8,7 +8,6 @@ end
 registerAsLoot("DLTS.LTSWaterCanEmpty", 1.5, "loggingfactory", "crate");
 registerAsLoot("DLTS.LTSWaterCanEmpty", 0.7, "all", "crate");
 registerAsLoot("DLTS.LTSWaterCanEmpty", 2, "shed", "other");
-registerAsLoot("DLTS.LTSWaterCanEmpty", 2, "shed", "counter");
 
 registerAsLoot("DLTS.LTSWaterCanFilled", 1.3, "zippeestore", "counter");
 registerAsLoot("DLTS.LTSWaterCanFilled", 0.5, "zippeestore", "crate");

@@ -8,10 +8,6 @@ function registerItemAsLoot(item, chance)
   table.insert(SuburbsDistributions["all"]["inventoryfemale"].items, chance);
 end
 
--- Flame Sources
-registerItemAsLoot("Base.Lighter", 0.02);
-registerItemAsLoot("Base.Matches", 0.02);
-
 -- Junk Food / Drink
 registerItemAsLoot("Base.Crisps", 0.02);
 registerItemAsLoot("Base.Candycane", 0.02);
