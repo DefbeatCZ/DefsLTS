@@ -409,6 +409,17 @@ module DLTS {
     OnGiveXP:CraftXP_FoodBase,
   }
   
+  recipe LTS Smash Nuts into Milk {
+    keep MortarPestle,
+    keep HuntingKnife/KitchenKnife,
+    LTSWildNuts=15,
+    Water=2,
+    Result:Milk,
+    Time:480.0,
+    Category:LTS-Food,
+    OnGiveXP:CraftXP_FoodBase,
+  }  
+  
   /** ------------------------------------------------------------------------- **/
   /** Hot Cuppa Ingredients **/  
   
