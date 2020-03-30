@@ -248,6 +248,7 @@ module DLTS {
     CorpseMale/CorpseFemale,
     Result:LTSCorpseFlesh=3,
     Time:240.0,
+    OnCreate:onCreate_getFreshResult,
     Category:LTS-Base,
   }
   
