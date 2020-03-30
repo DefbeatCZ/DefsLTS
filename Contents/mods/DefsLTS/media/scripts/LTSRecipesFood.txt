@@ -392,7 +392,7 @@ module DLTS {
   recipe LTS Smash Nuts into Butter {
     keep MortarPestle,
     keep HuntingKnife/KitchenKnife,
-    LTSWildNuts=20,
+    LTSWildNuts=15,
     Result:Butter,
     Time:480.0,
     Category:LTS-Food,
@@ -402,7 +402,7 @@ module DLTS {
   recipe LTS Smash Nuts into Flour {
     keep MortarPestle,
     keep HuntingKnife/KitchenKnife,
-    LTSWildNuts=35,
+    LTSWildNuts=20,
     Result:Flour,
     Time:480.0,
     Category:LTS-Food,
@@ -412,7 +412,7 @@ module DLTS {
   recipe LTS Smash Nuts into Milk {
     keep MortarPestle,
     keep HuntingKnife/KitchenKnife,
-    LTSWildNuts=15,
+    LTSWildNuts=10,
     Water=2,
     Result:Milk,
     Time:480.0,
