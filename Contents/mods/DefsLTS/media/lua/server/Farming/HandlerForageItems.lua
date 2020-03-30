@@ -31,7 +31,7 @@ table.insert(scavenges.mushrooms, WildOnion);
 local WildNuts = {};
 WildNuts.type="DLTS.LTSWildNuts";
 WildNuts.minCount=1;
-WildNuts.maxCount=1;
+WildNuts.maxCount=3;
 WildNuts.skill=4;
 table.insert(scavenges.berries, WildNuts);
 
@@ -40,18 +40,18 @@ Camomille.type="DLTS.LTSCamomille";
 Camomille.minCount=1;
 Camomille.maxCount=2;
 Camomille.skill=2;
-table.insert(scavenges.berries, Camomille);
+table.insert(scavenges.medicinalPlants, Camomille);
 
 local Dandelion = {};
 Dandelion.type="DLTS.LTSDandelion";
 Dandelion.minCount=1;
 Dandelion.maxCount=2;
 Dandelion.skill=2;
-table.insert(scavenges.berries, Dandelion);
+table.insert(scavenges.medicinalPlants, Dandelion);
 
 local Tobacco = {};
 Tobacco.type="DLTS.LTSTobacco";
 Tobacco.minCount=1;
 Tobacco.maxCount=2;
 Tobacco.skill=6;
-table.insert(scavenges.berries, Tobacco);
+table.insert(scavenges.medicinalPlants, Tobacco);
