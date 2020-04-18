@@ -243,7 +243,7 @@ module DLTS {
   /** Preparing Bits from Food Items **/
   
   recipe LTS Cut Bits of Meat {
-    keep HuntingKnife/KitchenKnife,
+    keep HuntingKnife/KitchenKnife/BreadKnife/MeatCleaver/Machete/FlintKnife,
     MuttonChop/PorkChop/Steak/Rabbitmeat/Salmon/FishFillet,
     Result:LTSBitsMeat=7,
     Sound:PZ_FoodSlicing,
@@ -253,7 +253,7 @@ module DLTS {
   }
   
   recipe LTS Cut Bits of Meat {
-    keep HuntingKnife/KitchenKnife,
+    keep HuntingKnife/KitchenKnife/BreadKnife/MeatCleaver/Machete/FlintKnife,
     Smallanimalmeat/Smallbirdmeat,
     Result:LTSBitsMeat=3,
     Sound:PZ_FoodSlicing,
@@ -263,7 +263,7 @@ module DLTS {
   }
 
   recipe LTS Cut Bits of Herbs {
-    keep HuntingKnife/KitchenKnife,
+    keep HuntingKnife/KitchenKnife/BreadKnife/MeatCleaver/Machete/FlintKnife,
     Violets/GrapeLeaves/BlackSage/CommonMallow/Ginseng/LemonGrass/WildGarlic/LTSDandelion/LTSCamomille,
     Result:LTSBitsHerbs=1,
     Sound:PZ_FoodSlicing,
@@ -273,7 +273,7 @@ module DLTS {
   }
   
   recipe LTS Cut Bits of Vegetable {
-    keep HuntingKnife/KitchenKnife,
+    keep HuntingKnife/KitchenKnife/BreadKnife/MeatCleaver/Machete/FlintKnife,
     Cabbage/Eggplant,
     Result:LTSBitsVegetable=9,
     Sound:PZ_FoodSlicing,
@@ -283,7 +283,7 @@ module DLTS {
   }  
 
   recipe LTS Cut Bits of Vegetable {
-    keep HuntingKnife/KitchenKnife,
+    keep HuntingKnife/KitchenKnife/BreadKnife/MeatCleaver/Machete/FlintKnife,
     Leek/Potato/Avocado/BellPepper/Broccoli/Zucchini,
     Result:LTSBitsVegetable=5,
     Sound:PZ_FoodSlicing,
@@ -293,7 +293,7 @@ module DLTS {
   }  
 
   recipe LTS Cut Bits of Vegetable {
-    keep HuntingKnife/KitchenKnife,
+    keep HuntingKnife/KitchenKnife/BreadKnife/MeatCleaver/Machete/FlintKnife,
     Carrots/Onion/RedRadish/Tomato/LTSWildOnion,
     Result:LTSBitsVegetable=3,
     Sound:PZ_FoodSlicing,
@@ -303,7 +303,7 @@ module DLTS {
   }  
 
   recipe LTS Cut Bits of Fruit {
-    keep HuntingKnife/KitchenKnife,
+    keep HuntingKnife/KitchenKnife/BreadKnife/MeatCleaver/Machete/FlintKnife,
     Cherry/Rosehips/Strewberrie/BerryBlack/BerryBlue/BerryGeneric1/BerryGeneric2/BerryGeneric3/BerryGeneric4/BerryGeneric5/BerryPoisonIvy,
     Result:LTSBitsFruit=1,
     Sound:PZ_FoodSlicing,
@@ -313,7 +313,7 @@ module DLTS {
   }  
 
   recipe LTS Cut Bits of Fruit {
-    keep HuntingKnife/KitchenKnife,
+    keep HuntingKnife/KitchenKnife/BreadKnife/MeatCleaver/Machete/FlintKnife,
     Pineapple/Apple/Banana/Grapes/Lemon/Orange/Peach/WatermelonSliced,
     Result:LTSBitsFruit=4,
     Sound:PZ_FoodSlicing,
@@ -323,7 +323,7 @@ module DLTS {
   }  
   
   recipe LTS Cut Bits of Mushroom {
-    keep HuntingKnife/KitchenKnife,
+    keep HuntingKnife/KitchenKnife/BreadKnife/MeatCleaver/Machete/FlintKnife,
     MushroomGeneric1/MushroomGeneric2/MushroomGeneric3/MushroomGeneric4/MushroomGeneric5/MushroomGeneric6/MushroomGeneric7,
     Result:LTSBitsMushroom=3,
     Sound:PZ_FoodSlicing,
@@ -336,7 +336,7 @@ module DLTS {
   /** Seasonings **/ 
   
   recipe LTS Create Seasoning {
-    keep HuntingKnife/KitchenKnife,
+    keep HuntingKnife/KitchenKnife/BreadKnife/MeatCleaver/Machete/FlintKnife,
     LTSDriedHerbs=2,
     Sound:PZ_FoodSlicing,
     Result:LTSSeasoningHerbs,
@@ -346,7 +346,7 @@ module DLTS {
   } 
   
   recipe LTS Create Seasoning {
-    keep HuntingKnife/KitchenKnife,
+    keep HuntingKnife/KitchenKnife/BreadKnife/MeatCleaver/Machete/FlintKnife,
     LTSDriedFruit=2,
     Sound:PZ_FoodSlicing,
     Result:LTSSeasoningFruit,
@@ -356,7 +356,7 @@ module DLTS {
   }   
   
   recipe LTS Create Seasoning {
-    keep HuntingKnife/KitchenKnife,
+    keep HuntingKnife/KitchenKnife/BreadKnife/MeatCleaver/Machete/FlintKnife,
     LTSDriedMushroom=2,
     Sound:PZ_FoodSlicing,
     Result:LTSSeasoningMushroom,
@@ -391,7 +391,7 @@ module DLTS {
 
   recipe LTS Smash Nuts into Butter {
     keep MortarPestle,
-    keep HuntingKnife/KitchenKnife,
+    keep HuntingKnife/KitchenKnife/BreadKnife/MeatCleaver/Machete/FlintKnife,
     LTSWildNuts=15,
     Result:Butter,
     Time:480.0,
@@ -401,7 +401,7 @@ module DLTS {
   
   recipe LTS Smash Nuts into Flour {
     keep MortarPestle,
-    keep HuntingKnife/KitchenKnife,
+    keep HuntingKnife/KitchenKnife/BreadKnife/MeatCleaver/Machete/FlintKnife,
     LTSWildNuts=20,
     Result:Flour,
     Time:480.0,
@@ -411,7 +411,7 @@ module DLTS {
   
   recipe LTS Smash Nuts into Milk {
     keep MortarPestle,
-    keep HuntingKnife/KitchenKnife,
+    keep HuntingKnife/KitchenKnife/BreadKnife/MeatCleaver/Machete/FlintKnife,
     LTSWildNuts=10,
     Water=2,
     Result:Milk,
@@ -424,7 +424,7 @@ module DLTS {
   /** Hot Cuppa Ingredients **/  
   
   recipe LTS Prepare Tea Serving {
-    keep HuntingKnife/KitchenKnife,
+    keep HuntingKnife/KitchenKnife/BreadKnife/MeatCleaver/Machete/FlintKnife,
     LTSDriedFruit,
     Sound:PZ_FoodSlicing,
     Result:LTSTeaServingFruit,
@@ -433,7 +433,7 @@ module DLTS {
   }  
   
   recipe LTS Prepare Tea Serving {
-    keep HuntingKnife/KitchenKnife,
+    keep HuntingKnife/KitchenKnife/BreadKnife/MeatCleaver/Machete/FlintKnife,
     LTSDriedHerbs,
     Sound:PZ_FoodSlicing,
     Result:LTSTeaServingHerbs,
@@ -442,7 +442,7 @@ module DLTS {
   }  
   
   recipe LTS Prepare Tea Serving {
-    keep HuntingKnife/KitchenKnife,
+    keep HuntingKnife/KitchenKnife/BreadKnife/MeatCleaver/Machete/FlintKnife,
     LTSBirchBark,
     Sound:PZ_FoodSlicing,
     Result:LTSTeaServingBirch,
