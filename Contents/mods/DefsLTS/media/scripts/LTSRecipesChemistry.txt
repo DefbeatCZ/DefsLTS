@@ -55,7 +55,7 @@ module DLTS {
     Sound:PZ_Fire,
     CanBeDoneFromFloor:true,
     Category:LTS-Chem,
-    onCreate:givePot,
+    OnCreate:givePot,
   }  
 
   /** ------------------------------------------------------------------------- **/
