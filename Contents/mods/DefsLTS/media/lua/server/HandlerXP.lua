@@ -49,3 +49,9 @@ end
 function CraftXP_Mending_Blade(recipe, ingredients, result, player)
     player:getXp():AddXP(Perks.MetalWelding, 10);
 end
+
+function CraftXP_CarMaintenance(recipe, ingredients, result, player)
+    player:getXp():AddXP(Perks.MetalWelding, 25);
+    player:getXp():AddXP(Perks.Electricity, 15);
+    player:getXp():AddXP(Perks.Mechanics, 125);
+end
