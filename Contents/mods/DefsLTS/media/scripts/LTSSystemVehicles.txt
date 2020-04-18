@@ -1,0 +1,83 @@
+module DLTS {
+
+  imports {
+    Base, Radio
+  } 
+
+  /** ------------------------------------------------------------------------- **/
+  /** Car Maintenance Items **/
+  
+  item LTSCarTools {
+    Type=Normal,
+    DisplayName=Car Maintenance Tools,
+    Icon=BoxTools,
+    Weight=10.0,
+  }
+
+  recipe LTS Assembly Maintenance Tools {
+    LTSBoxBlank,
+    Scissors,
+    Crowbar,
+    Hammer,
+    Jack,
+    LugWrench,
+    Screwdriver,
+    TirePump,
+    PipeWrench,
+    Wrench,
+    Time:120.0,
+    Result:LTSCarTools,
+    Category:LTS-Veh,
+  }
+
+  recipe LTS Take Maintenance Tools {
+    LTSCarTools,
+    Time:120.0,
+    Result:LTSBoxBlank,
+    Category:LTS-Veh,
+    OnCreate:giveMaintenanceTools,
+  }
+
+  item LTSCarParts {
+    Type=Drainable,
+    Weight=6.0,
+    DisplayName=Car Maintenance Materials,
+    Icon=BoxParts,
+    UseDelta=0.1,
+    ReplaceOnDeplete=DLTS.LTSBoxBlank,
+    cantBeConsolided=TRUE,
+  }
+  
+  recipe LTS Assembly Maintenance Materials {
+    LTSBoxBlank,
+    Base.ElectronicsScrap=2,
+    Base.ScrapMetal=10,
+    LTSScrapPlastic=8,
+    Base.SmallSheetMetal=5,
+    Radio.ElectricWire,
+    Base.Wire=5,
+    Base.DuctTape=6,    
+    Base.RippedSheets=10,
+    LTSChemEmpty=3,
+    LTSGlueMixture=2,
+    LTSMoonshine=2,
+    CleaningLiquid2=10,
+    Time:120.0,
+    Result:LTSCarParts,
+    Category:LTS-Veh,
+  }  
+
+  /** ------------------------------------------------------------------------- **/
+  /** General Maintenance **/
+  
+  recipe LTS Perform Car Maintenance {
+    keep LTSCarTools,
+    LTSCarParts=1,
+    Result:RippedSheetsDirty,
+    OnTest:onTest_LTSCarMaintenance,
+    OnCreate:onCreate_LTSCarMaintenance,
+    OnGiveXP:CraftXP_CarMaintenance,
+    Category:LTS-Veh,
+  }
+  
+}
