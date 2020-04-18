@@ -139,6 +139,15 @@ module DLTS {
     Time:240.0,
     Category:Carpentry,
   }  
+  
+  recipe LTS Mix Concrete {
+    destroy BucketEmpty,
+    Water=4,
+    ConcretePowder,
+    Result:BucketConcreteFull,
+    Time:240.0,
+    Category:Carpentry,
+  } 
 
   recipe LTS Crush Sand {
     keep Sledgehammer/Sledgehammer2,
