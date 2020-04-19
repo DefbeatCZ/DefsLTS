@@ -36,3 +36,12 @@ function onCreate_LTSCarMaintenance(items, result, player)
   end
 
 end
+
+function onCreate_LTSCarRemoveRust(items, result, player)
+  local vehicle = player:getVehicle();
+  
+  if vehicle ~= nil then
+    vehicle:setRust(0.0);
+  end
+  
+end

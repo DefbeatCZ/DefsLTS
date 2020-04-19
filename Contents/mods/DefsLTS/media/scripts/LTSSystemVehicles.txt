@@ -78,6 +78,17 @@ module DLTS {
     OnCreate:onCreate_LTSCarMaintenance,
     OnGiveXP:CraftXP_CarMaintenance,
     Category:LTS-Veh,
+    Time:1260.0,
+  }
+  
+  recipe LTS Remove Rust {
+    keep LTSCarTools,
+    LTSCarParts=1,
+    Result:RippedSheetsDirty,
+    OnTest:onTest_LTSCarMaintenance,
+    OnCreate:onCreate_LTSCarRemoveRust,
+    Category:LTS-Veh,
+    Time:1260.0,
   }
   
 }
