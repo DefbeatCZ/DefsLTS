@@ -5,6 +5,17 @@ module DLTS {
   } 
 
   /** ------------------------------------------------------------------------- **/
+  /** Using Cologne to Sterilize Rags **/
+  
+  recipe LTS Disinfect Rag with Cologne {
+    destroy RippedSheets,
+    Cologne,
+    Result:AlcoholRippedSheets,
+    Time:40.0,
+    Category:Health,
+  }
+
+  /** ------------------------------------------------------------------------- **/
   /** Limestone Extraction **/
 
   recipe LTS Find Limestone Chunks {
