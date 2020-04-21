@@ -41,5 +41,4 @@ registerItemAsLoot("Base.AlcoholWipes", 0.01);
 registerItemAsLoot("Base.Disinfectant", 0.01);
 registerItemAsLoot("Base.VideoGame", 0.01);
 registerItemAsLoot("Base.CDplayer", 0.01);
-registerItemAsLoot("Base.Umbrella", 0.01);
 registerItemAsLoot("Base.RubberBand", 0.02);
