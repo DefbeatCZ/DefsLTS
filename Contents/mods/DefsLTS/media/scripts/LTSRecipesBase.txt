@@ -1,8 +1,26 @@
 module DLTS {
 
   imports {
-    Base
+    Base, Radio
   } 
+
+  /** ------------------------------------------------------------------------- **/
+  /** Crafting Chemical Cells (Battery) **/
+  
+  recipe LTS Create Chemical Battery {
+    keep Hammer,
+    keep Saw,
+    Wire=2,
+    ElectricWire,
+    Nails=10,
+    MetalPipe,
+    LTSScrapPlastic=2,
+    Vinegar=3,
+    LTSPineTar=2,
+    Result:Battery=3,
+    Time:240.0,  
+    Category:LTS-Base,
+  }
 
   /** ------------------------------------------------------------------------- **/
   /** Using Cologne to Sterilize Rags **/
