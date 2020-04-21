@@ -5,9 +5,35 @@ module DLTS {
   } 
   
   /** ------------------------------------------------------------------------- **/
+  /** Craftable Vanilla Foods **/
+  
+  recipe LTS Homemade Pasta {
+    Flour=2,
+    Egg/WildEggs,
+    Salt;1,
+    Result:Pasta,
+    OnGiveXP:CraftXP_FoodBase,
+    Time:350,
+    Category:LTS-Food,
+  }
+  
+  recipe LTS Homemade Mayo {
+    EmptyJar,
+    Egg/WildEggs,
+    Egg/WildEggs,
+    Salt;1,
+    Vinegar=1,
+    Sugar=1,
+    Result:MayonnaiseFull,
+    OnGiveXP:CraftXP_FoodBase,
+    Time:350,
+    Category:LTS-Food,
+  }
+  
+  /** ------------------------------------------------------------------------- **/
   /** Honey Candy & Bar **/ 
 
-  recipe Make Honey Candy [Fruit] {
+  recipe LTS Make Honey Candy [Fruit] {
     Honey;5,
     Sugar=1,
     LTSBitsHerbs=2,
@@ -18,7 +44,7 @@ module DLTS {
     Category:LTS-Food,
   }
   
-  recipe Make Honey Candy [Healing] {
+  recipe LTS Make Honey Candy [Healing] {
     Honey;5,
     Sugar=1,
     LTSBitsHerbs=2,
@@ -31,7 +57,7 @@ module DLTS {
     Category:LTS-Food,
   }
   
-  recipe Make Honey Candy [Power Up] {
+  recipe LTS Make Honey Candy [Power Up] {
     Honey;5,
     Sugar=2,
     LTSBitsHerbs=5,
@@ -43,7 +69,7 @@ module DLTS {
     Category:LTS-Food,
   }  
   
-  recipe Make Honey Bar {
+  recipe LTS Make Honey Bar {
     Honey;5,
     Sugar=1,
     LTSBitsFruit=4,
