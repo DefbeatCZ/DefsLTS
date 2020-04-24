@@ -53,5 +53,83 @@ module DLTS {
     OnGiveXP:CraftXP_Ropework,
     AnimNode:Disassemble,
   }
+  
+  /** ------------------------------------------------------------------------- **/
+  /** Tailoring: Recipes with Vanilla materials **/
+  
+  recipe LTS Create Makeshift Sheet {
+    keep Scissors,
+    keep Needle,
+    Thread=6,
+    RippedSheets=6,
+    Result:Sheet,
+    Time:480.0,
+    Category:Tailoring,
+    OnGiveXP:CraftXP_Ropework,
+    AnimNode:Disassemble,
+  }
+  
+  recipe LTS Create Sheet from Pillow Cover {
+    keep Scissors,
+    Pillow,
+    Result:Sheet,
+    Time:360.0,
+    Category:Tailoring,
+    Sound:PZ_ClothesRipping,
+    OnGiveXP:CraftXP_Ropework,
+    AnimNode:Disassemble,
+  }  
+  
+  recipe LTS Create Makeshift Tissue {
+    keep Scissors,
+    RippedSheets,
+    Result:Tissue,
+    Time:240.0,
+    Category:Tailoring,
+    Sound:PZ_ClothesRipping,
+    OnGiveXP:CraftXP_Ropework,
+    AnimNode:Disassemble,
+  }
+  
+  recipe LTS Create Makeshift Tissue {
+    ToiletPaper,
+    Result:Tissue=2,
+    Time:240.0,
+    Category:Tailoring,
+    Sound:PZ_ClothesRipping,
+    OnGiveXP:CraftXP_Ropework,
+    AnimNode:Disassemble,
+  }
+  
+  recipe LTS Tear Sheet Rope {
+    keep Scissors,
+    SheetRope,
+    Result:RippedSheets=2,
+    Time:240.0,
+    Category:Tailoring,
+    Sound:PZ_ClothesRipping,
+    OnGiveXP:CraftXP_Ropework,
+    AnimNode:Disassemble,
+  }
+  
+  recipe LTS Tear Dish Cloth {
+    destroy DishCloth/DishClothWet,
+    Result:RippedSheets=2,
+    Time:240.0,
+    Category:Tailoring,
+    Sound:PZ_ClothesRipping,
+    OnGiveXP:CraftXP_Ropework,
+    AnimNode:Disassemble,
+  }
+  
+  recipe LTS Tear Bath Towel {
+    destroy BathTowel/BathTowelWet,
+    Result:RippedSheets=2,
+    Time:240.0,
+    Category:Tailoring,
+    Sound:PZ_ClothesRipping,
+    OnGiveXP:CraftXP_Ropework,
+    AnimNode:Disassemble,
+  }
 
 }
