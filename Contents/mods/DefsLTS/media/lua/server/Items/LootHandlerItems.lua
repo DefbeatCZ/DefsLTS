@@ -1,4 +1,4 @@
-require 'Items/SuburbsDistributions'
+require 'Items/Distributions'
 
 function registerAsLoot(item, chance, sub1, sub2)
   table.insert(SuburbsDistributions[sub1][sub2].items, item);
@@ -54,7 +54,7 @@ iReg = "DLTS.LTSWorkbookWood";
 registerAsLoot(iReg, 0.3, "poststorage", "all");
 registerAsLoot(iReg, 0.2, "toolstore", "shelves");
 registerAsLoot(iReg, 0.2, "toolstore", "counter");
-registerAsLoot(iReg, 0.5, "bookstore", "all");
+registerAsLoot(iReg, 0.5, "bookstore", "other");
 registerAsLoot(iReg, 0.3, "garage", "metal_shelves");
 registerAsLoot(iReg, 0.3, "all", "shelves");
 registerAsLoot(iReg, 0.2, "zippeestore", "shelvesmag");
@@ -66,7 +66,7 @@ registerAsLoot(iReg, 0.3, "electronicsstore", "counter");
 registerAsLoot(iReg, 0.3, "poststorage", "all");
 registerAsLoot(iReg, 0.2, "toolstore", "shelves");
 registerAsLoot(iReg, 0.2, "toolstore", "counter");
-registerAsLoot(iReg, 0.5, "bookstore", "all");
+registerAsLoot(iReg, 0.5, "bookstore", "other");
 registerAsLoot(iReg, 0.3, "garage", "metal_shelves");
 registerAsLoot(iReg, 0.3, "all", "shelves");
 registerAsLoot(iReg, 0.2, "zippeestore", "shelvesmag");
@@ -79,7 +79,7 @@ registerAsLoot(iReg, 0.3, "mechanic", "metal_shelves");
 registerAsLoot(iReg, 0.3, "poststorage", "all");
 registerAsLoot(iReg, 0.2, "toolstore", "shelves");
 registerAsLoot(iReg, 0.2, "toolstore", "counter");
-registerAsLoot(iReg, 0.5, "bookstore", "all");
+registerAsLoot(iReg, 0.5, "bookstore", "other");
 registerAsLoot(iReg, 0.3, "garage", "metal_shelves");
 registerAsLoot(iReg, 0.3, "all", "shelves");
 registerAsLoot(iReg, 0.2, "zippeestore", "shelvesmag");
@@ -91,7 +91,7 @@ registerAsLoot(iReg, 0.3, "sewingstore", "counter");
 registerAsLoot(iReg, 0.3, "poststorage", "all");
 registerAsLoot(iReg, 0.2, "toolstore", "shelves");
 registerAsLoot(iReg, 0.2, "toolstore", "counter");
-registerAsLoot(iReg, 0.5, "bookstore", "all");
+registerAsLoot(iReg, 0.5, "bookstore", "other");
 registerAsLoot(iReg, 0.3, "garage", "metal_shelves");
 registerAsLoot(iReg, 0.3, "all", "shelves");
 registerAsLoot(iReg, 0.2, "zippeestore", "shelvesmag");
