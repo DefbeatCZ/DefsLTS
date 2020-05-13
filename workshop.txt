@@ -1,7 +1,7 @@
 version=1
 id=1962914415
 title=Def's Long Term Survival
-description=The full release is now live. Complete overview is on the wiki https://github.com/DefbeatCZ/DefsLTS/wiki.
+description=Complete overview is on the wiki https://github.com/DefbeatCZ/DefsLTS/wiki.
 description=
 description=In short: Food preservation, more foraging, simple metalwork, plastic recycling, kitchen sink chemistry, packaging, logistics, zombie loot, car trunks increased ... All based on real life!
 description=
