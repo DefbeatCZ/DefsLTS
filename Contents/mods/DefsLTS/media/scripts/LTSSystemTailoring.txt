@@ -101,6 +101,18 @@ module DLTS {
     AnimNode:Disassemble,
   }
   
+  recipe LTS Create Sand Bag {
+    keep Scissors,
+    keep Needle,
+    Thread=6,
+    Sheet=2,
+    Result:EmptySandbag,
+    Time:360.0,
+    Category:Tailoring,
+    OnGiveXP:CraftXP_Ropework,
+    AnimNode:Disassemble,
+  }  
+  
   recipe LTS Tear Sheet Rope {
     keep Scissors,
     SheetRope,
