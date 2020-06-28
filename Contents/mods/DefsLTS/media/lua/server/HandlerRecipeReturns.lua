@@ -2,6 +2,10 @@ function giveDryingRack(items, result, player)
     player:getInventory():AddItem("DLTS.LTSDryingRackEmpty");
 end
 
+function giveJar(items, result, player)
+    player:getInventory():AddItem("Base.EmptyJar");
+end
+
 function givePot(items, result, player)
     player:getInventory():AddItem("Base.Pot");
 end

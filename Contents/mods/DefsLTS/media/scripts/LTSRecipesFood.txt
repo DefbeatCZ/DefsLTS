@@ -30,6 +30,19 @@ module DLTS {
     Category:LTS-Food,
   }
   
+  recipe LTS Homemade "Wine" {
+    WineEmpty/WineEmpty2,
+    WineEmpty/WineEmpty2,
+    LTSFruitWine,
+    Water=2,
+    Sugar=1,
+    Result:Wine=2,
+    OnGiveXP:CraftXP_FoodBase,
+    OnCreate:giveJar,
+    Time:350,
+    Category:LTS-Food,
+  }
+  
   /** ------------------------------------------------------------------------- **/
   /** Honey Candy & Bar **/ 
 
