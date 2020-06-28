@@ -1,0 +1,110 @@
+Items_EN = {
+
+  -- All Workbooks are named "Awesome DYI - [Subject]" (Defined in LTSBooks)
+
+  -- All Magazines should follow "Magazine: [Subject]{, Vol. [No]}" where {*} is if applicable 
+
+  ItemName_Base.FishingMag1 = "Magazine: Angler USA, Vol. I",
+  ItemName_Base.FishingMag2 = "Magazine: Angler USA, Vol. II",
+  ItemName_Base.ElectronicsMag1 = "Magazine: Electronics, Vol. I",
+  ItemName_Base.ElectronicsMag2 = "Magazine: Electronics, Vol. II",
+  ItemName_Base.ElectronicsMag3 = "Magazine: Electronics, Vol. III",
+  ItemName_Base.ElectronicsMag5 = "Magazine: Electronics, Vol. IV",
+  ItemName_Base.CookingMag1 = "Magazine: Good Cooking, Vol. I",
+  ItemName_Base.CookingMag2 = "Magazine: Good Cooking, Vol. II",
+  ItemName_Base.EngineerMagazine1 = "Magazine: Engineering, Vol. I",
+  ItemName_Base.EngineerMagazine2 = "Magazine: Engineering, Vol. II",
+  ItemName_Radio.RadioMag1 = "Magazine: Guerilla Radio, Vol. I",
+  ItemName_Radio.RadioMag2 = "Magazine: Guerilla Radio, Vol. II",
+  ItemName_Radio.RadioMag3 = "Magazine: Guerilla Radio, Vol. III",
+  ItemName_Base.ElectronicsMag4 = "Magazine: How To Use Generators",
+  ItemName_Base.FarmingMag1 = "Magazine: Farming",
+  ItemName_Base.HerbalistMag = "Magazine: The Herbalist",
+  ItemName_Base.HuntingMag1 = "Magazine: The Hunter, Vol. I",
+  ItemName_Base.HuntingMag2 = "Magazine: The Hunter, Vol. II",
+  ItemName_Base.HuntingMag3 = "Magazine: The Hunter, Vol. III",
+  ItemName_Base.MetalworkMag1 = "Magazine: Metalworking, Vol. I",
+  ItemName_Base.MetalworkMag2 = "Magazine: Metalworking, Vol. II",
+  ItemName_Base.MetalworkMag3 = "Magazine: Metalworking, Vol. III",
+  ItemName_Base.MetalworkMag4 = "Magazine: Metalworking, Vol. IV",
+
+  -- All Books should follow "Book of [Subject], Vol. [No]"
+
+  -- Carpentry
+  ItemName_Base.BookCarpentry1 = "Book of Carpentry, Vol. I",
+  ItemName_Base.BookCarpentry2 = "Book of Carpentry, Vol. II",
+  ItemName_Base.BookCarpentry3 = "Book of Carpentry, Vol. III", 
+  ItemName_Base.BookCarpentry4 = "Book of Carpentry, Vol. IV", 
+  ItemName_Base.BookCarpentry5 = "Book of Carpentry, Vol. V",
+
+  -- Cooking
+  ItemName_Base.BookCooking1 = "Book of Cooking, Vol. I",
+  ItemName_Base.BookCooking2 = "Book of Cooking, Vol. II",
+  ItemName_Base.BookCooking3 = "Book of Cooking, Vol. III",
+  ItemName_Base.BookCooking4 = "Book of Cooking, Vol. IV",
+  ItemName_Base.BookCooking5 = "Book of Cooking, Vol. V",
+
+  -- Electricity
+  ItemName_Base.BookElectrician1 = "Book of Electricity, Vol. I",
+  ItemName_Base.BookElectrician2 = "Book of Electricity, Vol. II",
+  ItemName_Base.BookElectrician3 = "Book of Electricity, Vol. III",
+  ItemName_Base.BookElectrician4 = "Book of Electricity, Vol. IV",
+  ItemName_Base.BookElectrician5 = "Book of Electricity, Vol. V",
+
+  -- Farming
+  ItemName_Base.BookFarming1 = "Book of Farming, Vol. I",
+  ItemName_Base.BookFarming2 = "Book of Farming, Vol. II",
+  ItemName_Base.BookFarming3 = "Book of Farming, Vol. III",
+  ItemName_Base.BookFarming4 = "Book of Farming, Vol. IV",
+  ItemName_Base.BookFarming5 = "Book of Farming, Vol. V",
+
+  -- First Aid
+  ItemName_Base.BookFirstAid1 = "Book of First Aid, Vol. I",
+  ItemName_Base.BookFirstAid2 = "Book of First Aid, Vol. II",
+  ItemName_Base.BookFirstAid3 = "Book of First Aid, Vol. III",
+  ItemName_Base.BookFirstAid4 = "Book of First Aid, Vol. IV",
+  ItemName_Base.BookFirstAid5 = "Book of First Aid, Vol. V",
+
+  -- Fishing
+  ItemName_Base.BookFishing1 = "Book of Fishing, Vol. I",
+  ItemName_Base.BookFishing2 = "Book of Fishing, Vol. II",
+  ItemName_Base.BookFishing3 = "Book of Fishing, Vol. III",
+  ItemName_Base.BookFishing4 = "Book of Fishing, Vol. IV",
+  ItemName_Base.BookFishing5 = "Book of Fishing, Vol. V",
+  
+  -- Foraging
+  ItemName_Base.BookForaging1 = "Book of Foraging, Vol. I",
+  ItemName_Base.BookForaging2 = "Book of Foraging, Vol. II",
+  ItemName_Base.BookForaging3 = "Book of Foraging, Vol. III",
+  ItemName_Base.BookForaging4 = "Book of Foraging, Vol. IV",
+  ItemName_Base.BookForaging5 = "Book of Foraging, Vol. V",  
+
+  -- Mechanics
+  ItemName_Base.BookMechanic1 = "Book of Mechanics, Vol. I",
+  ItemName_Base.BookMechanic2 = "Book of Mechanics, Vol. II",
+  ItemName_Base.BookMechanic3 = "Book of Mechanics, Vol. III",
+  ItemName_Base.BookMechanic4 = "Book of Mechanics, Vol. IV",
+  ItemName_Base.BookMechanic5 = "Book of Mechanics, Vol. V",
+  
+  -- Metalwork
+  ItemName_Base.BookMetalWelding1 = "Book of Metalwork, Vol. I",
+  ItemName_Base.BookMetalWelding2 = "Book of Metalwork, Vol. II",
+  ItemName_Base.BookMetalWelding3 = "Book of Metalwork, Vol. III",
+  ItemName_Base.BookMetalWelding4 = "Book of Metalwork, Vol. IV",
+  ItemName_Base.BookMetalWelding5 = "Book of Metalwork, Vol. V",
+  
+  -- Tailoring
+  ItemName_Base.BookTailoring1 = "Book of Tailoring, Vol. I",
+  ItemName_Base.BookTailoring2 = "Book of Tailoring, Vol. II",
+  ItemName_Base.BookTailoring3 = "Book of Tailoring, Vol. III",
+  ItemName_Base.BookTailoring4 = "Book of Tailoring, Vol. IV",
+  ItemName_Base.BookTailoring5 = "Book of Tailoring, Vol. V",
+  
+  -- Trapping
+  ItemName_Base.BookTrapping1 = "Book of Trapping, Vol. I",
+  ItemName_Base.BookTrapping2 = "Book of Trapping, Vol. II",
+  ItemName_Base.BookTrapping3 = "Book of Trapping, Vol. III",
+  ItemName_Base.BookTrapping4 = "Book of Trapping, Vol. IV",
+  ItemName_Base.BookTrapping5 = "Book of Trapping, Vol. V",
+  
+}
