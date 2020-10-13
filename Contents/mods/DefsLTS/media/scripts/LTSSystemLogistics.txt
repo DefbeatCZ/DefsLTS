@@ -141,7 +141,6 @@ module DLTS {
     CanBeDoneFromFloor:true,
     Result:LTSStorageCellar00,
     Time:520.0,
-    OnGiveXP:CraftXP_Cellar,
     Category:LTS-Logistics,
   }
   

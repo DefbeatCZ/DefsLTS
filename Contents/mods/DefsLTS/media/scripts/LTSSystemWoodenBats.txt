@@ -77,7 +77,7 @@ module DLTS {
     Result:LTSBatHardened,
     Time:260.0,
     Category:LTS-Base,
-    OnGiveXP:CraftXP_Bat,
+    OnGiveXP:CraftXP_Mending_Wood,
   }
  
   recipe LTS Reinforce Baseball Bat {
@@ -88,7 +88,7 @@ module DLTS {
     Result:LTSBatHardened,
     Time:380.0,
     Category:LTS-Base,
-    OnGiveXP:CraftXP_Bat,
+    OnGiveXP:CraftXP_Mending_Wood,
   }
 
   /** ------------------------------------------------------------------------- **/
@@ -152,7 +152,7 @@ module DLTS {
     Result:LTSBatBarbed,
     Time:320.0,
     Category:LTS-Base,
-    OnGiveXP:CraftXP_Bat,
+    OnGiveXP:CraftXP_Mending_Wood,
   }
 
   recipe LTS Retrieve Barbed Wire {
@@ -224,7 +224,7 @@ module DLTS {
     Time:320.0,
     Category:LTS-Base,
     Sound:Hammering,
-    OnGiveXP:CraftXP_Bat,
+    OnGiveXP:CraftXP_Mending_Wood,
   }
 
   recipe LTS Retrieve Barbed Wire {

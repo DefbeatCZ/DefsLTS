@@ -28,7 +28,6 @@ registerAsLoot(iReg, 2.0, "fossoil", "crate");
 registerAsLoot(iReg, 0.2, "shed", "other");
 registerAsLoot(iReg, 0.2, "generalstorestorage", "other");
 registerAsLoot(iReg, 2.8, "gasstore", "shelves");
-registerAsLoot(iReg, 0.8, "camping", "all");
 registerAsLoot(iReg, 0.3, "all", "metal_shelves");
 
 -- Empty Water Can 
@@ -38,7 +37,6 @@ registerAsLoot(iReg, 0.5, "shed", "other");
 registerAsLoot(iReg, 0.5, "generalstorestorage", "other");
 registerAsLoot(iReg, 0.5, "generalstorestorage", "other");
 registerAsLoot(iReg, 0.3, "storageunit", "all");
-registerAsLoot(iReg, 0.4, "camping", "all");
 registerAsLoot(iReg, 0.1, "all", "metal_shelves");
 
 -- Water Can with Water
