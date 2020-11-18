@@ -23,7 +23,7 @@ module DLTS {
     Egg/WildEggs,
     Salt;1,
     Vinegar=1,
-    Sugar=1,
+    Sugar;1,
     Result:MayonnaiseFull,
     OnGiveXP:CraftXP_FoodBase,
     Time:350,
@@ -35,7 +35,7 @@ module DLTS {
     WineEmpty/WineEmpty2,
     LTSFruitWine,
     Water=2,
-    Sugar=1,
+    Sugar;1,
     Result:Wine=2,
     OnGiveXP:CraftXP_FoodBase,
     OnCreate:giveJar,
@@ -48,7 +48,7 @@ module DLTS {
 
   recipe LTS Make Honey Candy [Fruit] {
     Honey;5,
-    Sugar=1,
+    Sugar;1,
     LTSBitsHerbs=2,
     LTSBitsFruit=5,
     Result:LTSHoneyCandyFruit=6,
@@ -59,7 +59,7 @@ module DLTS {
   
   recipe LTS Make Honey Candy [Healing] {
     Honey;5,
-    Sugar=1,
+    Sugar;1,
     LTSBitsHerbs=2,
     BlackSage=2,
     CommonMallow=2,
@@ -72,7 +72,7 @@ module DLTS {
   
   recipe LTS Make Honey Candy [Power Up] {
     Honey;5,
-    Sugar=2,
+    Sugar;2,
     LTSBitsHerbs=5,
     Rosehips=4,
     Ginseng=5,
@@ -84,7 +84,7 @@ module DLTS {
   
   recipe LTS Make Honey Bar {
     Honey;5,
-    Sugar=1,
+    Sugar;1,
     LTSBitsFruit=4,
     LTSWildNuts=2,
     Result:LTSHoneyBar,
@@ -123,7 +123,7 @@ module DLTS {
   recipe LTS Mix Fermentable Fruit Juice {
     LTSBitsFruit=8,
     Water=10,
-    Sugar=3,
+    Sugar;3,
     Yeast=1,
     Pot,
     Result:LTSFermentingJuiceYoung,
@@ -180,7 +180,7 @@ module DLTS {
   recipe LTS Start Yeast Cultivation {
     Flour=1,
     Water=2,
-    Sugar=2,
+    Sugar;2,
     Bowl,
     Result:LTSYeastWet,
     OnGiveXP:CraftXP_FoodBase,
