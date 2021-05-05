@@ -98,7 +98,7 @@ module DLTS {
     Category:Tailoring,
     Sound:PZ_ClothesRipping,
     OnGiveXP:CraftXP_Ropework,
-    AnimNode:Disassemble,
+    AnimNode:RipSheets,
   }
   
   recipe LTS Create Sand Bag {
@@ -131,7 +131,7 @@ module DLTS {
     Category:Tailoring,
     Sound:PZ_ClothesRipping,
     OnGiveXP:CraftXP_Ropework,
-    AnimNode:Disassemble,
+    AnimNode:RipSheets,
   }
   
   recipe LTS Tear Bath Towel {
@@ -141,7 +141,7 @@ module DLTS {
     Category:Tailoring,
     Sound:PZ_ClothesRipping,
     OnGiveXP:CraftXP_Ropework,
-    AnimNode:Disassemble,
+    AnimNode:RipSheets,
   }
 
 }
