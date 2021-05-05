@@ -99,7 +99,7 @@ module DLTS {
   }
   
   recipe LTS Empty Chemical Container {
-    destroy LTSLighterFluid/CleaningLiquid/CleaningLiquid2/Glue/Woodglue/Disinfectant/Ketchup/Mustard,
+    destroy LTSLighterFluid/CleaningLiquid2/Glue/Woodglue/Disinfectant/Ketchup/Mustard,
     Result:LTSChemEmpty,
     CanBeDoneFromFloor:true,
     Time:120.0,  
