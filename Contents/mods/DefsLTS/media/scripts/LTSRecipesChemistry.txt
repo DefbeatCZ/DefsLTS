@@ -142,6 +142,19 @@ module DLTS {
     Category:LTS-Chem,   
   }
   
+    /** ------------------------------------------------------------------------- **/
+  /** GunPowder **/
+  
+  recipe LTS Prepare Gunpowder {
+    keep MortarPestle,
+    LTSWoodAsh=3,
+    LTSSaltpeter=2,
+    LTSSulfur=1,
+    Result:LTSGunpowder,
+    Time:360.0, 
+    Category:LTS-Chem,
+  }
+  
   /** ------------------------------------------------------------------------- **/
   /** Base Materials **/
 
@@ -186,5 +199,12 @@ module DLTS {
     Time:360.0, 
     Category:LTS-Chem,
   }
-
+  
+  recipe LTS Prepare Saltpeter {
+    keep MortarPestle,
+    Coldpack=3,
+    Result:LTSSaltpeter,
+    Time:360.0, 
+    Category:LTS-Chem,
+  }
 }

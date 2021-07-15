@@ -101,7 +101,14 @@ module DLTS {
     cantBeConsolided=TRUE,
     ReplaceOnDeplete=EmptyJar,
   }
+  
+ 
+ 
+ 
+  /** ------------------------------------------------------------------------- **/
+  /** Sulphur **/       
 
+ 
   /** ------------------------------------------------------------------------- **/
   /** Processing Materials **/  
 
@@ -189,6 +196,22 @@ module DLTS {
     DisplayName=Scrap Plastic,
     Icon=ScrapPlastic,
   }    
+  
+   item LTSSulphur {
+    Type=Normal,
+    Weight=3,
+    DisplayName=Sulphur,
+    Icon=Plaster_Powder,
+    
+  }
+
+   item LTSSaltpeter {
+    Type=Normal,
+    Weight=0.5,
+    DisplayName=Saltpeter,
+    Icon=Salt,
+    
+  }
   
   /** ------------------------------------------------------------------------- **/
   /** Corpse Disposal: Butcher Corpses to Meat (Poison) **/
