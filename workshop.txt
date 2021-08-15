@@ -6,5 +6,5 @@ description=
 description=In short: Food preservation, more foraging, simple metalwork, plastic recycling, kitchen sink chemistry, packaging, logistics, zombie loot, car trunks increased ... All based on real life!
 description=
 description=Please report any bugs so I can squish them!
-tags=
+tags=Build 41;Balance;Food;Items;Literature;Misc;Realistic;Weapons
 visibility=public
