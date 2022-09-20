@@ -462,8 +462,13 @@ module DLTS {
   /** ------------------------------------------------------------------------- **/
   /** Hot Cuppa Ingredients **/  
   
-  recipe LTS Prepare Tea Serving {
-    keep HuntingKnife/KitchenKnife/BreadKnife/MeatCleaver/Machete/FlintKnife,
+    recipe LTS Prepare Tea Serving {
+	  keep [Recipe.GetItemTypes.SharpKnife],
+	  keep MortarPestle,
+	  keep Scissors,
+	  keep Spoon,
+	  AlcoholRippedSheets,
+	  Thread=1,
     LTSDriedFruit,
     Sound:PZ_FoodSlicing,
     Result:LTSTeaServingFruit,
@@ -471,8 +476,13 @@ module DLTS {
     Category:LTS-Food,
   }  
   
-  recipe LTS Prepare Tea Serving {
-    keep HuntingKnife/KitchenKnife/BreadKnife/MeatCleaver/Machete/FlintKnife,
+    recipe LTS Prepare Tea Serving {
+	  keep [Recipe.GetItemTypes.SharpKnife],
+	  keep MortarPestle,
+	  keep Scissors,
+	  keep Spoon,
+	  AlcoholRippedSheets,
+	  Thread=1,
     LTSDriedHerbs,
     Sound:PZ_FoodSlicing,
     Result:LTSTeaServingHerbs,
@@ -481,13 +491,18 @@ module DLTS {
   }  
   
   recipe LTS Prepare Tea Serving {
-    keep HuntingKnife/KitchenKnife/BreadKnife/MeatCleaver/Machete/FlintKnife,
+	  keep [Recipe.GetItemTypes.SharpKnife],
+	  keep MortarPestle,
+	  keep Scissors,
+	  keep Spoon,
+	  AlcoholRippedSheets,
+	  Thread=1,
     LTSBirchBark,
     Sound:PZ_FoodSlicing,
     Result:LTSTeaServingBirch,
     Time:90.0,
     Category:LTS-Food,
-  }  
+  }
   
 }
   
