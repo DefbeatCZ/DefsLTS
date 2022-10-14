@@ -8,7 +8,7 @@ module DLTS {
   /** Crafting Chemical Cells (Battery) **/
   
   recipe LTS Create Chemical Battery {
-    keep Hammer,
+    keep [Recipe.GetItemTypes.Hammer],
     keep Saw,
     Wire=2,
     ElectricWire,
@@ -37,7 +37,7 @@ module DLTS {
   /** Limestone Extraction **/
 
   recipe LTS Find Limestone Chunks {
-    keep Hammer,
+    keep [Recipe.GetItemTypes.Hammer],
     Stone=5,
     Result:LTSLimestone,
     Time:120.0,  

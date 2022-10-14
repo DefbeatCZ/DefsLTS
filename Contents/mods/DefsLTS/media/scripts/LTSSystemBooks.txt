@@ -18,7 +18,7 @@ module DLTS {
   recipe LTS Woodworking Practice {
     keep LTSWorkbookWood,
     keep Saw,
-    keep Hammer,
+    keep [Recipe.GetItemTypes.Hammer],
     Plank=2,
     Result:UnusableWood,
     Time:480.0,
