@@ -178,7 +178,7 @@ module DLTS {
   recipe LTS Prepare Reduced Quicklime {
     keep Pot/Saucepan,
     keep MortarPestle,
-    keep Hammer,
+    keep [Recipe.GetItemTypes.Hammer],
     LTSLimestone=2,
     Water=3,
     Vinegar=1,
