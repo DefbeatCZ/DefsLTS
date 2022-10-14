@@ -7,7 +7,7 @@ module DLTS {
   recipe LTS Forge Metal Sheet {
     BlowTorch=7,
     keep WeldingMask,
-    keep Hammer,
+    keep [Recipe.GetItemTypes.Hammer],
     ScrapMetal=10,
     Result:SheetMetal,
     Time:480.0,
@@ -19,7 +19,7 @@ module DLTS {
   recipe LTS Forge Small Metal Sheet {
     BlowTorch=5,
     keep WeldingMask,
-    keep Hammer,
+    keep [Recipe.GetItemTypes.Hammer],
     ScrapMetal=4,
     Result:SmallSheetMetal,
     Time:480.0,
@@ -31,7 +31,7 @@ module DLTS {
   recipe LTS Forge Metal Bar {
     BlowTorch=5,
     keep WeldingMask,
-    keep Hammer,
+    keep [Recipe.GetItemTypes.Hammer],
     ScrapMetal=4,
     Result:MetalBar,
     Time:480.0,
@@ -43,7 +43,7 @@ module DLTS {
   recipe LTS Forge Metal Pipe {
     BlowTorch=7,
     keep WeldingMask,
-    keep Hammer,
+    keep [Recipe.GetItemTypes.Hammer],
     ScrapMetal=5,
     Result:MetalPipe,
     Time:480.0,
@@ -55,7 +55,7 @@ module DLTS {
   recipe LTS Forge Nails {
     BlowTorch=9,
     keep WeldingMask,
-    keep Hammer,
+    keep [Recipe.GetItemTypes.Hammer],
     ScrapMetal=12,
     Result:NailsBox,
     Time:480.0,
@@ -67,7 +67,7 @@ module DLTS {
   recipe LTS Forge Wire {
     BlowTorch=9,
     keep WeldingMask,
-    keep Hammer,
+    keep [Recipe.GetItemTypes.Hammer],
     ScrapMetal=5,
     Result:Wire,
     Time:480.0,
@@ -79,7 +79,7 @@ module DLTS {
   recipe LTS Forge Barbed Wire {
     BlowTorch=5,
     keep WeldingMask,
-    keep Hammer,
+    keep [Recipe.GetItemTypes.Hammer],
     Wire=5,
     ScrapMetal=3,
     Result:BarbedWire,
