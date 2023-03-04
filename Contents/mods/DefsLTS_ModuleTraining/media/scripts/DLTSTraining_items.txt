@@ -1,6 +1,5 @@
 module DLTSTraining {
   
-  /** All training books **/
   item DLTSTrainingBookCardio {
     DisplayName = Personal Training Plan: Cardio,
     Type = Literature,
@@ -55,10 +54,5 @@ module DLTSTraining {
     WorldStaticModel = BookRedPink_Ground,
     Tooltip = DLTSTraining_TTP_BookCrafting,
   }
-
-
-
-
-
 
 }
