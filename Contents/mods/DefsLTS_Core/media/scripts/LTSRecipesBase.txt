@@ -74,6 +74,14 @@ module DLTS {
     Category:LTS-Base,
   }
   
+  recipe LTS Reclaim vanilla Propane Tank {
+    destroy LTSPropaneTankEmpty,
+    Result:PropaneTank,
+    CanBeDoneFromFloor:true,
+    Time:120.0,  
+    Category:LTS-Base,
+  }
+  
   recipe LTS Empty Gas Can {
     destroy PetrolCan,
     Result:EmptyPetrolCan,
