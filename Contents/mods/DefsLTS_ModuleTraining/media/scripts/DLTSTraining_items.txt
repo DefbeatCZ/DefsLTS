@@ -1,0 +1,64 @@
+module DLTSTraining {
+  
+  /** All training books **/
+  item DLTSTrainingBookCardio {
+    DisplayName = Personal Training Plan: Cardio,
+    Type = Literature,
+    DisplayCategory = SkillBook,
+    Weight = 0.25,
+    Icon = Book6,
+    StaticModel = Book,
+    WorldStaticModel = BookRedPink_Ground,
+    Tooltip = DLTSTraining_TTP_BookCardio,
+  }
+
+  item DLTSTrainingBookMelee {
+    DisplayName = Personal Training Plan: Melee,
+    Type = Literature,
+    DisplayCategory = SkillBook,
+    Weight = 0.25,
+    Icon = Book6,
+    StaticModel = Book,
+    WorldStaticModel = BookRedPink_Ground,
+    Tooltip = DLTSTraining_TTP_BookMeleeCombat,
+  }
+
+  item DLTSTrainingBookRanged {
+    DisplayName = Personal Training Plan: Ranged,
+    Type = Literature,
+    DisplayCategory = SkillBook,
+    Weight = 0.25,
+    Icon = Book6,
+    StaticModel = Book,
+    WorldStaticModel = BookRedPink_Ground,
+    Tooltip = DLTSTraining_TTP_BookRangedCombat,
+  }
+
+  item DLTSTrainingBookSurvival {
+    DisplayName = Personal Training Plan: Survival,
+    Type = Literature,
+    DisplayCategory = SkillBook,
+    Weight = 0.25,
+    Icon = Book6,
+    StaticModel = Book,
+    WorldStaticModel = BookRedPink_Ground,  
+    Tooltip = DLTSTraining_TTP_BookSurvival,
+  }
+
+  item DLTSTrainingBookCrafting {
+    DisplayName = Personal Training Plan: Crafting,
+    Type = Literature,
+    DisplayCategory = SkillBook,
+    Weight = 0.25,
+    Icon = Book6,
+    StaticModel = Book,
+    WorldStaticModel = BookRedPink_Ground,
+    Tooltip = DLTSTraining_TTP_BookCrafting,
+  }
+
+
+
+
+
+
+}
