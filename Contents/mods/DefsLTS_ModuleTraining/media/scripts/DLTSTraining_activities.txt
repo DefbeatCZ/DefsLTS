@@ -1,0 +1,47 @@
+module DLTSTraining {
+
+  recipe Training: Cardio I (Light) {
+    keep DLTSTrainingBookCardio,
+    Stone = 5,
+    Result:Stone=5,
+    Category:DLTS Training,
+    Time:800.0,
+    OnGiveXP:DLTSTrainingGetXP_LightCardio,
+  }
+
+  recipe Training: Cardio II (Medium) {
+    keep DLTSTrainingBookCardio,
+    Stone = 5,
+    Result:Stone=5,
+    Category:DLTS Training,
+    Time:1200.0,
+    OnGiveXP:DLTSTrainingGetXP_MediumCardio,
+  }
+
+  recipe Training: Cardio III (Heavy) {
+    keep DLTSTrainingBookCardio,
+    Stone = 5,
+    Result:Stone=5,
+    Category:DLTS Training,
+    Time:1600.0,
+    OnGiveXP:DLTSTrainingGetXP_HeavyCardio,
+  }
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

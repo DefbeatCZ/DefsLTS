@@ -7,5 +7,12 @@ Tooltip_EN = {
   Tooltip_DLTSTraining_BookCrafting = "Your personal training plan for getting into crafting disciplines.",
   Tooltip_DLTSTraining_BookSurvival = "Your personal training plan for getting into survival disciplines.",
   
+  
+  
+  
+  
+  
+  
+  
 
 }
