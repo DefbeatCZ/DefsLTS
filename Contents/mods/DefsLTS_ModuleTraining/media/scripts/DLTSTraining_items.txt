@@ -2,7 +2,7 @@ module DLTSTraining {
   
   item DLTSTrainingBookCardio {
     DisplayName = Personal Training Plan: Cardio,
-    Type = Literature,
+    Type = Normal,
     DisplayCategory = SkillBook,
     Weight = 0.25,
     Icon = Book6,
@@ -13,7 +13,7 @@ module DLTSTraining {
 
   item DLTSTrainingBookMelee {
     DisplayName = Personal Training Plan: Melee,
-    Type = Literature,
+    Type = Normal,
     DisplayCategory = SkillBook,
     Weight = 0.25,
     Icon = Book6,
@@ -24,7 +24,7 @@ module DLTSTraining {
 
   item DLTSTrainingBookRanged {
     DisplayName = Personal Training Plan: Ranged,
-    Type = Literature,
+    Type = Normal,
     DisplayCategory = SkillBook,
     Weight = 0.25,
     Icon = Book6,
@@ -35,7 +35,7 @@ module DLTSTraining {
 
   item DLTSTrainingBookSurvival {
     DisplayName = Personal Training Plan: Survival,
-    Type = Literature,
+    Type = Normal,
     DisplayCategory = SkillBook,
     Weight = 0.25,
     Icon = Book6,
@@ -46,7 +46,7 @@ module DLTSTraining {
 
   item DLTSTrainingBookCrafting {
     DisplayName = Personal Training Plan: Crafting,
-    Type = Literature,
+    Type = Normal,
     DisplayCategory = SkillBook,
     Weight = 0.25,
     Icon = Book6,
