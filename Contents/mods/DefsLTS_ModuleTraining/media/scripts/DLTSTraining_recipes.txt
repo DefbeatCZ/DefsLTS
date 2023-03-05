@@ -1,0 +1,52 @@
+module DLTSTraining {
+
+  imports {
+    Base,
+  } 
+
+  recipe Compile Training Material: Cardio {
+    keep [Recipe.GetItemTypes.Write],
+    Book = 3,
+    Notebook,
+    Result:DLTSTrainingBookCardio,
+    Time:480.0,
+    Category:DLTS Training,
+  }
+
+  recipe Compile Training Material: Melee {
+    keep [Recipe.GetItemTypes.Write],
+    Book = 3,
+    Notebook,
+    Result:DLTSTrainingBookMelee,
+    Time:480.0,
+    Category:DLTS Training,  
+  }
+
+  recipe Compile Training Material: Ranged {
+    keep [Recipe.GetItemTypes.Write],
+    Book = 3,
+    Notebook,
+    Result:DLTSTrainingBookRanged,
+    Time:480.0,
+    Category:DLTS Training,  
+  }
+
+  recipe Compile Training Material: Crafting {
+    keep [Recipe.GetItemTypes.Write],
+    Book = 3,
+    Notebook,
+    Result:DLTSTrainingBookCrafting,
+    Time:480.0,
+    Category:DLTS Training,  
+  }
+
+  recipe Compile Training Material: Survival {
+    keep [Recipe.GetItemTypes.Write],
+    Book = 3,
+    Notebook,
+    Result:DLTSTrainingBookSurvival,
+    Time:480.0,
+    Category:DLTS Training,  
+  }
+
+}
