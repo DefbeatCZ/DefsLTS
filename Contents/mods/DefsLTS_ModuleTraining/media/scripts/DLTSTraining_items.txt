@@ -8,7 +8,7 @@ module DLTSTraining {
     Icon = Book6,
     StaticModel = Book,
     WorldStaticModel = BookRedPink_Ground,
-    Tooltip = DLTSTraining_TTP_BookCardio,
+    Tooltip = Tooltip_DLTSTraining_BookCardio,
   }
 
   item DLTSTrainingBookMelee {
@@ -19,7 +19,7 @@ module DLTSTraining {
     Icon = Book6,
     StaticModel = Book,
     WorldStaticModel = BookRedPink_Ground,
-    Tooltip = DLTSTraining_TTP_BookMeleeCombat,
+    Tooltip = Tooltip_DLTSTraining_BookMeleeCombat,
   }
 
   item DLTSTrainingBookRanged {
@@ -30,7 +30,7 @@ module DLTSTraining {
     Icon = Book6,
     StaticModel = Book,
     WorldStaticModel = BookRedPink_Ground,
-    Tooltip = DLTSTraining_TTP_BookRangedCombat,
+    Tooltip = Tooltip_DLTSTraining_BookRangedCombat,
   }
 
   item DLTSTrainingBookSurvival {
@@ -41,7 +41,7 @@ module DLTSTraining {
     Icon = Book6,
     StaticModel = Book,
     WorldStaticModel = BookRedPink_Ground,  
-    Tooltip = DLTSTraining_TTP_BookSurvival,
+    Tooltip = Tooltip_DLTSTraining_BookSurvival,
   }
 
   item DLTSTrainingBookCrafting {
@@ -52,7 +52,7 @@ module DLTSTraining {
     Icon = Book6,
     StaticModel = Book,
     WorldStaticModel = BookRedPink_Ground,
-    Tooltip = DLTSTraining_TTP_BookCrafting,
+    Tooltip = Tooltip_DLTSTraining_BookCrafting,
   }
 
 }

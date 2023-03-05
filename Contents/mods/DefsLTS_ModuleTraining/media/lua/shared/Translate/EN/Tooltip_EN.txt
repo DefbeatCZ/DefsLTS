@@ -1,11 +1,11 @@
 Tooltip_EN = {
 
   -- Workbooks
-  DLTSTraining_TTP_BookCardio = "Your personal training plan for getting yourself into shape.",
-  DLTSTraining_TTP_BookMeleeCombat = "Your personal training plan for learning how to punch a zed.",
-  DLTSTraining_TTP_BookRangedCombat = "Your personal training plan for learning how to shoot a zed.",
-  DLTSTraining_TTP_BookCrafting = "Your personal training plan for getting into crafting disciplines.",
-  DLTSTraining_TTP_BookSurvival = "Your personal training plan for getting into survival disciplines.",
+  Tooltip_DLTSTraining_BookCardio = "Your personal training plan for getting yourself into shape.",
+  Tooltip_DLTSTraining_BookMeleeCombat = "Your personal training plan for learning how to punch a zed.",
+  Tooltip_DLTSTraining_BookRangedCombat = "Your personal training plan for learning how to shoot a zed.",
+  Tooltip_DLTSTraining_BookCrafting = "Your personal training plan for getting into crafting disciplines.",
+  Tooltip_DLTSTraining_BookSurvival = "Your personal training plan for getting into survival disciplines.",
   
 
 }
