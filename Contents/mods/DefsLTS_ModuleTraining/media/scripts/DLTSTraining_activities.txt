@@ -1,38 +1,91 @@
 module DLTSTraining {
 
+  imports {
+    Base,
+  } 
+  
   recipe Training: Cardio I (Light) {
-    keep DLTSTrainingBookCardio,
-    Stone = 5,
-    Result:Stone=5,
+    DLTSTrainingBookCardio,
+    Keep Stone=5,
+    Result:DLTSTrainingBookCardio,
     Category:DLTS Training,
     Time:800.0,
     OnGiveXP:DLTSTrainingGetXP_LightCardio,
   }
 
   recipe Training: Cardio II (Medium) {
-    keep DLTSTrainingBookCardio,
-    Stone = 5,
-    Result:Stone=5,
+    DLTSTrainingBookCardio,
+    Keep Stone=5,
+    Result:DLTSTrainingBookCardio,
     Category:DLTS Training,
     Time:1200.0,
     OnGiveXP:DLTSTrainingGetXP_MediumCardio,
   }
 
   recipe Training: Cardio III (Heavy) {
-    keep DLTSTrainingBookCardio,
-    Stone = 5,
-    Result:Stone=5,
+    DLTSTrainingBookCardio,
+    Keep Stone=5,
+    Result:DLTSTrainingBookCardio,
     Category:DLTS Training,
     Time:1600.0,
     OnGiveXP:DLTSTrainingGetXP_HeavyCardio,
   }
-
-
-
-
   
+  recipe Training: Light Movement {
+    DLTSTrainingBookCardio,
+    Keep Stone=5,
+    Result:DLTSTrainingBookCardio,
+    Category:DLTS Training,
+    Time:1600.0,
+    OnGiveXP:DLTSTrainingGetXP_LightMovement,
+  } 
 
+  recipe Training: Melee Maintenance {
+    DLTSTrainingBookMelee,
+    keep [Recipe.GetItemTypes.SharpKnife],
+    keep Plank,
+    Keep RippedSheets,
+    Result:DLTSTrainingBookMelee,
+    Category:DLTS Training,
+    Time:1200.0,
+    OnGiveXP:DLTSTrainingGetXP_MeleeMaintenance,
+  }
+  
+  recipe Training: Melee Combat (Blade) {
+    DLTSTrainingBookMelee,
+    keep [Recipe.GetItemTypes.SharpKnife],
+    Result:DLTSTrainingBookMelee,
+    Category:DLTS Training,
+    Time:1600.0,
+    OnGiveXP:DLTSTrainingGetXP_MeleeBlade,
+  }
+  
+  recipe Training: Melee Combat (Axe) {
+    DLTSTrainingBookMelee,
+    keep HandAxe/Axe/AxeStone/WoodAxe,
+    Result:DLTSTrainingBookMelee,
+    Category:DLTS Training,
+    Time:1600.0,
+    OnGiveXP:DLTSTrainingGetXP_MeleeAxe,
+  }
 
+  recipe Training: Melee Combat (Blunt) {
+    DLTSTrainingBookMelee,
+    keep Plank,
+    Result:DLTSTrainingBookMelee,
+    Category:DLTS Training,
+    Time:1600.0,
+    OnGiveXP:DLTSTrainingGetXP_MeleeBlunt,
+  }
+
+  recipe Training: Melee Combat (Spear) {
+    DLTSTrainingBookMelee,
+    keep Plank,
+    Result:DLTSTrainingBookMelee,
+    Category:DLTS Training,
+    Time:1600.0,
+    OnGiveXP:DLTSTrainingGetXP_MeleeSpear,
+  }
 
 
 
