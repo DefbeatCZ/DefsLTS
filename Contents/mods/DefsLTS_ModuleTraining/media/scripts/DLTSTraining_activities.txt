@@ -80,7 +80,7 @@ module DLTSTraining {
 
   recipe Training: Melee Combat (Spear) {
     DLTSTrainingBookMelee,
-    keep Plank,
+    keep SpearCrafted,
     Result:DLTSTrainingBookMelee,
     Category:DLTS Training,
     Time:1600.0,
